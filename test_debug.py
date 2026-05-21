@@ -1,83 +1,63 @@
 #!/usr/bin/env python3
 import os
-import ast
-from typing import TypedDict, Annotated
-import operator
 import traceback
 
-print(">>> 0. 开始导入...")
-from deepagents.graph import create_deep_agent
-from langchain_openai import ChatOpenAI
-from langgraph.graph import StateGraph, START, END
-print(">>> 导入完成")
+from src.agent.runner import build_runnable_graph, create_initial_state
+from src.agent.tracing import build_langfuse_config, dump_execution_trace, flush_langfuse
 
-print(">>> 1. 创建 agent...")
-agent = create_deep_agent(
-    model=ChatOpenAI(
-        model="deepseek-chat",
-        base_url="https://api.deepseek.com/v1",
-        api_key="sk-8180e5ff3724496e904c229f6e8dd099",
-        temperature=0.2
-    )
-)
-print(">>> 2. agent 创建成功")
 
-class State(TypedDict):
-    messages: Annotated[list, operator.add]
-    code: str
-    retry: int
+DEFAULT_PROMPT = "先告诉我你是哪个模型,然后为 ROCm 基础环境生成一个 pytest 测试用例，验证当前机器能正常执行 rocminfo，并检查输出中至少包含一个 GPU agent、设备名称和 ISA 信息。如果 rocminfo 不存在，应标记为 skipped，而不是直接 fail"
 
-def coder(state: State):
-    print(f">>> coder 被调用")
-    result = agent.invoke({"messages": state["messages"]})
-    last_msg = result["messages"][-1]
-    reply = last_msg.content
-    print(f">>> 收到回复: {reply[:80]}...")
-    
-    code = ""
-    if "```python" in reply:
-        code = reply.split("```python")[1].split("```")[0].strip()
-    elif "```" in reply:
-        code = reply.split("```")[1].split("```")[0].strip()
-    
-    return {"messages": [{"role": "assistant", "content": reply}], "code": code}
 
-def checker(state: State):
-    print(f">>> checker 被调用")
+def _message_content(message) -> str:
+    """Return content from dict or LangChain message."""
+    if isinstance(message, dict):
+        return str(message.get("content", ""))
+    return str(getattr(message, "content", ""))
+
+
+def main() -> None:
+    """Run a minimal Test Case Agent debug flow."""
+    provider = os.environ.get("TEST_CASE_AGENT_MODEL_PROVIDER")
+    prompt = os.environ.get("TEST_CASE_AGENT_DEBUG_PROMPT", DEFAULT_PROMPT)
+    thread_id = os.environ.get("TEST_CASE_AGENT_THREAD_ID", "test-case-agent-debug")
+    trace_dir = os.environ.get("TEST_CASE_AGENT_TRACE_DIR", f"traces/{thread_id}")
+
+    print(">>> 0. 构建 graph...")
+    graph = build_runnable_graph(provider=provider, enable_checkpoint=True)
+
+    config = {
+        "configurable": {"thread_id": thread_id},
+    }
+    config.update(build_langfuse_config(thread_id=thread_id))
+
+    initial_state = create_initial_state(prompt)
+
+    print(">>> 1. 开始调用 graph.invoke...")
+    result = graph.invoke(initial_state, config=config)
+
+    print(">>> 2. 调用完成")
+    for index, message in enumerate(result["messages"]):
+        print(f"[message {index}] {_message_content(message)[:120]}...")
+
+    print(f"\n需求:\n{result.get('requirement', '')[:300]}")
+    print(f"\n测试计划:\n{result.get('case_plan', '')[:800]}")
+    print(f"\n代码:\n{(result.get('generated_code') or result.get('code', ''))[:800]}")
+    print(f"\n执行计划:\n{result.get('execution_plan', {})}")
+    print(f"\n执行结果:\n{result.get('execution_result', {})}")
+    print(f"\n修复建议:\n{result.get('repair_suggestion', '')[:500]}")
+    print(f"\n最终报告:\n{result.get('final_report', {})}")
+    print(f"重试: {result.get('retry', 0)}")
+    print(f"修复次数: {result.get('repair_count', 0)}")
+
+    dump_execution_trace(graph, config, output_dir=trace_dir)
+    flush_langfuse()
+    print(f">>> trace 已保存到: {trace_dir}")
+
+
+if __name__ == "__main__":
     try:
-        ast.parse(state["code"])
-        return {"messages": [{"role": "assistant", "content": "✅ 语法通过"}]}
-    except SyntaxError as e:
-        return {"messages": [{"role": "assistant", "content": f"❌ 语法错误: {e}"}], "retry": 1}
-
-def router(state: State):
-    retry = state.get("retry", 0)
-    last = str(state["messages"][-1]["content"])
-    print(f">>> router: retry={retry}, last={last[:30]}")
-    if retry >= 3:
-        return "giveup"
-    if "✅" in last:
-        return "ok"
-    return "retry"
-
-builder = StateGraph(State)
-builder.add_node("coder", coder)
-builder.add_node("checker", checker)
-builder.add_edge(START, "coder")
-builder.add_edge("coder", "checker")
-builder.add_conditional_edges("checker", router, {"ok": END, "retry": "coder", "giveup": END})
-graph = builder.compile()
-print(">>> 3. 图编译完成")
-
-print(">>> 4. 开始调用 graph.invoke...")
-result = graph.invoke({
-    "messages": [{"role": "user", "content": "生成一个 pytest 测试函数，测试 numpy 矩阵乘法 1024x1024"}],
-    "code": "", "retry": 0
-})
-
-print(">>> 5. 调用完成")
-for msg in result["messages"]:
-    role = "👤" if msg["role"] == "user" else "🤖"
-    print(f"{role} {msg['content'][:80]}...")
-print(f"\n代码:\n{result['code'][:300]}")
-print(f"重试: {result['retry']}")
+        main()
+    except Exception:
+        traceback.print_exc()
+        raise

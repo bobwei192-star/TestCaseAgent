@@ -1,0 +1,131 @@
+{
+  "repo": "ROCm/ROCm",
+  "total_issues": 50,
+  "open_issues": 50,
+  "closed_issues": 0,
+  "fetched_at": "2026-05-19T13:30:14.955186+00:00",
+  "top_labels": [
+    {
+      "name": "status: triage",
+      "count": 34
+    },
+    {
+      "name": "Documentation",
+      "count": 3
+    },
+    {
+      "name": "status: assessed",
+      "count": 3
+    },
+    {
+      "name": "Verified Issue",
+      "count": 3
+    },
+    {
+      "name": "Feature Request",
+      "count": 3
+    },
+    {
+      "name": "ROCm 7.2.1",
+      "count": 2
+    },
+    {
+      "name": "ROCm 7.2.3",
+      "count": 1
+    },
+    {
+      "name": "project: miopen",
+      "count": 1
+    },
+    {
+      "name": "status: fix submitted",
+      "count": 1
+    },
+    {
+      "name": "AMD Radeon RX 7900 XTX",
+      "count": 1
+    }
+  ],
+  "top_authors": [
+    {
+      "name": "prbasyal-amd",
+      "count": 3
+    },
+    {
+      "name": "z1-jiraGithub",
+      "count": 2
+    },
+    {
+      "name": "Deaththegrim",
+      "count": 2
+    },
+    {
+      "name": "robegan21",
+      "count": 2
+    },
+    {
+      "name": "benrichard-amd",
+      "count": 2
+    },
+    {
+      "name": "bkpaine1",
+      "count": 2
+    },
+    {
+      "name": "sermore",
+      "count": 1
+    },
+    {
+      "name": "Lama-Thematique",
+      "count": 1
+    },
+    {
+      "name": "PCAssistSoftware",
+      "count": 1
+    },
+    {
+      "name": "nova2moon",
+      "count": 1
+    },
+    {
+      "name": "amd-fangchou",
+      "count": 1
+    },
+    {
+      "name": "JoeLoser",
+      "count": 1
+    },
+    {
+      "name": "amd-nicknick",
+      "count": 1
+    },
+    {
+      "name": "Mamoru-Yuasa",
+      "count": 1
+    },
+    {
+      "name": "ratcampaign",
+      "count": 1
+    },
+    {
+      "name": "mengweili02",
+      "count": 1
+    },
+    {
+      "name": "lin636",
+      "count": 1
+    },
+    {
+      "name": "marek99",
+      "count": 1
+    },
+    {
+      "name": "ChihweiLHBird",
+      "count": 1
+    },
+    {
+      "name": "valeriy-idatica",
+      "count": 1
+    }
+  ]
+}

@@ -1,22 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "test-case-agent"
 version = "0.1.0"
-description = "基于 LangGraph 的智能体，自动生成 ROCm / AI Model 测试用例"
-readme = "README.md"
-requires-python = ">=3.13"
+description = "LangGraph-based agent for generating ROCm test cases."
+requires-python = ">=3.12"
 dependencies = [
-    "langgraph>=0.2.0",
+    "langgraph[dev]>=0.2.0",
+    "langgraph-cli[inmem]>=0.4.0",
+    "langgraph-checkpoint-postgres",
     "langchain>=0.3.0",
     "langchain-openai>=0.3.0",
     "python-dotenv>=1.0.0",
+    "langfuse",
+    "openai",
+    "deepagents",
 ]
 
-[project.scripts]
-tca = "src.cli:main"
-
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
-
-[tool.hatch.build.targets.wheel]
-packages = ["src"]
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]

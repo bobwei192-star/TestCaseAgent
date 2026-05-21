@@ -1,0 +1,1024 @@
+[
+  {
+    "number": 6273,
+    "title": "[Issue]: amdgpu: MES failed to respond to msg=REMOVE_QUEUE",
+    "state": "open",
+    "created_at": "2026-05-19T07:38:49Z",
+    "updated_at": "2026-05-19T07:38:49Z",
+    "closed_at": null,
+    "author": "sermore",
+    "labels": [],
+    "label_colors": {},
+    "assignees": [],
+    "comment_count": 0,
+    "url": "https://github.com/ROCm/ROCm/issues/6273",
+    "filename": "6273_[Issue]_amdgpu_MES_failed_to_respond_to_msg=REMOVE_QUEUE.md"
+  },
+  {
+    "number": 6271,
+    "title": "[Issue]: Kernel crash when using TORCH_BLAS_PREFER_HIPBLASLT with pytorch",
+    "state": "open",
+    "created_at": "2026-05-18T17:20:36Z",
+    "updated_at": "2026-05-18T17:21:09Z",
+    "closed_at": null,
+    "author": "Lama-Thematique",
+    "labels": [],
+    "label_colors": {},
+    "assignees": [],
+    "comment_count": 0,
+    "url": "https://github.com/ROCm/ROCm/issues/6271",
+    "filename": "6271_[Issue]_Kernel_crash_when_using_TORCH_BLAS_PREFER_HIPBLASLT_with_pytorch.md"
+  },
+  {
+    "number": 6270,
+    "title": "[Issue]: llama.cpp cli and bench and server just immediately close with no error at all",
+    "state": "open",
+    "created_at": "2026-05-18T16:31:00Z",
+    "updated_at": "2026-05-18T16:31:00Z",
+    "closed_at": null,
+    "author": "PCAssistSoftware",
+    "labels": [],
+    "label_colors": {},
+    "assignees": [],
+    "comment_count": 0,
+    "url": "https://github.com/ROCm/ROCm/issues/6270",
+    "filename": "6270_[Issue]_llama.cpp_cli_and_bench_and_server_just_immediately_close_with_no_error.md"
+  },
+  {
+    "number": 6269,
+    "title": "ROCm 7.2.1 / 6.17.0-1020-oem ROCm soft-crashes:  GCVM_L2_PROTECTION_FAULT_STATUS:0x00000B32 Faulty UTCL2 client ID: CPC (0x5)",
+    "state": "open",
+    "created_at": "2026-05-17T21:35:12Z",
+    "updated_at": "2026-05-19T13:27:41Z",
+    "closed_at": null,
+    "author": "nova2moon",
+    "labels": [
+      "status: triage"
+    ],
+    "label_colors": {
+      "status: triage": "#585dd7"
+    },
+    "assignees": [
+      "amd-nicknick"
+    ],
+    "comment_count": 1,
+    "url": "https://github.com/ROCm/ROCm/issues/6269",
+    "filename": "6269_ROCm_7.2.1_6.17.0-1020-oem_ROCm_soft-crashes_GCVM_L2_PROTECTION_FAULT_STATUS0x00.md"
+  },
+  {
+    "number": 6258,
+    "title": "Testing issue again",
+    "state": "open",
+    "created_at": "2026-05-14T11:29:37Z",
+    "updated_at": "2026-05-14T11:44:38Z",
+    "closed_at": null,
+    "author": "z1-jiraGithub",
+    "labels": [],
+    "label_colors": {},
+    "assignees": [],
+    "comment_count": 0,
+    "url": "https://github.com/ROCm/ROCm/issues/6258",
+    "filename": "6258_Testing_issue_again.md"
+  },
+  {
+    "number": 6257,
+    "title": "[Issue]: [Windows] Inconsistent memory usage when generating images with SD3.5",
+    "state": "open",
+    "created_at": "2026-05-14T03:19:55Z",
+    "updated_at": "2026-05-19T05:22:39Z",
+    "closed_at": null,
+    "author": "amd-fangchou",
+    "labels": [],
+    "label_colors": {},
+    "assignees": [
+      "amd-nicknick"
+    ],
+    "comment_count": 0,
+    "url": "https://github.com/ROCm/ROCm/issues/6257",
+    "filename": "6257_[Issue]_[Windows]_Inconsistent_memory_usage_when_generating_images_with_SD3.5.md"
+  },
+  {
+    "number": 6245,
+    "title": "Deterministic `HSA_STATUS_ERROR_EXCEPTION` (0x1016) on simple HIP kernel doing `printf` + `__builtin_trap()` (MI355X, ROCm 7.1.1)",
+    "state": "open",
+    "created_at": "2026-05-12T23:36:04Z",
+    "updated_at": "2026-05-13T01:23:22Z",
+    "closed_at": null,
+    "author": "JoeLoser",
+    "labels": [],
+    "label_colors": {},
+    "assignees": [],
+    "comment_count": 1,
+    "url": "https://github.com/ROCm/ROCm/issues/6245",
+    "filename": "6245_Deterministic_`HSA_STATUS_ERROR_EXCEPTION`_(0x1016)_on_simple_HIP_kernel_doing_`.md"
+  },
+  {
+    "number": 6236,
+    "title": "[Issue]: Llama.cpp does not work on gfx1153 Windows",
+    "state": "open",
+    "created_at": "2026-05-12T14:26:23Z",
+    "updated_at": "2026-05-12T14:27:48Z",
+    "closed_at": null,
+    "author": "amd-nicknick",
+    "labels": [
+      "status: triage"
+    ],
+    "label_colors": {
+      "status: triage": "#585dd7"
+    },
+    "assignees": [
+      "amd-nicknick"
+    ],
+    "comment_count": 0,
+    "url": "https://github.com/ROCm/ROCm/issues/6236",
+    "filename": "6236_[Issue]_Llama.cpp_does_not_work_on_gfx1153_Windows.md"
+  },
+  {
+    "number": 6235,
+    "title": "[GITHUB] Test Issue for the Repo names",
+    "state": "open",
+    "created_at": "2026-05-12T14:05:27Z",
+    "updated_at": "2026-05-14T11:26:37Z",
+    "closed_at": null,
+    "author": "z1-jiraGithub",
+    "labels": [
+      "Documentation"
+    ],
+    "label_colors": {
+      "Documentation": "#5319e7"
+    },
+    "assignees": [],
+    "comment_count": 0,
+    "url": "https://github.com/ROCm/ROCm/issues/6235",
+    "filename": "6235_[GITHUB]_Test_Issue_for_the_Repo_names.md"
+  },
+  {
+    "number": 6233,
+    "title": "[Issue]: ROCm fails with \"GPU node has unrecognized id\" error when AOCC compiler environment is sourced",
+    "state": "open",
+    "created_at": "2026-05-12T08:54:00Z",
+    "updated_at": "2026-05-13T15:03:44Z",
+    "closed_at": null,
+    "author": "Mamoru-Yuasa",
+    "labels": [
+      "status: triage"
+    ],
+    "label_colors": {
+      "status: triage": "#585dd7"
+    },
+    "assignees": [
+      "darren-amd"
+    ],
+    "comment_count": 0,
+    "url": "https://github.com/ROCm/ROCm/issues/6233",
+    "filename": "6233_[Issue]_ROCm_fails_with_GPU_node_has_unrecognized_id_error_when_AOCC_compiler_en.md"
+  },
+  {
+    "number": 6227,
+    "title": "[Issue]: ROCm unable to load models and fails to fold 26.5.1",
+    "state": "open",
+    "created_at": "2026-05-11T16:50:19Z",
+    "updated_at": "2026-05-15T17:18:52Z",
+    "closed_at": null,
+    "author": "ratcampaign",
+    "labels": [
+      "status: triage"
+    ],
+    "label_colors": {
+      "status: triage": "#585dd7"
+    },
+    "assignees": [
+      "mapatel-amd"
+    ],
+    "comment_count": 0,
+    "url": "https://github.com/ROCm/ROCm/issues/6227",
+    "filename": "6227_[Issue]_ROCm_unable_to_load_models_and_fails_to_fold_26.5.1.md"
+  },
+  {
+    "number": 6215,
+    "title": "[Issue]: amdgpu_cs_ioctl returns -ENOMEM under sustained ROCm churn — TTM eviction LRU candidates transiently busy; fixable with bounded caller-level retry",
+    "state": "open",
+    "created_at": "2026-05-10T10:25:22Z",
+    "updated_at": "2026-05-12T13:37:17Z",
+    "closed_at": null,
+    "author": "Deaththegrim",
+    "labels": [
+      "status: triage"
+    ],
+    "label_colors": {
+      "status: triage": "#585dd7"
+    },
+    "assignees": [
+      "amd-nicknick"
+    ],
+    "comment_count": 0,
+    "url": "https://github.com/ROCm/ROCm/issues/6215",
+    "filename": "6215_[Issue]_amdgpu_cs_ioctl_returns_-ENOMEM_under_sustained_ROCm_churn_—_TTM_evictio.md"
+  },
+  {
+    "number": 6214,
+    "title": "[Issue]: amdgpu_gem_object_open leaks bo_va when amdgpu_eviction_fence_attach fails — surfaces as 'VM memory stats ... is non-zero when fini'",
+    "state": "open",
+    "created_at": "2026-05-10T10:25:15Z",
+    "updated_at": "2026-05-19T05:57:28Z",
+    "closed_at": null,
+    "author": "Deaththegrim",
+    "labels": [
+      "status: triage"
+    ],
+    "label_colors": {
+      "status: triage": "#585dd7"
+    },
+    "assignees": [
+      "amd-nicknick"
+    ],
+    "comment_count": 1,
+    "url": "https://github.com/ROCm/ROCm/issues/6214",
+    "filename": "6214_[Issue]_amdgpu_gem_object_open_leaks_bo_va_when_amdgpu_eviction_fence_attach_fai.md"
+  },
+  {
+    "number": 6206,
+    "title": "[Issue]: GPU detected for both rocminfo and torch.cuda.is_available(), but torch inference is falling back to CPU",
+    "state": "open",
+    "created_at": "2026-05-09T03:34:22Z",
+    "updated_at": "2026-05-16T00:21:36Z",
+    "closed_at": null,
+    "author": "mengweili02",
+    "labels": [
+      "status: assessed"
+    ],
+    "label_colors": {
+      "status: assessed": "#e6d813"
+    },
+    "assignees": [
+      "harkgill-amd"
+    ],
+    "comment_count": 2,
+    "url": "https://github.com/ROCm/ROCm/issues/6206",
+    "filename": "6206_[Issue]_GPU_detected_for_both_rocminfo_and_torch.cuda.is_available(),_but_torch.md"
+  },
+  {
+    "number": 6204,
+    "title": "WSL2 下无法直通 AMD Radeon RX 7800 XT (RDNA3)，lspci 无输出，/dev/dri 不存在",
+    "state": "open",
+    "created_at": "2026-05-08T11:00:41Z",
+    "updated_at": "2026-05-13T16:49:13Z",
+    "closed_at": null,
+    "author": "lin636",
+    "labels": [
+      "status: triage"
+    ],
+    "label_colors": {
+      "status: triage": "#585dd7"
+    },
+    "assignees": [
+      "mapatel-amd"
+    ],
+    "comment_count": 1,
+    "url": "https://github.com/ROCm/ROCm/issues/6204",
+    "filename": "6204_WSL2_下无法直通_AMD_Radeon_RX_7800_XT_(RDNA3)，lspci_无输出，devdri_不存在.md"
+  },
+  {
+    "number": 6203,
+    "title": "[Issue]: RX 9070 / gfx1201: massive prefill slowdown unless ROCBLAS_USE_HIPBLASLT=0 is set",
+    "state": "open",
+    "created_at": "2026-05-07T07:58:49Z",
+    "updated_at": "2026-05-17T18:03:44Z",
+    "closed_at": null,
+    "author": "marek99",
+    "labels": [
+      "status: triage"
+    ],
+    "label_colors": {
+      "status: triage": "#585dd7"
+    },
+    "assignees": [
+      "harkgill-amd"
+    ],
+    "comment_count": 5,
+    "url": "https://github.com/ROCm/ROCm/issues/6203",
+    "filename": "6203_[Issue]_RX_9070_gfx1201_massive_prefill_slowdown_unless_ROCBLAS_USE_HIPBLASLT=0.md"
+  },
+  {
+    "number": 6195,
+    "title": "Minor performance regression for MIGraphX with int8-quantized models",
+    "state": "open",
+    "created_at": "2026-05-04T14:45:39Z",
+    "updated_at": "2026-05-04T14:46:37Z",
+    "closed_at": null,
+    "author": "prbasyal-amd",
+    "labels": [
+      "Verified Issue",
+      "ROCm 7.2.3"
+    ],
+    "label_colors": {
+      "Verified Issue": "#0052cc",
+      "ROCm 7.2.3": "#aaaaaa"
+    },
+    "assignees": [
+      "prbasyal-amd"
+    ],
+    "comment_count": 0,
+    "url": "https://github.com/ROCm/ROCm/issues/6195",
+    "filename": "6195_Minor_performance_regression_for_MIGraphX_with_int8-quantized_models.md"
+  },
+  {
+    "number": 6194,
+    "title": "[Issue]: hipcc requires non-existent libxml2.so.2 - ROCm 7.2.1 on Ubuntu 26.04",
+    "state": "open",
+    "created_at": "2026-04-29T22:06:12Z",
+    "updated_at": "2026-05-15T17:13:15Z",
+    "closed_at": null,
+    "author": "robegan21",
+    "labels": [
+      "status: triage"
+    ],
+    "label_colors": {
+      "status: triage": "#585dd7"
+    },
+    "assignees": [
+      "lucbruni-amd"
+    ],
+    "comment_count": 5,
+    "url": "https://github.com/ROCm/ROCm/issues/6194",
+    "filename": "6194_[Issue]_hipcc_requires_non-existent_libxml2.so.2_-_ROCm_7.2.1_on_Ubuntu_26.04.md"
+  },
+  {
+    "number": 6193,
+    "title": "[Issue]: amdgpu-install with dkms fails to build on Ubuntu 26.04",
+    "state": "open",
+    "created_at": "2026-04-29T21:47:31Z",
+    "updated_at": "2026-05-11T19:34:19Z",
+    "closed_at": null,
+    "author": "robegan21",
+    "labels": [
+      "status: triage"
+    ],
+    "label_colors": {
+      "status: triage": "#585dd7"
+    },
+    "assignees": [
+      "lucbruni-amd"
+    ],
+    "comment_count": 2,
+    "url": "https://github.com/ROCm/ROCm/issues/6193",
+    "filename": "6193_[Issue]_amdgpu-install_with_dkms_fails_to_build_on_Ubuntu_26.04.md"
+  },
+  {
+    "number": 6192,
+    "title": "[Documentation]: Clarify ROCm support status for RDNA 1 GPUs in compatibility documentation",
+    "state": "open",
+    "created_at": "2026-04-29T19:08:10Z",
+    "updated_at": "2026-05-12T14:45:07Z",
+    "closed_at": null,
+    "author": "ChihweiLHBird",
+    "labels": [
+      "Documentation",
+      "status: triage"
+    ],
+    "label_colors": {
+      "Documentation": "#5319e7",
+      "status: triage": "#585dd7"
+    },
+    "assignees": [
+      "benrichard-amd"
+    ],
+    "comment_count": 0,
+    "url": "https://github.com/ROCm/ROCm/issues/6192",
+    "filename": "6192_[Documentation]_Clarify_ROCm_support_status_for_RDNA_1_GPUs_in_compatibility_doc.md"
+  },
+  {
+    "number": 6186,
+    "title": "[Issue]: gfx1151 Constant PERMISSION_FAULTS (0x3) on Strix Halo (Ryzen AI MAX 395) during ROCm workloads",
+    "state": "open",
+    "created_at": "2026-04-27T09:10:21Z",
+    "updated_at": "2026-05-04T23:58:21Z",
+    "closed_at": null,
+    "author": "valeriy-idatica",
+    "labels": [
+      "status: triage"
+    ],
+    "label_colors": {
+      "status: triage": "#585dd7"
+    },
+    "assignees": [
+      "Jonathan03ant"
+    ],
+    "comment_count": 3,
+    "url": "https://github.com/ROCm/ROCm/issues/6186",
+    "filename": "6186_[Issue]_gfx1151_Constant_PERMISSION_FAULTS_(0x3)_on_Strix_Halo_(Ryzen_AI_MAX_395.md"
+  },
+  {
+    "number": 6185,
+    "title": "[Feature]: Add Support for Firepro WX7100",
+    "state": "open",
+    "created_at": "2026-04-27T04:56:36Z",
+    "updated_at": "2026-05-04T14:27:58Z",
+    "closed_at": null,
+    "author": "alter-affe",
+    "labels": [
+      "Feature Request"
+    ],
+    "label_colors": {
+      "Feature Request": "#fbca04"
+    },
+    "assignees": [
+      "schung-amd"
+    ],
+    "comment_count": 0,
+    "url": "https://github.com/ROCm/ROCm/issues/6185",
+    "filename": "6185_[Feature]_Add_Support_for_Firepro_WX7100.md"
+  },
+  {
+    "number": 6184,
+    "title": "[Bug]: Can't build Hunyuan3D's custom_rasterizer on windows",
+    "state": "open",
+    "created_at": "2026-04-26T16:58:40Z",
+    "updated_at": "2026-05-06T00:57:03Z",
+    "closed_at": null,
+    "author": "wrharper",
+    "labels": [
+      "Feature Request",
+      "status: triage"
+    ],
+    "label_colors": {
+      "Feature Request": "#fbca04",
+      "status: triage": "#585dd7"
+    },
+    "assignees": [
+      "schung-amd"
+    ],
+    "comment_count": 6,
+    "url": "https://github.com/ROCm/ROCm/issues/6184",
+    "filename": "6184_[Bug]_Can't_build_Hunyuan3D's_custom_rasterizer_on_windows.md"
+  },
+  {
+    "number": 6182,
+    "title": "gfx1151 (Strix Halo / Bosgame M5 / Sixunited AXB35-02) — HSA `Memory critical error by agent node-0 ... Reason: Memory in use` on first GGUF model upload, persists on kernel 7.0.1 (KFD ABI 1.22) across all software combinations",
+    "state": "open",
+    "created_at": "2026-04-25T04:56:42Z",
+    "updated_at": "2026-05-11T21:20:05Z",
+    "closed_at": null,
+    "author": "dkzv",
+    "labels": [
+      "status: triage"
+    ],
+    "label_colors": {
+      "status: triage": "#585dd7"
+    },
+    "assignees": [
+      "harkgill-amd"
+    ],
+    "comment_count": 8,
+    "url": "https://github.com/ROCm/ROCm/issues/6182",
+    "filename": "6182_gfx1151_(Strix_Halo_Bosgame_M5_Sixunited_AXB35-02)_—_HSA_`Memory_critical_error.md"
+  },
+  {
+    "number": 6176,
+    "title": "[Issue]: amdgpu: trn=2 ACK should not assert! wait again ! with GPU Radeon Instinct MI50",
+    "state": "open",
+    "created_at": "2026-04-22T20:22:23Z",
+    "updated_at": "2026-05-06T16:15:50Z",
+    "closed_at": null,
+    "author": "camzilla1050",
+    "labels": [
+      "status: triage"
+    ],
+    "label_colors": {
+      "status: triage": "#585dd7"
+    },
+    "assignees": [
+      "harkgill-amd"
+    ],
+    "comment_count": 3,
+    "url": "https://github.com/ROCm/ROCm/issues/6176",
+    "filename": "6176_[Issue]_amdgpu_trn=2_ACK_should_not_assert!_wait_again_!_with_GPU_Radeon_Instinc.md"
+  },
+  {
+    "number": 6168,
+    "title": "[Issue]: Vship segfaults when built with HIP",
+    "state": "open",
+    "created_at": "2026-04-21T11:39:36Z",
+    "updated_at": "2026-05-15T19:24:46Z",
+    "closed_at": null,
+    "author": "Line-fr",
+    "labels": [
+      "status: triage"
+    ],
+    "label_colors": {
+      "status: triage": "#585dd7"
+    },
+    "assignees": [
+      "schung-amd"
+    ],
+    "comment_count": 52,
+    "url": "https://github.com/ROCm/ROCm/issues/6168",
+    "filename": "6168_[Issue]_Vship_segfaults_when_built_with_HIP.md"
+  },
+  {
+    "number": 6167,
+    "title": "[Issue]: RDNA2 GPUs/iGPUs are not being enumerated with ROCm on Windows + Adrenalin 26.3.1",
+    "state": "open",
+    "created_at": "2026-04-21T05:56:11Z",
+    "updated_at": "2026-04-23T18:54:05Z",
+    "closed_at": null,
+    "author": "enpinion",
+    "labels": [
+      "status: triage"
+    ],
+    "label_colors": {
+      "status: triage": "#585dd7"
+    },
+    "assignees": [
+      "schung-amd"
+    ],
+    "comment_count": 2,
+    "url": "https://github.com/ROCm/ROCm/issues/6167",
+    "filename": "6167_[Issue]_RDNA2_GPUsiGPUs_are_not_being_enumerated_with_ROCm_on_Windows_+_Adrenali.md"
+  },
+  {
+    "number": 6165,
+    "title": "[gfx1151] Silent hard hang under sustained vLLM inference with MES 0x86 — amdgpu hangcheck never fires",
+    "state": "open",
+    "created_at": "2026-04-20T16:23:58Z",
+    "updated_at": "2026-05-12T14:57:57Z",
+    "closed_at": null,
+    "author": "Lafunamor",
+    "labels": [
+      "status: triage"
+    ],
+    "label_colors": {
+      "status: triage": "#585dd7"
+    },
+    "assignees": [
+      "amd-nicknick"
+    ],
+    "comment_count": 9,
+    "url": "https://github.com/ROCm/ROCm/issues/6165",
+    "filename": "6165_[gfx1151]_Silent_hard_hang_under_sustained_vLLM_inference_with_MES_0x86_—_amdgpu.md"
+  },
+  {
+    "number": 6157,
+    "title": "[Issue]: AMD RYZEN AI MAX+ 395 w/ Radeon 8060S - Memory access fault by GPU node-1 (Agent handle: 0x58935a90) on address 0x7fbe6a804000. Reason: Page not present or supervisor privilege.",
+    "state": "open",
+    "created_at": "2026-04-17T11:58:18Z",
+    "updated_at": "2026-05-14T11:41:42Z",
+    "closed_at": null,
+    "author": "rosstang",
+    "labels": [
+      "status: triage"
+    ],
+    "label_colors": {
+      "status: triage": "#585dd7"
+    },
+    "assignees": [
+      "harkgill-amd"
+    ],
+    "comment_count": 8,
+    "url": "https://github.com/ROCm/ROCm/issues/6157",
+    "filename": "6157_[Issue]_AMD_RYZEN_AI_MAX+_395_w_Radeon_8060S_-_Memory_access_fault_by_GPU_node-1.md"
+  },
+  {
+    "number": 6153,
+    "title": "[Documentation]:  Missing documentation for hipMemcpyPeer / hipMemcpyPeerAsync",
+    "state": "open",
+    "created_at": "2026-04-15T17:39:44Z",
+    "updated_at": "2026-04-16T13:56:30Z",
+    "closed_at": null,
+    "author": "benrichard-amd",
+    "labels": [
+      "Documentation",
+      "status: triage"
+    ],
+    "label_colors": {
+      "Documentation": "#5319e7",
+      "status: triage": "#585dd7"
+    },
+    "assignees": [
+      "amitkumar-amd"
+    ],
+    "comment_count": 0,
+    "url": "https://github.com/ROCm/ROCm/issues/6153",
+    "filename": "6153_[Documentation]_Missing_documentation_for_hipMemcpyPeer_hipMemcpyPeerAsync.md"
+  },
+  {
+    "number": 6150,
+    "title": "Running BatchNorm2D causes miopenStatusUnknownError",
+    "state": "open",
+    "created_at": "2026-04-15T13:03:35Z",
+    "updated_at": "2026-04-15T14:17:26Z",
+    "closed_at": null,
+    "author": "mt88875",
+    "labels": [
+      "status: triage",
+      "project: miopen"
+    ],
+    "label_colors": {
+      "status: triage": "#585dd7",
+      "project: miopen": "#962619"
+    },
+    "assignees": [
+      "adityas-amd"
+    ],
+    "comment_count": 0,
+    "url": "https://github.com/ROCm/ROCm/issues/6150",
+    "filename": "6150_Running_BatchNorm2D_causes_miopenStatusUnknownError.md"
+  },
+  {
+    "number": 6148,
+    "title": "[Issue]: ROCM 7.2.1 NCCL error when using vllm on 2x gfx1201 Radeon AI PRO 9700",
+    "state": "open",
+    "created_at": "2026-04-14T10:36:28Z",
+    "updated_at": "2026-04-15T15:58:33Z",
+    "closed_at": null,
+    "author": "big-yellow-duck",
+    "labels": [
+      "status: triage"
+    ],
+    "label_colors": {
+      "status: triage": "#585dd7"
+    },
+    "assignees": [
+      "tcgu-amd"
+    ],
+    "comment_count": 1,
+    "url": "https://github.com/ROCm/ROCm/issues/6148",
+    "filename": "6148_[Issue]_ROCM_7.2.1_NCCL_error_when_using_vllm_on_2x_gfx1201_Radeon_AI_PRO_9700.md"
+  },
+  {
+    "number": 6140,
+    "title": "Obsolete -src repo setup by amdgpu-install ",
+    "state": "open",
+    "created_at": "2026-04-11T00:14:38Z",
+    "updated_at": "2026-05-13T16:50:07Z",
+    "closed_at": null,
+    "author": "dvdgomez",
+    "labels": [
+      "status: assessed"
+    ],
+    "label_colors": {
+      "status: assessed": "#e6d813"
+    },
+    "assignees": [
+      "harkgill-amd"
+    ],
+    "comment_count": 2,
+    "url": "https://github.com/ROCm/ROCm/issues/6140",
+    "filename": "6140_Obsolete_-src_repo_setup_by_amdgpu-install.md"
+  },
+  {
+    "number": 6127,
+    "title": "[Issue]: gst-plugin-scan triggers compute ring timeouts and GPU MODE1 reset on gfx1201 (RDNA 4)",
+    "state": "open",
+    "created_at": "2026-04-08T03:03:53Z",
+    "updated_at": "2026-05-19T08:40:13Z",
+    "closed_at": null,
+    "author": "nathancassano",
+    "labels": [
+      "status: triage"
+    ],
+    "label_colors": {
+      "status: triage": "#585dd7"
+    },
+    "assignees": [
+      "amd-nicknick"
+    ],
+    "comment_count": 4,
+    "url": "https://github.com/ROCm/ROCm/issues/6127",
+    "filename": "6127_[Issue]_gst-plugin-scan_triggers_compute_ring_timeouts_and_GPU_MODE1_reset_on_gf.md"
+  },
+  {
+    "number": 6126,
+    "title": "[Issue]: v_dot4_i32_i8 treats int8 operands as unsigned on RDNA3 (gfx1101)",
+    "state": "open",
+    "created_at": "2026-04-07T20:08:58Z",
+    "updated_at": "2026-05-19T02:06:58Z",
+    "closed_at": null,
+    "author": "VX1D",
+    "labels": [
+      "status: triage",
+      "status: fix submitted"
+    ],
+    "label_colors": {
+      "status: triage": "#585dd7",
+      "status: fix submitted": "#75d97e"
+    },
+    "assignees": [
+      "Jonathan03ant"
+    ],
+    "comment_count": 5,
+    "url": "https://github.com/ROCm/ROCm/issues/6126",
+    "filename": "6126_[Issue]_v_dot4_i32_i8_treats_int8_operands_as_unsigned_on_RDNA3_(gfx1101).md"
+  },
+  {
+    "number": 6124,
+    "title": "[Issue]: Severe OpenCL Performance Discrepancy (Linux vs. Windows) in DaVinci Resolve Studio",
+    "state": "open",
+    "created_at": "2026-04-07T10:29:19Z",
+    "updated_at": "2026-04-20T13:55:15Z",
+    "closed_at": null,
+    "author": "lseurttyuu",
+    "labels": [
+      "status: triage",
+      "status: assessed"
+    ],
+    "label_colors": {
+      "status: triage": "#585dd7",
+      "status: assessed": "#e6d813"
+    },
+    "assignees": [
+      "tcgu-amd"
+    ],
+    "comment_count": 0,
+    "url": "https://github.com/ROCm/ROCm/issues/6124",
+    "filename": "6124_[Issue]_Severe_OpenCL_Performance_Discrepancy_(Linux_vs._Windows)_in_DaVinci_Res.md"
+  },
+  {
+    "number": 6123,
+    "title": "Non-deterministic NaN corruption during CPU→GPU tensor transfer on gfx1030 (RX 6900 XT)",
+    "state": "open",
+    "created_at": "2026-04-07T00:11:16Z",
+    "updated_at": "2026-05-04T09:45:31Z",
+    "closed_at": null,
+    "author": "almara3",
+    "labels": [],
+    "label_colors": {},
+    "assignees": [],
+    "comment_count": 3,
+    "url": "https://github.com/ROCm/ROCm/issues/6123",
+    "filename": "6123_Non-deterministic_NaN_corruption_during_CPU→GPU_tensor_transfer_on_gfx1030_(RX_6.md"
+  },
+  {
+    "number": 6121,
+    "title": "[Issue]: DKMS 6.18 kernel support",
+    "state": "open",
+    "created_at": "2026-04-06T04:11:06Z",
+    "updated_at": "2026-04-10T22:21:41Z",
+    "closed_at": null,
+    "author": "Qubitium",
+    "labels": [
+      "AMD Radeon RX 7900 XTX",
+      "status: triage"
+    ],
+    "label_colors": {
+      "AMD Radeon RX 7900 XTX": "#ededed",
+      "status: triage": "#585dd7"
+    },
+    "assignees": [
+      "schung-amd"
+    ],
+    "comment_count": 7,
+    "url": "https://github.com/ROCm/ROCm/issues/6121",
+    "filename": "6121_[Issue]_DKMS_6.18_kernel_support.md"
+  },
+  {
+    "number": 6116,
+    "title": "[Bug]: torch.mm produces data-dependent NaN when input exceeds ~500K rows on gfx1201 (RDNA 4)",
+    "state": "open",
+    "created_at": "2026-04-03T13:35:53Z",
+    "updated_at": "2026-04-13T13:00:58Z",
+    "closed_at": null,
+    "author": "jsurquhart614",
+    "labels": [
+      "status: triage"
+    ],
+    "label_colors": {
+      "status: triage": "#585dd7"
+    },
+    "assignees": [
+      "adityas-amd"
+    ],
+    "comment_count": 1,
+    "url": "https://github.com/ROCm/ROCm/issues/6116",
+    "filename": "6116_[Bug]_torch.mm_produces_data-dependent_NaN_when_input_exceeds_~500K_rows_on_gfx1.md"
+  },
+  {
+    "number": 6101,
+    "title": "R9700 fan does not spin under load - persists on kernel 7.0 / Ubuntu 26.04",
+    "state": "open",
+    "created_at": "2026-03-31T13:52:36Z",
+    "updated_at": "2026-05-19T10:43:14Z",
+    "closed_at": null,
+    "author": "lobsteroh",
+    "labels": [
+      "status: triage"
+    ],
+    "label_colors": {
+      "status: triage": "#585dd7"
+    },
+    "assignees": [
+      "amd-nicknick"
+    ],
+    "comment_count": 52,
+    "url": "https://github.com/ROCm/ROCm/issues/6101",
+    "filename": "6101_R9700_fan_does_not_spin_under_load_-_persists_on_kernel_7.0_Ubuntu_26.04.md"
+  },
+  {
+    "number": 6076,
+    "title": "aiter has many .co blobs with missing source code / OSS concerns",
+    "state": "open",
+    "created_at": "2026-03-28T21:42:00Z",
+    "updated_at": "2026-05-13T16:51:31Z",
+    "closed_at": null,
+    "author": "LunNova",
+    "labels": [
+      "status: triage"
+    ],
+    "label_colors": {
+      "status: triage": "#585dd7"
+    },
+    "assignees": [
+      "benrichard-amd"
+    ],
+    "comment_count": 0,
+    "url": "https://github.com/ROCm/ROCm/issues/6076",
+    "filename": "6076_aiter_has_many_.co_blobs_with_missing_source_code_OSS_concerns.md"
+  },
+  {
+    "number": 6074,
+    "title": "[Issue]: RCCL 2.27.7 / ROCm 7.2.1 dual-GPU collectives fail on 2x Radeon RX 7900 XTX",
+    "state": "open",
+    "created_at": "2026-03-28T17:27:22Z",
+    "updated_at": "2026-05-07T16:46:08Z",
+    "closed_at": null,
+    "author": "msembinelli",
+    "labels": [
+      "status: triage"
+    ],
+    "label_colors": {
+      "status: triage": "#585dd7"
+    },
+    "assignees": [
+      "tcgu-amd"
+    ],
+    "comment_count": 35,
+    "url": "https://github.com/ROCm/ROCm/issues/6074",
+    "filename": "6074_[Issue]_RCCL_2.27.7_ROCm_7.2.1_dual-GPU_collectives_fail_on_2x_Radeon_RX_7900_XT.md"
+  },
+  {
+    "number": 6066,
+    "title": "Longer runtime for hipBLASLt GEMM operations on Instinct MI300X GPUs in partitioned mode",
+    "state": "open",
+    "created_at": "2026-03-25T23:30:33Z",
+    "updated_at": "2026-03-25T23:31:01Z",
+    "closed_at": null,
+    "author": "prbasyal-amd",
+    "labels": [
+      "Verified Issue",
+      "ROCm 7.2.1"
+    ],
+    "label_colors": {
+      "Verified Issue": "#0052cc",
+      "ROCm 7.2.1": "#aaaaaa"
+    },
+    "assignees": [
+      "prbasyal-amd"
+    ],
+    "comment_count": 0,
+    "url": "https://github.com/ROCm/ROCm/issues/6066",
+    "filename": "6066_Longer_runtime_for_hipBLASLt_GEMM_operations_on_Instinct_MI300X_GPUs_in_partitio.md"
+  },
+  {
+    "number": 6065,
+    "title": "hipBLASLt performance regression for specific GEMM configurations",
+    "state": "open",
+    "created_at": "2026-03-25T23:24:56Z",
+    "updated_at": "2026-03-25T23:25:54Z",
+    "closed_at": null,
+    "author": "prbasyal-amd",
+    "labels": [
+      "Verified Issue",
+      "ROCm 7.2.1"
+    ],
+    "label_colors": {
+      "Verified Issue": "#0052cc",
+      "ROCm 7.2.1": "#aaaaaa"
+    },
+    "assignees": [
+      "prbasyal-amd"
+    ],
+    "comment_count": 0,
+    "url": "https://github.com/ROCm/ROCm/issues/6065",
+    "filename": "6065_hipBLASLt_performance_regression_for_specific_GEMM_configurations.md"
+  },
+  {
+    "number": 6052,
+    "title": "[Feature]: Add Support in Unsloth Studio",
+    "state": "open",
+    "created_at": "2026-03-21T05:03:56Z",
+    "updated_at": "2026-03-23T19:26:34Z",
+    "closed_at": null,
+    "author": "LeonardoDaviti",
+    "labels": [
+      "Feature Request"
+    ],
+    "label_colors": {
+      "Feature Request": "#fbca04"
+    },
+    "assignees": [],
+    "comment_count": 0,
+    "url": "https://github.com/ROCm/ROCm/issues/6052",
+    "filename": "6052_[Feature]_Add_Support_in_Unsloth_Studio.md"
+  },
+  {
+    "number": 6050,
+    "title": "AMD APU iGPU (GFX1150/RDNA 3.5): ROCm allocates only VRAM, not GTT - 60% slower than Vulkan",
+    "state": "open",
+    "created_at": "2026-03-20T17:34:38Z",
+    "updated_at": "2026-05-14T14:06:53Z",
+    "closed_at": null,
+    "author": "benrichard-amd",
+    "labels": [],
+    "label_colors": {},
+    "assignees": [
+      "benrichard-amd"
+    ],
+    "comment_count": 0,
+    "url": "https://github.com/ROCm/ROCm/issues/6050",
+    "filename": "6050_AMD_APU_iGPU_(GFX1150RDNA_3.5)_ROCm_allocates_only_VRAM,_not_GTT_-_60%_slower_th.md"
+  },
+  {
+    "number": 6035,
+    "title": "amd-smi reports ALL N/A on Strix Halo gfx1151 — kernel exposes data, user-space tools are blind",
+    "state": "open",
+    "created_at": "2026-03-15T14:27:38Z",
+    "updated_at": "2026-03-25T14:48:24Z",
+    "closed_at": null,
+    "author": "bkpaine1",
+    "labels": [
+      "status: triage"
+    ],
+    "label_colors": {
+      "status: triage": "#585dd7"
+    },
+    "assignees": [
+      "darren-amd"
+    ],
+    "comment_count": 4,
+    "url": "https://github.com/ROCm/ROCm/issues/6035",
+    "filename": "6035_amd-smi_reports_ALL_NA_on_Strix_Halo_gfx1151_—_kernel_exposes_data,_user-space_t.md"
+  },
+  {
+    "number": 6034,
+    "title": "Strix Halo gfx1151: 93 ML experiments, 5 critical bf16 bugs, AOTriton 19x speedup undocumented",
+    "state": "open",
+    "created_at": "2026-03-13T00:44:00Z",
+    "updated_at": "2026-05-17T00:55:02Z",
+    "closed_at": null,
+    "author": "bkpaine1",
+    "labels": [
+      "status: triage"
+    ],
+    "label_colors": {
+      "status: triage": "#585dd7"
+    },
+    "assignees": [
+      "tcgu-amd"
+    ],
+    "comment_count": 31,
+    "url": "https://github.com/ROCm/ROCm/issues/6034",
+    "filename": "6034_Strix_Halo_gfx1151_93_ML_experiments,_5_critical_bf16_bugs,_AOTriton_19x_speedup.md"
+  },
+  {
+    "number": 6033,
+    "title": "[Issue]: Ubuntu 24.04.4 crashing every other day (Radeon 780m)",
+    "state": "open",
+    "created_at": "2026-03-12T05:45:06Z",
+    "updated_at": "2026-05-13T18:59:25Z",
+    "closed_at": null,
+    "author": "peterwwillis",
+    "labels": [
+      "status: triage"
+    ],
+    "label_colors": {
+      "status: triage": "#585dd7"
+    },
+    "assignees": [
+      "Jonathan03ant"
+    ],
+    "comment_count": 10,
+    "url": "https://github.com/ROCm/ROCm/issues/6033",
+    "filename": "6033_[Issue]_Ubuntu_24.04.4_crashing_every_other_day_(Radeon_780m).md"
+  },
+  {
+    "number": 6031,
+    "title": "[Issue]: GPUs power throttling",
+    "state": "open",
+    "created_at": "2026-03-11T12:26:23Z",
+    "updated_at": "2026-03-20T15:42:33Z",
+    "closed_at": null,
+    "author": "ewindisch",
+    "labels": [
+      "status: triage"
+    ],
+    "label_colors": {
+      "status: triage": "#585dd7"
+    },
+    "assignees": [
+      "darren-amd"
+    ],
+    "comment_count": 8,
+    "url": "https://github.com/ROCm/ROCm/issues/6031",
+    "filename": "6031_[Issue]_GPUs_power_throttling.md"
+  }
+]

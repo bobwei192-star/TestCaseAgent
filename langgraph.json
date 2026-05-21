@@ -1,0 +1,12 @@
+{
+  "dependencies": [
+    "."
+  ],
+  "graphs": {
+    "test_case_agent": "./src/agent/app.py:graph"
+  },
+  "env": ".env",
+  "watch": {
+    "exclude": ["scripts/**"]
+  }
+}
