@@ -121,4 +121,6 @@ def build_model(provider: str | None = None):
         api_key=config.api_key,
         temperature=config.temperature,
         default_headers=default_headers,
+        request_timeout=int(os.environ.get("LLM_REQUEST_TIMEOUT", "120")),
+        max_retries=int(os.environ.get("LLM_MAX_RETRIES", "2")),
     )

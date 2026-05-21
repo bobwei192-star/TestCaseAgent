@@ -26,14 +26,36 @@ def _last_user_message(state: AgentState) -> str:
     return ""
 
 
-def _invoke_llm(agent: Any, prompt: str) -> str:
+def _invoke_llm(agent: Any, prompt: str, node_name: str = "LLM") -> str:
     """Invoke the deep agent with a single prompt and return text content."""
     if agent is None:
         raise RuntimeError("LLM node requires a model-backed agent. Pass model to build_graph().")
 
-    result = agent.invoke({"messages": [{"role": "user", "content": prompt}]})
-    last_msg = result["messages"][-1]
-    return _message_content(last_msg)
+    print(f"\n[{node_name}] Invoking LLM ({len(prompt)} chars prompt)...")
+    try:
+        result = agent.invoke({"messages": [{"role": "user", "content": prompt}]})
+        last_msg = result["messages"][-1]
+        content = _message_content(last_msg)
+        print(f"[{node_name}] LLM response: {len(content)} chars")
+        return content
+    except PermissionError:
+        import sys
+        print(f"\n[{node_name}] ❌ 文件写入权限不足（LLM 可能企图写系统路径 /test_case/...）", file=sys.stderr)
+        raise
+    except Exception:
+        import os, sys, traceback
+        exc_name = type(sys.exc_info()[1]).__name__
+        exc_msg = str(sys.exc_info()[1])[:200]
+        provider = os.environ.get("TEST_CASE_AGENT_MODEL_PROVIDER", "unknown")
+        model = os.environ.get("LLM_MODEL") or os.environ.get("DEEPSEEK_MODEL") or "unknown"
+        base_url = os.environ.get("LLM_BASE_URL") or os.environ.get("DEEPSEEK_BASE_URL") or "unknown"
+        print(f"\n[{node_name}] ❌ Agent invoke 失败: {exc_name}: {exc_msg}", file=sys.stderr)
+        print(f"  provider={provider}  model={model}  base_url={base_url}", file=sys.stderr)
+        print(f"  Check .env API keys 或排查上方具体错误。", file=sys.stderr)
+        print(f"\n--- traceback ---", file=sys.stderr)
+        traceback.print_exc(file=sys.stderr)
+        print(f"--- end traceback ---\n", file=sys.stderr)
+        raise
 
 
 def _extract_code(text: str) -> str:
@@ -281,7 +303,7 @@ def planner(state: AgentState, runtime: Runtime[AgentContext], agent) -> dict:
         f"上下文:\n{state.get('context', {})}\n"
         f"{memory_hints}\n"
     )
-    case_plan = _invoke_llm(agent, prompt)
+    case_plan = _invoke_llm(agent, prompt, node_name="planner")
 
     memory_key = f"plan_{uuid.uuid4().hex[:8]}"
     memory_value = {
@@ -318,13 +340,17 @@ def generator(state: AgentState, runtime: Runtime[AgentContext], agent) -> dict:
     print(f"[DEBUG generator] Formatted hints length: {len(memory_hints)} chars")
     print(f"{'='*60}\n")
 
-    # 注入上一轮代码
+    # 注入上一轮代码（限制大小，防止多轮后 prompt 爆炸）
+    _MAX_PREVIOUS_CODE_CHARS = 5000
     previous_code = state.get('generated_code') or state.get('code', '')
     previous_code_hint = ""
     if previous_code:
+        truncated = previous_code
+        if len(previous_code) > _MAX_PREVIOUS_CODE_CHARS:
+            truncated = previous_code[:_MAX_PREVIOUS_CODE_CHARS] + "\n# ... (已截断，上述代码太长)"
         previous_code_hint = (
             f"\n\n上一轮生成的代码（请在此基础上修改，输出完整可执行文件）：\n"
-            f"```python\n{previous_code}\n```\n"
+            f"```python\n{truncated}\n```\n"
         )
 
     # ✅ 关键修复：明确禁止只返回片段/差异，强制输出完整代码块
@@ -337,14 +363,14 @@ def generator(state: AgentState, runtime: Runtime[AgentContext], agent) -> dict:
         "命令不存在时应使用 pytest.skip，命令执行失败时应暴露 returncode/stdout/stderr 诊断。"
         "\n\n【强制要求】即使只是补充一个函数或做小幅修改，也必须输出完整的 pytest 文件代码，"
         "不要只返回新增片段、diff 或文字说明。必须包含所有 import 和全部测试函数。"
+        "\n\n【路径约束】保存文件时一律使用相对路径，如 test_xxx.py 或 output/test_xxx.py，"
+        "禁止使用 /test_case/、/home/、/tmp/ 等绝对路径。代码中不要出现 save_to_file 调用。"
         "请用 ```python ... ``` 代码块包裹完整代码。\n\n"
         f"测试计划:\n{state.get('case_plan', '')}\n"
         f"{memory_hints}\n"
         f"{previous_code_hint}\n"
     )
-    reply = _invoke_llm(agent, prompt)
-    
-    # ✅ 增加原始返回调试，便于排查 0 字符问题
+    reply = _invoke_llm(agent, prompt, node_name="generator")
     print(f"\n[DEBUG generator] Raw reply length: {len(reply)} chars")
     print(f"[DEBUG generator] Raw reply preview: {reply[:200]}...")
     
@@ -413,7 +439,7 @@ def repairer(state: AgentState, runtime: Runtime[AgentContext], agent) -> dict:
         f"代码:\n{state.get('generated_code') or state.get('code', '')}\n"
         f"{memory_hints}\n"
     )
-    suggestion = _invoke_llm(agent, prompt)
+    suggestion = _invoke_llm(agent, prompt, node_name="repairer")
 
     memory_key = f"repair_{uuid.uuid4().hex[:8]}"
     memory_value = {

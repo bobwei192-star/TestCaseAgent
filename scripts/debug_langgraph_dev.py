@@ -90,6 +90,7 @@ class LangGraphDevDebugger:
         event_type = "message"
         data_lines: list[str] = []
         event_count = 0
+        heartbeat_count = 0
 
         for line in response.iter_lines(decode_unicode=True):
             if line is None:
@@ -101,6 +102,7 @@ class LangGraphDevDebugger:
                     self._handle_event(event_count, event_type, "\n".join(data_lines))
                     event_type = "message"
                     data_lines = []
+                    heartbeat_count = 0
                 continue
 
             if line.startswith("event:"):
@@ -108,7 +110,14 @@ class LangGraphDevDebugger:
             elif line.startswith("data:"):
                 data_lines.append(line.removeprefix("data:").strip())
             else:
-                print(f"[SSE RAW] {line}")
+                if ": heartbeat" in line:
+                    heartbeat_count += 1
+                    if heartbeat_count == 1:
+                        print("[SSE] heartbeat (waiting for LLM response, may take 30-120s)...")
+                    elif heartbeat_count % 30 == 0:
+                        print(f"[SSE] ...{heartbeat_count} heartbeats, still waiting...")
+                else:
+                    print(f"[SSE RAW] {line}")
 
         if data_lines:
             event_count += 1

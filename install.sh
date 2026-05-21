@@ -19,7 +19,7 @@ log_info "Project root: $SCRIPT_DIR"
 
 log_step 1 "Create and activate project virtual environment"
 if [ ! -d ".venv" ]; then
-    sudo python3 -m venv .venv
+    python3 -m venv .venv
     log_info "Created .venv"
 else
     log_warn ".venv already exists, reuse it"
@@ -34,20 +34,20 @@ log_info "VIRTUAL_ENV: ${VIRTUAL_ENV:-}"
 python --version
 
 log_step 2 "Upgrade pip"
-sudo python -m pip install --upgrade pip
+python -m pip install --upgrade pip
 
 log_step 3 "Install project requirements"
-sudo python -m pip install -r requirements.txt
+python -m pip install -r requirements.txt
 
 log_step 4 "Install DeepAgents"
 if [ -f "etc/deepagents/pyproject.toml" ] || [ -f "etc/deepagents/setup.py" ]; then
-    sudo python -m pip install -e etc/deepagents
+    python -m pip install -e etc/deepagents
 else
-    sudo python -m pip install deepagents
+    python -m pip install deepagents
 fi
 
 log_step 5 "Install project package and verify LangGraph Studio dependencies"
-sudo python -m pip install -e .
+python -m pip install -e .
 
 python - <<'PY'
 import importlib.util
