@@ -1,0 +1,15 @@
+.venv
+.git
+__pycache__
+*.pyc
+.pytest_cache
+.ruff_cache
+output
+etc
+tests
+**/test_*
+node_modules
+.pnpm-store
+.DS_Store
+*.md
+*.log

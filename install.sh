@@ -70,7 +70,7 @@ python -m pip install \
     langchain-huggingface langchain-chroma chromadb \
     sentence-transformers \
     torch --index-url https://download.pytorch.org/whl/cpu
-
+pip install prompt_toolkit
 log_step 4 "Install DeepAgents"
 if [ -f "etc/deepagents/pyproject.toml" ] || [ -f "etc/deepagents/setup.py" ]; then
     python -m pip install -e etc/deepagents
@@ -99,6 +99,7 @@ for label, name in modules.items():
 if missing:
     sys.exit(f"Missing: {', '.join(missing)}")
 PY
+pip install langchain-cli
 
 if ! command -v langgraph >/dev/null 2>&1; then
     log_error "langgraph CLI is not available in .venv"

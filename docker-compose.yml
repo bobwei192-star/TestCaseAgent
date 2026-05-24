@@ -1,0 +1,172 @@
+# =============================================================================
+# TestCaseAgent — Docker Compose 部署
+# =============================================================================
+#
+# 使用:
+#   docker-compose up -d                        # 启动 agent + langfuse
+#   docker-compose up -d agent                  # 只启动 agent
+#   docker-compose logs -f agent                # 查看 agent 日志
+#   docker-compose down                         # 停止所有服务
+#
+# =============================================================================
+
+services:
+  agent:
+    build: .
+    container_name: testcase-agent
+    restart: unless-stopped
+    ports:
+      - "2024:2024"
+    env_file:
+      - .env
+    environment:
+      - LANGFUSE_HOST=http://langfuse:3000
+      - LANGGRAPH_API_URL=http://0.0.0.0:2024
+    volumes:
+      - ./chroma_db:/app/chroma_db:ro
+      - agent_output:/app/output
+    depends_on:
+      langfuse:
+        condition: service_healthy
+    networks:
+      - agent-net
+
+  langfuse:
+    image: docker.io/langfuse/langfuse:3
+    container_name: testcase-langfuse
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      NEXTAUTH_URL: http://localhost:3000
+      NEXTAUTH_SECRET: ${NEXTAUTH_SECRET:-changeme}
+      DATABASE_URL: postgresql://postgres:${POSTGRES_PASSWORD:-postgres}@postgres:5432/postgres
+      SALT: ${SALT:-changeme}
+      ENCRYPTION_KEY: ${ENCRYPTION_KEY:-0000000000000000000000000000000000000000000000000000000000000000}
+      CLICKHOUSE_URL: http://clickhouse:8123
+      CLICKHOUSE_USER: clickhouse
+      CLICKHOUSE_PASSWORD: clickhouse
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      REDIS_AUTH: myredissecret
+      LANGFUSE_S3_EVENT_UPLOAD_BUCKET: langfuse
+      LANGFUSE_S3_EVENT_UPLOAD_REGION: auto
+      LANGFUSE_S3_EVENT_UPLOAD_ACCESS_KEY_ID: minio
+      LANGFUSE_S3_EVENT_UPLOAD_SECRET_ACCESS_KEY: miniosecret
+      LANGFUSE_S3_EVENT_UPLOAD_ENDPOINT: http://minio:9000
+      LANGFUSE_S3_EVENT_UPLOAD_FORCE_PATH_STYLE: "true"
+      LANGFUSE_S3_MEDIA_UPLOAD_BUCKET: langfuse
+      LANGFUSE_S3_MEDIA_UPLOAD_REGION: auto
+      LANGFUSE_S3_MEDIA_UPLOAD_ACCESS_KEY_ID: minio
+      LANGFUSE_S3_MEDIA_UPLOAD_SECRET_ACCESS_KEY: miniosecret
+      LANGFUSE_S3_MEDIA_UPLOAD_ENDPOINT: http://minio:9000
+      LANGFUSE_S3_MEDIA_UPLOAD_FORCE_PATH_STYLE: "true"
+      TELEMETRY_ENABLED: "true"
+      LANGFUSE_ENABLE_EXPERIMENTAL_FEATURES: "true"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      clickhouse:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      minio:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/api/public/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    networks:
+      - agent-net
+
+  postgres:
+    image: docker.io/postgres:17
+    container_name: testcase-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+      POSTGRES_DB: postgres
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 3s
+      timeout: 3s
+      retries: 10
+    networks:
+      - agent-net
+
+  clickhouse:
+    image: docker.io/clickhouse/clickhouse-server
+    container_name: testcase-clickhouse
+    restart: unless-stopped
+    environment:
+      CLICKHOUSE_DB: default
+      CLICKHOUSE_USER: clickhouse
+      CLICKHOUSE_PASSWORD: clickhouse
+    ports:
+      - "127.0.0.1:8123:8123"
+      - "127.0.0.1:9000:9000"
+    volumes:
+      - clickhouse_data:/var/lib/clickhouse
+    healthcheck:
+      test: wget --no-verbose --tries=1 --spider http://localhost:8123/ping || exit 1
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    networks:
+      - agent-net
+
+  redis:
+    image: docker.io/redis:7
+    container_name: testcase-redis
+    restart: unless-stopped
+    command: --requirepass myredissecret --maxmemory-policy noeviction
+    ports:
+      - "127.0.0.1:6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "--pass", "myredissecret", "ping"]
+      interval: 3s
+      timeout: 10s
+      retries: 10
+    networks:
+      - agent-net
+
+  minio:
+    image: cgr.dev/chainguard/minio
+    container_name: testcase-minio
+    restart: unless-stopped
+    entrypoint: sh
+    command: -c 'mkdir -p /data/langfuse && minio server --address ":9000" --console-address ":9001" /data'
+    environment:
+      MINIO_ROOT_USER: minio
+      MINIO_ROOT_PASSWORD: miniosecret
+    ports:
+      - "127.0.0.1:9090:9000"
+      - "127.0.0.1:9091:9001"
+    volumes:
+      - minio_data:/data
+    healthcheck:
+      test: ["CMD", "mc", "ready", "local"]
+      interval: 1s
+      timeout: 5s
+      retries: 5
+    networks:
+      - agent-net
+
+volumes:
+  agent_output:
+  postgres_data:
+  clickhouse_data:
+  redis_data:
+  minio_data:
+
+networks:
+  agent-net:
+    driver: bridge

@@ -1,16 +1,16 @@
 # TestCaseAgent
 
-基于 **LangGraph + LangChain + DeepAgents** 构建的智能体，自动生成、执行、修复 AMD ROCm 及 AI Model 的 pytest 测试用例。
+基于 **LangGraph + LangChain + DeepAgents** 构建的智能体，自动生成、执行、修复测试用例。
 
 ## 项目定位
 
-输入自然语言（或自然语言 + 一段代码 / 报错信息），Agent 自动处理并输出一个可执行的 pytest 测试用例文件。
+输入自然语言（或自然语言 + 一段代码 / 报错信息），Agent 自动生成或者更新修复一个可执行的 pytest 测试用例文件。
 
 ### 商业价值
 
 | 维度 | 描述 |
 |------|------|
-| **降本** | 手写一个 ROCm 用例需数小时，Agent 一句话自动闭环，效率提升 10 倍以上 |
+| **降本** | 手写一个 用例需数小时，Agent 一句话自动闭环，效率提升 10 倍以上 |
 | **提质** | RAG 知识库保障用例贴合官方规范、风格统一、语法可校验，团队知识沉淀为可执行资产 |
 | **提效** | Agent 自动接管"生成 → 执行 → 失败修复"全流程，端到端验证从天级压缩至分钟级 |
 | **增值** | Agent 可并行批量生成用例，测试覆盖率随版本快速规模化 |
@@ -18,28 +18,31 @@
 ## 核心功能
 
 1. **生成测试用例** — 用户以自然语言描述测试需求，Agent 生成 pytest 格式可执行代码
-2. **生成并执行** — 自动调用 AIDevOps Agent 执行生成的用例并返回结果
-3. **结果驱动修复** — AIDevOps 返回失败后自动分析原因并修复用例（最多 3 轮重试）
+2. **生成并执行** — 自动调用 AIDevOps Agent（or Tools） 执行生成的用例并返回结果
+3. **结果驱动修复** — AIDevOps（or Tools） 返回失败后自动分析原因并修复用例（最多 3 轮重试）
 4. **用户驱动修复** — 用户描述用例问题，Agent 分析并修复
 
-### 覆盖范围
 
-- ROCm 底层算子：rocBLAS、MIOpen、rocSOLVER、rocFFT、rocRAND、RCCL 等
-- AI Model 推理：PyTorch / vLLM / ONNX Runtime / JAX / TensorFlow / llama.cpp
-- 系统环境：ROCm 安装验证、GPU 拓扑、内核驱动、WSL 工具链
 
 ## 技术栈
 
-| 层级 | 选型 |
-|------|------|
-| Agent 编排 | LangGraph |
-| LLM 调用 | LangChain + OpenAI 兼容接口 |
-| Agent 框架 | DeepAgents（`create_deep_agent`） |
-| 可观测性 | Langfuse（Tracing / 监控） |
-| Agent 间通信 | A2A (Agent-to-Agent Protocol) |
-| 用例格式 | pytest（`.py`） |
-| 外部依赖 | AIDevOps Agent（通过 A2A 协议对接） |
-| 项目管理 | pyproject.toml + setuptools |
+| 技术 | 用途 | 作用   |
+|------|------|---------|
+| **LangGraph** | Agent 编排引擎 | StateGraph 有状态图 + Checkpointer 多轮记忆 + InMemoryStore 长期记忆 + `graph.stream()` 节点级流式事件 |
+| **DeepAgents** | Agent 框架 | `create_deep_agent()` 一行代码出 agent，内置 Filesystem 中间件 + Subagent 调度 + HITL 中断机制 |
+| **MCP** (Model Context Protocol) | 外部工具接入 | HuggingFace 官方 MCP Server 的标准协议集成，npx 动态加载 `hub_repo_search` / `hub_repo_details` |
+| **RAG** (Chroma + HuggingFace) | 上下文检索 | `InMemoryVectorStore`（对齐 LangChain 官方模式） + `sentence-transformers/all-MiniLM-L6-v2` + 268 篇文档索引 |
+| **Langfuse** | 可观测性 | 自部署 Docker 容器，全链路 Trace + Token 用量追踪 + 可视化调试 |
+| **Typer + Rich** | CLI 工具 | Rich `Live` 实时节点执行树 + `Tree/Panel` 代码渲染 + HITL 终端确认 |
+| **HITL** | 人工审批 | CLI `Confirm.ask()` 计划审批 + Graph `interrupt_on` 工具中断（写文件前确认） |
+| **LangChain** | LLM 调用层 | `ChatOpenAI` 多 provider（DeepSeek/AMD/OpenAI）+ `StructuredTool` 工具封装 |
+| **HuggingFace Hub** | 模型验证 | MCP 工具确认 HF 模型是否存在及可下载，禁止凭记忆假设 |
+| **input_filter** | 输入清洗 | 控制字符过滤 + 重复字符折叠 + 全重复行去重 + Unicode NFC 规范化 + 垃圾检测 |
+| **Pytest** | 测试框架 | 单元 / 集成测试分离（`tests/unit/` + `tests/integration/`），冒烟测试自动 skip 缺密钥场景 |
+| **Makefile** | 自动化 | `make test` / `make serve` / `make smoke` / `make lint` 一行命令 |
+| **Chroma** | 向量库 | `PersistentClient` 本地落盘 + `collection.get()` 批量加载到内存 |
+| **python-dotenv** | 配置管理 | `.env` 多 provider 配置，`load_dotenv()` 统一入口 |
+
 
 ## 核心流程
 
@@ -76,48 +79,8 @@
                                     完成 ✅
 ```
 
-**9 个 LangGraph 节点**：
 
-| 节点 | 职责 |
-|------|------|
-| `requirement_parser` | 解析用户需求，提取测试目标 |
-| `context_retriever` | 从知识库 / Store 检索上下文和参考用例 |
-| `planner` | LLM 节点，拆解测试点，生成结构化用例计划 |
-| `generator` | LLM 节点，根据计划生成 pytest 代码 |
-| `execution_planner` | 规划执行方式（本地 / AIDevOps / Docker / skip） |
-| `dry_run_executor` | Dry-run 执行收集反馈 |
-| `result_parser` | 解析执行结果，判断通过 / 失败 |
-| `repairer` | LLM 节点，分析失败原因并自动修复（最多 3 轮） |
-| `finalizer` | 输出最终用例并落盘 |
 
-## 项目结构
-
-```
-TestCaseAgent/
-├── src/agent/
-│   ├── app.py          # LangGraph Studio 入口（langgraph dev 加载）
-│   ├── graph.py        # StateGraph 构建与节点编排
-│   ├── state.py        # AgentState 与 AgentContext 定义
-│   ├── nodes.py        # 各节点实现
-│   ├── tools.py        # 工具函数（文件读写等）
-│   ├── model.py        # LLM 模型初始化
-│   ├── tracing.py      # Langfuse 可观测性配置
-│   └── runner.py       # 本地运行入口
-├── etc/
-│   └── rocm_issues/    # ROCm 社区已知问题知识库（100+ Issue）
-├── doc/
-│   ├── 01_需求与用例.md
-│   ├── 02_架构与工具设计.md
-│   └── 03_开发运行与观测.md
-├── scripts/            # 辅助脚本
-├── pyproject.toml      # 项目配置与依赖
-├── requirements.txt    # pip 依赖
-├── langgraph.json      # LangGraph CLI 配置
-├── install.sh          # 一键安装脚本
-├── test_debug.py       # 调试入口
-├── .env.example        # 环境变量模板
-└── README.md
-```
 
 ## 快速开始
 
@@ -202,6 +165,43 @@ Test Case Agent 与 AIDevOps Agent 之间通过 **A2A 协议**通信：
 - 每次生成 / 执行 / 修复的链路自动上报
 - Token 用量监控与成本分析
 - 失败分析与回溯
+
+## Docker 部署
+
+```bash
+# 1. 构建并启动全部服务（agent + langfuse + postgres + clickhouse + redis + minio）
+docker-compose up -d
+
+# 2. 只启动 agent（依赖外部 langfuse）
+docker-compose up -d agent
+
+# 3. 查看日志
+docker-compose logs -f agent
+
+# 4. 停止
+docker-compose down
+```
+
+| 服务 | 端口 | 说明 |
+|------|------|------|
+| agent | `2024` | LangGraph API（`langgraph dev`） |
+| langfuse | `3000` | 可观测性 Tracing UI |
+| postgres | `5432` | 持久化存储（仅 localhost 可访问） |
+| clickhouse | `8123` / `9000` | 分析数据库（仅 localhost 可访问） |
+| redis | `6379` | 缓存与队列（仅 localhost 可访问） |
+| minio | `9090` | S3 兼容对象存储（仅 localhost 可访问） |
+
+**首次启动后配置 Langfuse：**
+
+1. 打开 `http://localhost:3000` → 注册账号
+2. Settings → API Keys → Create API Key
+3. 将 `Public Key` / `Secret Key` 填入 `.env`：
+   ```
+   LANGFUSE_PUBLIC_KEY="pk-lf-..."
+   LANGFUSE_SECRET_KEY="sk-lf-..."
+   LANGFUSE_BASE_URL="http://langfuse:3000"
+   ```
+4. 重启 agent：`docker-compose restart agent`
 
 ## 里程碑
 
