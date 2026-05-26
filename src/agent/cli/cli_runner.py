@@ -313,6 +313,10 @@ class CLIRunner:
                             if node_name not in node_start_time:
                                 node_start_time[node_name] = time.time()
 
+                            # 始终更新耗时（确保每个节点都有耗时记录）
+                            elapsed = time.time() - node_start_time[node_name]
+                            node_timings[node_name] = elapsed
+
                             # 检查节点是否完成（通过检查是否有最终输出）
                             is_complete = _is_node_complete(node_name, node_output)
                             
@@ -321,17 +325,11 @@ class CLIRunner:
                                 label = Text()
                                 label.append(f"⚡ {node_name}", style="bold yellow")
                                 label.append(" 执行中...", style="dim")
+                                label.append(f" [{elapsed:.2f}s]", style="bold blue")
                                 node_branches[node_name].label = label
                                 live.update(tree)
-                                
-                                # 显示实时耗时
-                                elapsed = time.time() - node_start_time[node_name]
-                                node_timings[node_name] = elapsed
                             else:
-                                # 节点完成，计算最终耗时
-                                elapsed = time.time() - node_start_time[node_name]
-                                node_timings[node_name] = elapsed
-
+                                # 节点完成，显示最终状态
                                 summary = _extract_summary(node_name, node_output)
                                 self.outputs[node_name] = summary
                                 if summary:
