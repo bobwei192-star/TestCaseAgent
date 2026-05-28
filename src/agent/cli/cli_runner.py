@@ -13,12 +13,15 @@ from ..state import AgentContext
 from ..tracing import flush_langfuse
 from ..input_filter import clean_input, is_meaningful
 from ..message_utils import get_message_content
+from ..logging_config import get_logger
+
+logger = get_logger("cli_runner")
 
 console = Console()
 
 NODE_NAMES = [
     "requirement_parser",
-    "context_retriever",
+    # "context_retriever",  # 暂时移除，减少耗时
     "planner",
     "generator",
     "sandbox_executor",
@@ -26,7 +29,7 @@ NODE_NAMES = [
 
 NODE_OUTPUT_KEYS = {
     "requirement_parser": "parsed_requirement",
-    "context_retriever": "context",
+    # "context_retriever": "context",  # 暂时移除
     "planner": "case_plan",
     "generator": "generated_code",
     "sandbox_executor": "execution_result",
@@ -378,6 +381,9 @@ class CLIRunner:
         console.print("\n")
         console.print("[bold blue]⏱️ 执行节点汇总[/bold blue]")
         console.print("-" * 60)
+        
+        # 收集节点耗时统计用于日志
+        timing_stats = []
         for node_name in NODE_NAMES:
             if node_name in node_results:
                 result = node_results[node_name]
@@ -385,13 +391,39 @@ class CLIRunner:
                 elapsed = result["elapsed"]
                 summary = result["summary"]
                 console.print(f"  {status_icon} {node_name:<22} {elapsed:>6.2f}s  {summary[:50]}")
+                timing_stats.append({
+                    "node": node_name,
+                    "elapsed": round(elapsed, 2),
+                    "status": "failed" if result["failed"] else "success",
+                    "summary": summary[:50]
+                })
             elif node_name in node_timings:
                 console.print(f"  ⏳ {node_name:<22} {node_timings[node_name]:>6.2f}s  (未完成)")
+                timing_stats.append({
+                    "node": node_name,
+                    "elapsed": round(node_timings[node_name], 2),
+                    "status": "incomplete",
+                    "summary": "未完成"
+                })
             else:
                 console.print(f"  ○ {node_name:<22} {'N/A':>6}  (未执行)")
+                timing_stats.append({
+                    "node": node_name,
+                    "elapsed": 0,
+                    "status": "not_executed",
+                    "summary": "未执行"
+                })
         console.print("-" * 60)
         console.print(f"  {'总耗时':<22} {total_time:>6.2f}s")
         console.print()
+        
+        # 记录耗时统计到日志
+        logger.info(
+            "cli_run_complete",
+            total_elapsed=round(total_time, 2),
+            node_timings=timing_stats,
+            prompt=prompt[:50] if prompt else ""
+        )
 
         try:
             full_state = self.graph.get_state(self.config)

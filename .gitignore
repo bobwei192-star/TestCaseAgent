@@ -12,7 +12,26 @@ wheels/
 .langgraph_api
 .llm_models
 .models
+
 # Node.js / npm / pnpm
 .node/
 .npm-cache/
 node_modules/
+
+# Test & pytest
+.pytest_cache/
+report.html
+test_case_agent.log
+
+# Generated / runtime output
+output/
+test_case/
+chroma_langchain_db/
+chroma_db/
+llm_model/
+
+# Git backup
+.git.bak/
+
+# Debug / temp files
+a.py

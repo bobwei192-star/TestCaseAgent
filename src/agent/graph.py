@@ -16,7 +16,7 @@ from .tools import TOOLS
 
 from .state import AgentState, AgentContext
 from .nodes import (
-    context_retriever,
+    # context_retriever,  # 暂时注释，减少耗时
     generator,
     planner,
     requirement_parser,
@@ -128,15 +128,16 @@ def build_graph(
 
     # 注册各处理节点
     builder.add_node("requirement_parser", requirement_parser_with_agent)
-    builder.add_node("context_retriever", context_retriever)
+    # builder.add_node("context_retriever", context_retriever)  # 暂时注释，减少耗时
     builder.add_node("planner", planner_with_agent)
     builder.add_node("generator", generator_with_model)
     builder.add_node("sandbox_executor", sandbox_executor, retry_policy=SANDBOX_RETRY_POLICY)
 
     # 定义节点间的线性边（顺序执行流）
     builder.add_edge(START, "requirement_parser")
-    builder.add_edge("requirement_parser", "context_retriever")
-    builder.add_edge("context_retriever", "planner")
+    # builder.add_edge("requirement_parser", "context_retriever")  # 跳过 context_retriever
+    # builder.add_edge("context_retriever", "planner")
+    builder.add_edge("requirement_parser", "planner")  # 直接从 requirement_parser 到 planner
     builder.add_edge("planner", "generator")
     builder.add_edge("generator", "sandbox_executor")
 
