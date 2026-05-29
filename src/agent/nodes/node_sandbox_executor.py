@@ -18,12 +18,17 @@ from __future__ import annotations
 import os
 from typing import Any
 
+from langchain_core.messages import AIMessage
+
 from ..sandbox import CommandResult, SandboxConfig, build_sandbox_client
 from ..sandbox.feedback import build_feedback
 from ..sandbox import strategy as sandbox_strategy
 from ..sandbox.strategy import StrategyFactory
 from ..state import AgentState
 from ..intent_router import IntentType
+from ..logging_config import get_logger
+
+_logger = get_logger("nodes.sandbox_executor")
 
 _REMOTE_DIR = "/tmp/testcase_agent"
 _REMOTE_TEST_FILE = f"{_REMOTE_DIR}/test_generated.py"
@@ -62,7 +67,7 @@ def _build_config(raw_config: dict[str, Any] | None) -> SandboxConfig:
         remote_host=str(
             config.get("remote_host")
             or os.environ.get("TEST_CASE_AGENT_REMOTE_HOST")
-            or "10.67.69.34"
+            or ""
         ),
         remote_user=str(
             config.get("remote_user")
@@ -72,7 +77,7 @@ def _build_config(raw_config: dict[str, Any] | None) -> SandboxConfig:
         remote_password=str(
             config.get("remote_password")
             or os.environ.get("TEST_CASE_AGENT_REMOTE_PASSWORD")
-            or "0"
+            or ""
         ),
         remote_work_dir=str(
             config.get("remote_work_dir")
@@ -115,6 +120,14 @@ def _failure_update(
     stderr = command_result.stderr if command_result else ""
     exit_code = command_result.exit_code if command_result else 1
 
+    _logger.warning(
+        "sandbox_failure",
+        stage=stage,
+        error=error,
+        retry=retry_count,
+        max_retries=max_retries,
+    )
+
     return {
         "execution_result": {
             "status": "failed",
@@ -132,7 +145,7 @@ def _failure_update(
         "feedback": feedback,
         "error_log": [f"[{stage}] {error}"],
         "sandbox_id": sandbox_id,
-        "messages": [{"role": "assistant", "content": feedback}],
+        "messages": [AIMessage(content=feedback)],
     }
 
 
@@ -148,7 +161,7 @@ def sandbox_executor(state: AgentState) -> dict:
 
     # 获取意图信息
     parsed_intent: IntentType = state.get("parsed_intent", "GENERATE")
-    print(f"[sandbox_executor] Intent: {parsed_intent}")
+    _logger.info("sandbox_executor_start", intent=parsed_intent)
 
     # 查询类意图不需要执行
     if parsed_intent in ["DIAGNOSE", "COVERAGE", "PROBE"]:
@@ -159,12 +172,7 @@ def sandbox_executor(state: AgentState) -> dict:
                 "message": f"意图 {parsed_intent} 是查询类，无需执行沙盒测试",
             },
             "feedback": "",
-            "messages": [
-                {
-                    "role": "assistant",
-                    "content": f"查询类意图 {parsed_intent}，跳过沙盒执行。",
-                }
-            ],
+            "messages": [AIMessage(content=f"查询类意图 {parsed_intent}，跳过沙盒执行。")],
         }
 
     # 获取保存的文件路径
@@ -183,6 +191,7 @@ def sandbox_executor(state: AgentState) -> dict:
     returncode = strategy_result.get("returncode", 1)
 
     if status == "success":
+        _logger.info("sandbox_success", intent=parsed_intent)
         return {
             "execution_result": {
                 "status": "success",
@@ -195,12 +204,7 @@ def sandbox_executor(state: AgentState) -> dict:
                 "duration_seconds": 0.0,
             },
             "feedback": "",
-            "messages": [
-                {
-                    "role": "assistant",
-                    "content": f"{parsed_intent} 执行成功。",
-                }
-            ],
+            "messages": [AIMessage(content=f"{parsed_intent} 执行成功。")],
         }
     else:
         errors = strategy_result.get("errors", [])

@@ -4,6 +4,7 @@
 - 支持多种意图：GENERATE/APPEND/UPDATE/REFACTOR/EXECUTE_EXTERNAL/DIAGNOSE/COVERAGE/PROBE/ENV_BUILD
 - 根据意图选择不同的提示词模板
 - ENV_BUILD 意图生成 Dockerfile，其他意图生成测试代码
+- 生成代码后自动进行安全审查（#40）
 """
 
 import os
@@ -11,16 +12,21 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any
 
+from langchain_core.messages import HumanMessage, AIMessage
 from langgraph.runtime import Runtime
 
 from ..prompts import get_generator_prompt, get_prompt_by_template
 from ..state import AgentState, AgentContext
 from ..code_output import parse_llm_response
+from ..code_security import review_code
 from ..intent_router import IntentType
+from ..logging_config import get_logger
 from .utils import (
     _validate_real_test_code,
     _looks_like_python_code,
 )
+
+_logger = get_logger("nodes.generator")
 
 
 def get_llm(model: Any = None) -> Any:
@@ -51,20 +57,20 @@ def _save_test_file(code: str) -> str:
     with open(filepath, "w", encoding="utf-8") as f:
         f.write(code)
 
-    print(f"\n[DEBUG generator] ✅ 测试文件已保存: {filepath}")
+    _logger.info("test_file_saved", filepath=filepath)
     return filepath
 
 
 def generator(state: AgentState, runtime: Any = None, model: Any = None) -> dict:
     """
     使用底层 ChatOpenAI model 直接调用，避免 Agent 的 HITL 拦截。
-    
+
     根据意图选择不同的生成策略：
     - GENERATE/APPEND/UPDATE/REFACTOR: 生成测试代码
     - ENV_BUILD: 生成 Dockerfile
     - EXECUTE_EXTERNAL: 生成外部执行脚本
     - DIAGNOSE/COVERAGE/PROBE: 查询类，不生成代码
-    
+
     Args:
         model: 底层 ChatOpenAI 实例（从 graph.py 传入）
     """
@@ -74,15 +80,16 @@ def generator(state: AgentState, runtime: Any = None, model: Any = None) -> dict
     parsed_intent: IntentType = state.get("parsed_intent", "GENERATE")
     template_name = state.get("template_name", "template_a")
 
-    print(f"\n{'=' * 60}")
-    print(f"[DEBUG generator] Intent: {parsed_intent}, Template: {template_name}")
-    print(f"[DEBUG generator] case_plan length: {len(state.get('case_plan', ''))} chars")
-    print(f"[DEBUG generator] case_plan preview: {state.get('case_plan', '')[:100]}...")
-    
+    _logger.info(
+        "generator_start",
+        intent=parsed_intent,
+        template=template_name,
+        plan_len=len(state.get("case_plan", "")),
+    )
+
     # 检查状态完整性
     if not state.get("case_plan"):
-        print(f"[DEBUG generator] ⚠️ WARNING: case_plan is empty or None!")
-        print(f"[DEBUG generator] Available state keys: {list(state.keys())}")
+        _logger.warning("generator_empty_plan", state_keys=list(state.keys()))
 
     # 意图特定的记忆搜索
     memories = []
@@ -94,29 +101,20 @@ def generator(state: AgentState, runtime: Any = None, model: Any = None) -> dict
             memories = memory.search("generations", query=state.get("case_plan", ""), limit=2)
         raw_hints = memory.format_hints(memories)
         memory_hints = raw_hints if isinstance(raw_hints, str) else ""
-
-    try:
-        print(f"[DEBUG generator] Retrieved {len(memories)} memories:")
-        for i, m in enumerate(memories):
-            data = m.value.get("data", "")[:100] if hasattr(m, "value") else str(m)[:100]
-            print(f"  [{i}] key={m.key}, data={data}...")
-    except Exception:
-        pass
-    print(f"[DEBUG generator] Formatted hints length: {len(memory_hints) if isinstance(memory_hints, str) else '?'} chars")
-    print(f"{'=' * 60}\n")
+        _logger.debug("generator_memories", count=len(memories))
 
     # ========== 历史代码处理（修改/追加模式） ==========
     _MAX_PREVIOUS_CODE_CHARS = 5000
     previous_code = state.get("generated_code") or state.get("code", "")
     previous_code_hint = ""
-    
+
     # 根据意图确定操作模式
     intent_to_action = {
         "APPEND": ("补充/追加", "保留所有历史测试函数，在其下方追加新函数"),
         "UPDATE": ("修改", "保留所有未修改的测试函数，只修改指定的部分"),
         "REFACTOR": ("重构", "保留测试逻辑，优化代码结构"),
     }
-    
+
     action_desc, keep_desc = intent_to_action.get(parsed_intent, ("修改或补充", "保留所有历史测试函数，根据需求修改或追加"))
 
     if previous_code:
@@ -161,42 +159,53 @@ def generator(state: AgentState, runtime: Any = None, model: Any = None) -> dict
         )
 
     # ========== 直接调用底层 model ==========
-    print(f"\n[generator] 直接调用底层 ChatOpenAI model...")
+    _logger.info("generator_invoke_model")
     try:
         effective_model = get_llm(model)
         if effective_model is None:
             raise RuntimeError("generator 需要传入底层 model 实例")
-        
-        response = effective_model.invoke([{"role": "user", "content": prompt}])
-        
+
+        response = effective_model.invoke([HumanMessage(content=prompt)])
+
         if hasattr(response, "content"):
             reply = response.content
         else:
             reply = str(response)
 
-        print(f"[generator] Model response: {len(reply)} chars")
+        _logger.debug("generator_model_response", chars=len(reply))
 
     except Exception as exc:
-        print(f"[generator] ❌ Model invoke 失败: {type(exc).__name__}: {exc}")
-        import traceback
-        traceback.print_exc()
+        _logger.exception("generator_model_failed", error=str(exc))
         return {
             "code": "",
             "generated_code": "",
             "explanation": f"Error: {exc}",
             "validation_result": {"status": "failed", "errors": [str(exc)]},
-            "messages": [{"role": "assistant", "content": f"生成失败: {exc}"}],
+            "messages": [AIMessage(content=f"生成失败: {exc}")],
         }
-
-    print(f"\n[DEBUG generator] Raw reply length: {len(reply)} chars")
-    print(f"[DEBUG generator] Raw reply preview: {reply[:200]}...")
 
     # 使用 Pydantic 友好的解析器（优先 JSON，失败回退正则）
     generated_code, explanation, extraction_status = parse_llm_response(reply)
-    print(f"[DEBUG generator] Extracted code length: {len(generated_code)} chars")
-    print(f"[DEBUG generator] Extraction status: {extraction_status}")
-    if explanation:
-        print(f"[DEBUG generator] Explanation length: {len(explanation)} chars")
+    _logger.debug("generator_code_extracted", code_len=len(generated_code), status=extraction_status)
+
+    # 安全审查（#40）：检查生成代码中的危险调用
+    security_result = review_code(generated_code, sandbox_mode=True)
+    if security_result.severity == "critical":
+        _logger.warning(
+            "generator_security_blocked",
+            issues=security_result.issues,
+        )
+        return {
+            "code": "",
+            "generated_code": "",
+            "explanation": f"代码安全审查未通过: {'; '.join(security_result.issues)}",
+            "validation_result": {
+                "status": "failed",
+                "quality_gate": "security_review",
+                "errors": security_result.issues,
+            },
+            "messages": [AIMessage(content=f"安全审查拦截: {'; '.join(security_result.issues)}")],
+        }
 
     # 验证新代码
     if not generated_code:
@@ -219,8 +228,10 @@ def generator(state: AgentState, runtime: Any = None, model: Any = None) -> dict
 
     if validation_result["status"] == "failed":
         if old_code and _looks_like_python_code(old_code)[0]:
-            print(
-                f"\n[DEBUG generator] 新代码验证失败({len(generated_code)} chars)，保留上一轮有效代码({len(old_code)} chars)"
+            _logger.warning(
+                "generator_validation_failed_keep_old",
+                new_len=len(generated_code),
+                old_len=len(old_code),
             )
             final_code = old_code
             validation_result["errors"].insert(
@@ -228,15 +239,14 @@ def generator(state: AgentState, runtime: Any = None, model: Any = None) -> dict
                 f"New generation failed ({extraction_status}). Kept previous {len(old_code)} chars code.",
             )
         else:
-            print(f"\n[DEBUG generator] 新代码验证失败，且无旧代码可保留")
+            _logger.warning("generator_validation_failed_no_old")
 
     # 保存文件
     saved_filepath = None
     if final_code:
         saved_filepath = _save_test_file(final_code)
-        print(f"\n[DEBUG generator] 📁 文件已保存: {saved_filepath}")
     else:
-        print(f"\n[DEBUG generator] ⚠️ 没有有效代码可保存")
+        _logger.warning("generator_no_valid_code")
 
     # 写入记忆
     if memory is not None:
@@ -248,7 +258,7 @@ def generator(state: AgentState, runtime: Any = None, model: Any = None) -> dict
         # Also call save_memory for backward compatibility
         if hasattr(memory, "save_memory"):
             memory.save_memory(data=final_code, key=memory_key)
-        print(f"\n[DEBUG generator] ✅ Wrote memory: key={memory_key}")
+        _logger.info("generator_memory_saved", key=memory_key)
 
     return {
         "code": final_code,
@@ -256,5 +266,5 @@ def generator(state: AgentState, runtime: Any = None, model: Any = None) -> dict
         "explanation": explanation,
         "validation_result": validation_result,
         "saved_filepath": saved_filepath,
-        "messages": [{"role": "assistant", "content": reply}],
+        "messages": [AIMessage(content=reply)],
     }

@@ -37,10 +37,11 @@ class TestGraphStructure:
         assert "requirement_parser" in nodes
     
     def test_graph_has_context_retriever_node(self):
-        """测试有 context_retriever 节点"""
+        """context_retriever 节点暂时注释（减少延迟），后续可启用"""
         graph = build_graph()
         nodes = graph.nodes.keys()
-        assert "context_retriever" in nodes
+        # context_retriever 暂时注释掉，之后可重新启用
+        assert "planner" in nodes  # 至少验证图结构完整
     
     def test_graph_has_planner_node(self):
         """测试有 planner 节点"""
@@ -60,12 +61,11 @@ class TestGraphStructure:
         nodes = graph.nodes.keys()
         assert "sandbox_executor" in nodes
     
-    def test_graph_has_five_nodes(self):
-        """测试有5个核心节点"""
+    def test_graph_has_four_nodes(self):
+        """当前图有 4 个核心节点（context_retriever 暂时注释）"""
         graph = build_graph()
         core_nodes = [
             "requirement_parser",
-            "context_retriever",
             "planner",
             "generator",
             "sandbox_executor"

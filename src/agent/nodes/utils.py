@@ -1,14 +1,35 @@
+"""Agent 节点通用工具函数 —— 统一消息处理、LLM 调用、代码提取等。
+
+函数：
+- _message_content: 统一获取消息内容
+- _last_user_message: 获取最后一条用户消息
+- _invoke_llm: 标准 LLM 调用（使用 BaseMessage）
+- _looks_like_python_code: 检查代码是否像 Python
+- _fix_code_by_truncation: 截断修复代码
+- _extract_code: 从 LLM 回复中提取代码
+- _validate_real_test_code: 验证测试代码有效性
+- _memory_namespace: 构建记忆命名空间
+- _format_memories: 格式化记忆列表
+"""
+
 import ast
 import re
 from typing import Any
 
+from langchain_core.messages import HumanMessage
+
 from ..state import AgentState, AgentContext
+from ..logging_config import get_logger
+
+_logger = get_logger("nodes.utils")
 
 
 def _message_content(message: Any) -> str:
+    if hasattr(message, "content"):
+        return str(message.content)
     if isinstance(message, dict):
         return str(message.get("content", ""))
-    return str(getattr(message, "content", ""))
+    return str(message)
 
 
 def _last_user_message(state: AgentState) -> str:
@@ -16,16 +37,16 @@ def _last_user_message(state: AgentState) -> str:
     if not msgs:
         return ""
     for message in reversed(msgs):
-        if isinstance(message, dict):
+        if hasattr(message, "type"):
+            role = message.type
+            if role in ("user", "human"):
+                content = getattr(message, "content", "")
+                if content:
+                    return str(content)
+        elif isinstance(message, dict):
             role = message.get("role", "")
             if role in ("user", "human"):
                 content = message.get("content", "")
-                if content:
-                    return str(content)
-        else:
-            role = getattr(message, "type", "") or getattr(message, "role", "")
-            if role in ("user", "human"):
-                content = getattr(message, "content", "")
                 if content:
                     return str(content)
     return _message_content(msgs[-1])
@@ -37,42 +58,22 @@ def _invoke_llm(agent: Any, prompt: str, node_name: str = "LLM") -> str:
             "LLM node requires a model-backed agent. Pass model to build_graph()."
         )
 
-    print(f"\n[{node_name}] Invoking LLM ({len(prompt)} chars prompt)...")
+    _logger.info("invoke_llm_start", node=node_name, prompt_len=len(prompt))
     try:
-        result = agent.invoke({"messages": [{"role": "user", "content": prompt}]})
+        result = agent.invoke({"messages": [HumanMessage(content=prompt)]})
         last_msg = result["messages"][-1]
         content = _message_content(last_msg)
-        print(f"[{node_name}] LLM response: {len(content)} chars")
+        _logger.info("invoke_llm_done", node=node_name, response_len=len(content))
         return content
     except PermissionError:
-        import sys
-
-        print(f"\n[{node_name}] ❌ 文件写入权限不足", file=sys.stderr)
+        _logger.error("invoke_llm_permission_error", node=node_name)
         raise
-    except Exception:
-        import os, sys, traceback
-
-        exc_name = type(sys.exc_info()[1]).__name__
-        exc_msg = str(sys.exc_info()[1])[:200]
-        provider = os.environ.get("TEST_CASE_AGENT_MODEL_PROVIDER", "unknown")
-        model = (
-            os.environ.get("LLM_MODEL") or os.environ.get("DEEPSEEK_MODEL") or "unknown"
-        )
-        base_url = (
-            os.environ.get("LLM_BASE_URL")
-            or os.environ.get("DEEPSEEK_BASE_URL")
-            or "unknown"
-        )
-        print(
-            f"\n[{node_name}] ❌ Agent invoke 失败: {exc_name}: {exc_msg}",
-            file=sys.stderr,
-        )
-        print(
-            f"  provider={provider}  model={model}  base_url={base_url}",
-            file=sys.stderr,
-        )
-        traceback.print_exc(file=sys.stderr)
+    except (ConnectionError, TimeoutError) as e:
+        _logger.error("invoke_llm_network_error", node=node_name, error=str(e))
         raise
+    except Exception as e:
+        _logger.exception("invoke_llm_failed", node=node_name, error=str(e)[:200])
+        raise RuntimeError(f"[{node_name}] LLM invoke 失败: {type(e).__name__}: {e}") from e
 
 
 def _looks_like_python_code(text: str) -> tuple[bool, str]:

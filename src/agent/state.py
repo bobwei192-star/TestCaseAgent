@@ -8,18 +8,22 @@
 - typing: Python 类型注解（Annotated、TypedDict）
 - operator: 提供 operator.add 用于状态字段的累加合并策略
 - dataclasses: 用于定义 AgentContext 数据类
+- langgraph.graph.message: 标准消息合并 reducer
 """
 
 import operator
 from dataclasses import dataclass
 from typing import Annotated, Any, TypedDict
 
+from langchain_core.messages import BaseMessage
+from langgraph.graph.message import add_messages
+
 
 class AgentState(TypedDict, total=False):
     """LangGraph 图运行时各节点共享的状态字典。
 
     字段说明：
-    - messages: 对话消息列表，使用 operator.add 策略（追加合并）
+    - messages: 对话消息列表，使用 add_messages reducer（标准 BaseMessage 追加合并）
     - requirement: 用户原始需求文本
     - parsed_requirement: 经 LLM 解析后的结构化需求
     - context: RAG 检索到的上下文信息
@@ -30,9 +34,14 @@ class AgentState(TypedDict, total=False):
     - sandbox_*: 沙盒执行循环相关字段
     """
 
-    messages: Annotated[list, operator.add]  # 对话消息，追加合并
+    messages: Annotated[list[BaseMessage], add_messages]  # 对话消息，标准合并
     requirement: str  # 用户原始需求
     parsed_requirement: str  # 解析后的结构化需求
+    parsed_intent: str  # 解析后的意图类型
+    intent: str  # 意图类型（兼容字段）
+    intent_cluster: str  # 意图聚类
+    cluster: str  # 意图聚类（兼容字段）
+    template_name: str  # 提示词模板名称
     context: dict[str, Any]  # RAG 检索上下文
     case_plan: str  # 测试计划
     code: str  # 代码（兼容旧字段）
@@ -55,6 +64,7 @@ class AgentState(TypedDict, total=False):
     max_sandbox_retries: int  # 最大沙盒重试次数
     feedback: str  # 沙盒失败后的反馈信息，用于重新规划
     error_log: Annotated[list[str], operator.add]  # 错误日志（累加）
+    session_id: str  # 会话 ID
 
 
 @dataclass
@@ -72,3 +82,4 @@ class AgentContext:
 
     user_id: str = "anonymous"  # 默认值兼容 Chat UI 无 user_id 的场景
     project_id: str | None = None
+

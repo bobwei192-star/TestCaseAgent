@@ -15,7 +15,7 @@ RUN pip install --upgrade pip -q \
         langchain-community langchain-text-splitters \
         langchain-huggingface langchain-chroma chromadb \
         sentence-transformers \
-        torch --index-url https://download.pytorch.org/whl/cpu
+        torch --extra-index-url https://download.pytorch.org/whl/cpu
 
 COPY . .
 RUN pip install -e . --no-deps

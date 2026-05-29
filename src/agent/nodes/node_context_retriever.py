@@ -30,10 +30,13 @@ _LOCAL_MODEL_DIR = Path(os.environ.get(
 # 模型名称
 _EMBEDDING_MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
 
-# 嵌入模型实例（全局缓存）
+# 嵌入模型实例（线程安全懒加载单例）
+import threading
+
 _embeddings: Any | None = None
 _vectorstore: InMemoryVectorStore | None = None
 _load_error: str | None = None
+_lock = threading.Lock()
 
 
 def _download_model_with_fallback() -> str | None:

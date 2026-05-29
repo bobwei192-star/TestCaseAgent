@@ -230,7 +230,7 @@ class TestDependenciesImportable:
 
         g = build_graph()
         nodes = [n for n in g.get_graph().nodes.keys() if not n.startswith("__")]
-        assert len(nodes) == 5, f"预期 5 个节点，实际: {len(nodes)}: {nodes}"
+        assert len(nodes) == 4, f"预期 4 个节点，实际: {len(nodes)}: {nodes}"
 
 
 if __name__ == "__main__":

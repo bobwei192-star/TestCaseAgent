@@ -129,8 +129,10 @@ class LocalDockerPytestStrategy(ExecutionStrategy):
                 text=True
             )
         else:
+            # 使用 shlex.split() 正确解析 shell 引号，
+            # 避免 command.split() 把单引号字符串拆碎
             result = subprocess.run(
-                command.split(),
+                shlex.split(command),
                 capture_output=True,
                 text=True
             )

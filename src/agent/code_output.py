@@ -7,13 +7,11 @@ from pydantic import BaseModel, Field
 class CodeGenerationOutput(BaseModel):
     """LLM 代码生成的结构化输出模型。"""
 
+    model_config = {"extra": "ignore"}
+
     code: str = Field(description="生成的 pytest 测试代码")
     explanation: str = Field(description="代码的说明和注释", default="")
     status: str = Field(description="生成状态: success 或 failed", default="success")
-
-    class Config:
-        # 允许额外字段被忽略
-        extra = "ignore"
 
 
 def parse_llm_response(response: str) -> tuple[str, str, str]:

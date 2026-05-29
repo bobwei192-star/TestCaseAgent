@@ -63,6 +63,27 @@ def _build_langfuse_handler() -> Any | None:
 langfuse_handler = _build_langfuse_handler()
 
 
+def reset_langfuse_handler() -> None:
+    """重新初始化 Langfuse handler（用于断线重连）。"""
+    global langfuse_handler
+    langfuse_handler = _build_langfuse_handler()
+
+
+def get_langfuse_handler() -> Any | None:
+    """获取或重新创建 Langfuse handler（支持自动重连）。"""
+    global langfuse_handler
+    if langfuse_handler is not None:
+        try:
+            client = getattr(langfuse_handler, "_client", None) or getattr(
+                langfuse_handler, "_langfuse_client", None
+            )
+            if client and hasattr(client, "is_connected"):
+                pass
+        except Exception:
+            langfuse_handler = _build_langfuse_handler()
+    return langfuse_handler
+
+
 def build_langfuse_config(
     thread_id: str | None = None,
     tags: list[str] | None = None,

@@ -6,10 +6,7 @@ __pycache__
 .ruff_cache
 output
 etc
-tests
-**/test_*
 node_modules
 .pnpm-store
 .DS_Store
-*.md
 *.log

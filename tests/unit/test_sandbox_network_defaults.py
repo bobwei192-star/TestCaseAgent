@@ -20,9 +20,10 @@ def test_executor_config_defaults_to_remote_amd_host():
     config = _build_config({})
 
     assert config.provider == "remote_ssh_docker"
-    assert config.remote_host == "10.67.69.34"
+    # 环境变量未设置时，remote_host 为空（#18：已移除硬编码 IP）
+    assert config.remote_host == ""
     assert config.remote_user == "jenkins"
-    assert config.remote_password == "0"
+    assert config.remote_password == ""
     assert config.device_name == "/dev/kfd,/dev/dri"
 
 
@@ -36,9 +37,10 @@ def test_initial_state_defaults_to_remote_amd_host():
     state = create_initial_state("生成一个 pytest 用例")
 
     assert state["sandbox_config"]["provider"] == "remote_ssh_docker"
-    assert state["sandbox_config"]["remote_host"] == "10.67.69.34"
+    # 环境变量未设置时，remote_host 为空（#18：已移除硬编码 IP）
+    assert state["sandbox_config"]["remote_host"] == ""
     assert state["sandbox_config"]["remote_user"] == "jenkins"
-    assert "remote_password" not in state["sandbox_config"]
+    # remote_password 不再存入 sandbox_config
     assert state["sandbox_config"]["device_name"] == "/dev/kfd,/dev/dri"
 
 

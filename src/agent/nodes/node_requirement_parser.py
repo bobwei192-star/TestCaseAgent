@@ -1,8 +1,13 @@
 from typing import Any, Optional
+from langchain_core.messages import HumanMessage, AIMessage
+
 from ..state import AgentState, AgentContext
 from ..prompts import get_requirement_parser_prompt
 from ..intent_router import route_intent, get_intent_cluster, get_template_name
+from ..logging_config import get_logger
 from .utils import _last_user_message
+
+_logger = get_logger("nodes.requirement_parser")
 
 
 def get_llm(agent: Any = None) -> Any:
@@ -28,15 +33,20 @@ def requirement_parser(
     intent_cluster = get_intent_cluster(parsed_intent)
     template_name = get_template_name(parsed_intent)
 
-    print(f"[意图识别] raw_requirement: {raw_requirement[:50]}...")
-    print(f"[意图识别] intent: {parsed_intent}, cluster: {intent_cluster}, template: {template_name}")
+    _logger.info(
+        "intent_detected",
+        raw=raw_requirement[:50],
+        intent=parsed_intent,
+        cluster=intent_cluster,
+        template=template_name,
+    )
 
     prompt = get_requirement_parser_prompt(raw_requirement)
 
     # Use get_llm so tests can patch this module's get_llm
     llm = get_llm(agent)
     if llm is not None:
-        llm_result = llm.invoke({"messages": [{"role": "user", "content": prompt}]})
+        llm_result = llm.invoke({"messages": [HumanMessage(content=prompt)]})
     else:
         from .utils import _invoke_llm
         llm_result = _invoke_llm(agent, prompt, node_name="requirement_parser")
@@ -59,8 +69,6 @@ def requirement_parser(
             parsed_requirement=content,
         )
 
-    msg = {"role": "assistant", "content": content}
-
     return {
         "requirement": raw_requirement,
         "parsed_requirement": content,
@@ -69,5 +77,5 @@ def requirement_parser(
         "intent_cluster": intent_cluster,
         "cluster": intent_cluster,
         "template_name": template_name,
-        "messages": [msg],
+        "messages": [AIMessage(content=content)],
     }

@@ -206,10 +206,13 @@ class TestPlanner:
         mock_get_llm.return_value = mock_llm
         
         mock_mem = Mock()
+        mock_mem.search.return_value = []
+        mock_mem.format_hints.return_value = ""
         mock_mem.get_relevant_memories.return_value = []
         mock_get_mem.return_value = mock_mem
         
         state = {
+            "requirement": "test req",
             "parsed_requirement": "test spec",
             "intent": "GENERATE",
             "raw_requirement": "test req"
@@ -227,10 +230,13 @@ class TestPlanner:
         mock_get_llm.return_value = mock_llm
         
         mock_mem = Mock()
+        mock_mem.search.return_value = []
+        mock_mem.format_hints.return_value = ""
         mock_mem.get_relevant_memories.return_value = []
         mock_get_mem.return_value = mock_mem
         
         state = {
+            "requirement": "",
             "parsed_requirement": "",
             "intent": "GENERATE",
             "raw_requirement": ""
@@ -248,10 +254,13 @@ class TestPlanner:
         mock_get_llm.return_value = mock_llm
         
         mock_mem = Mock()
+        mock_mem.search.return_value = []
+        mock_mem.format_hints.return_value = ""
         mock_mem.get_relevant_memories.return_value = []
         mock_get_mem.return_value = mock_mem
         
         state = {
+            "requirement": "req",
             "parsed_requirement": "spec",
             "intent": "GENERATE",
             "raw_requirement": "req",
@@ -270,11 +279,14 @@ class TestPlanner:
         mock_get_llm.return_value = mock_llm
         
         mock_mem = Mock()
+        mock_mem.search.return_value = []
+        mock_mem.format_hints.return_value = ""
         mock_mem.get_relevant_memories.return_value = []
         mock_get_mem.return_value = mock_mem
         
         for intent in ["GENERATE", "APPEND", "UPDATE", "REFACTOR"]:
             state = {
+                "requirement": "req",
                 "parsed_requirement": "spec",
                 "intent": intent,
                 "raw_requirement": "req"
@@ -291,11 +303,14 @@ class TestPlanner:
         mock_get_llm.return_value = mock_llm
         
         mock_mem = Mock()
+        mock_mem.search.return_value = []
+        mock_mem.format_hints.return_value = ""
         mock_mem.get_relevant_memories.return_value = []
         mock_mem.save_memory = Mock()
         mock_get_mem.return_value = mock_mem
         
         state = {
+            "requirement": "req",
             "parsed_requirement": "spec",
             "intent": "GENERATE",
             "raw_requirement": "req"
@@ -313,10 +328,13 @@ class TestPlanner:
         mock_get_llm.return_value = mock_llm
         
         mock_mem = Mock()
+        mock_mem.search.return_value = []
+        mock_mem.format_hints.return_value = ""
         mock_mem.get_relevant_memories.return_value = []
         mock_get_mem.return_value = mock_mem
         
         state = {
+            "requirement": "req",
             "parsed_requirement": "spec",
             "intent": "GENERATE",
             "raw_requirement": "req"
@@ -334,13 +352,17 @@ class TestPlanner:
         mock_get_llm.return_value = mock_llm
         
         mock_mem = Mock()
+        mock_mem.search.return_value = []
+        mock_mem.format_hints.return_value = ""
         mock_mem.get_relevant_memories.return_value = []
         mock_get_mem.return_value = mock_mem
         
         state = {
+            "requirement": "req",
             "parsed_requirement": "spec",
             "intent": "GENERATE",
-            "raw_requirement": "req"
+            "raw_requirement": "req",
+            "context": {}
         }
         # 应该直接返回，不应该抛出 interrupt 相关异常
         result = planner(state)
@@ -365,6 +387,8 @@ class TestGenerator:
         mock_get_llm.return_value = mock_llm
         
         mock_mem = Mock()
+        mock_mem.search.return_value = []
+        mock_mem.format_hints.return_value = ""
         mock_mem.get_relevant_memories.return_value = []
         mock_mem.save_memory = Mock()
         mock_get_mem.return_value = mock_mem
@@ -391,6 +415,8 @@ class TestGenerator:
         mock_get_llm.return_value = mock_llm
         
         mock_mem = Mock()
+        mock_mem.search.return_value = []
+        mock_mem.format_hints.return_value = ""
         mock_mem.get_relevant_memories.return_value = []
         mock_mem.save_memory = Mock()
         mock_get_mem.return_value = mock_mem
@@ -420,6 +446,8 @@ class TestGenerator:
         mock_get_llm.return_value = mock_llm
         
         mock_mem = Mock()
+        mock_mem.search.return_value = []
+        mock_mem.format_hints.return_value = ""
         mock_mem.get_relevant_memories.return_value = []
         mock_mem.save_memory = Mock()
         mock_get_mem.return_value = mock_mem
@@ -446,6 +474,8 @@ class TestGenerator:
         mock_get_llm.return_value = mock_llm
         
         mock_mem = Mock()
+        mock_mem.search.return_value = []
+        mock_mem.format_hints.return_value = ""
         mock_mem.get_relevant_memories.return_value = []
         mock_mem.save_memory = Mock()
         mock_get_mem.return_value = mock_mem
@@ -472,6 +502,8 @@ class TestGenerator:
         mock_get_llm.return_value = mock_llm
         
         mock_mem = Mock()
+        mock_mem.search.return_value = []
+        mock_mem.format_hints.return_value = ""
         mock_mem.get_relevant_memories.return_value = []
         mock_mem.save_memory = Mock()
         mock_get_mem.return_value = mock_mem

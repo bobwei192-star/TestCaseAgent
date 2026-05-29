@@ -2030,3 +2030,7067 @@
   "event": "Failed to export span batch code: 401, reason: Unauthorized",
   "level": "ERROR"
 }
+{
+  "raw": "写一个pytest测试用例，测试rocm-smi指令的存在性和正确性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:08:19.742245Z"
+}
+{
+  "query": "写一个pytest测试用例，测试rocm-smi指令的存在性和正确性",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:08:19.745136Z"
+}
+{
+  "event": "execution_plan_parsed",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:08:19.786992Z"
+}
+{
+  "execution_plan_status": "parsed",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:08:19.787572Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "create_intent",
+  "plan_len": 1623,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:08:19.788585Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:08:19.789125Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_100819.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:08:19.792415Z"
+}
+{
+  "raw": "写一个pytest测试用例，测试rocm-smi指令的存在性和正确性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:08:33.412003Z"
+}
+{
+  "query": "写一个pytest测试用例，测试rocm-smi指令的存在性和正确性",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:08:33.413193Z"
+}
+{
+  "event": "execution_plan_parsed",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:08:33.427409Z"
+}
+{
+  "execution_plan_status": "parsed",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:08:33.427929Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "create_intent",
+  "plan_len": 1623,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:08:33.428822Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:08:33.429312Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_100833.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:08:33.431686Z"
+}
+{
+  "raw": "测试 hipcc 编译功能",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:12:14.982880Z"
+}
+{
+  "query": "测试 hipcc 编译功能",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:12:14.985166Z"
+}
+{
+  "event": "execution_plan_parsed",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:12:15.012525Z"
+}
+{
+  "execution_plan_status": "parsed",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:12:15.013102Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "create_intent",
+  "plan_len": 1623,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:12:15.014306Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:12:15.015267Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_101215.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:12:15.019756Z"
+}
+{
+  "raw": "测试rocm-smi命令的存在性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:18:19.548493Z"
+}
+{
+  "raw": "测试rocm-smi命令的存在性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:18:19.551897Z"
+}
+{
+  "raw": "测试rocm-smi命令的存在性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:18:19.625541Z"
+}
+{
+  "raw": "测试rocm-smi命令的存在性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:18:19.628004Z"
+}
+{
+  "raw": "测试rocm-smi命令的存在性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:18:19.630509Z"
+}
+{
+  "query": "测试rocm-smi命令的存在性",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:18:19.637775Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:18:19.638982Z"
+}
+{
+  "query": "测试rocm-smi命令的存在性",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:18:19.641308Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:18:19.642114Z"
+}
+{
+  "query": "测试rocm-smi命令的存在性",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:18:19.655236Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:18:19.656637Z"
+}
+{
+  "query": "测试rocm-smi命令的存在性",
+  "feedback": "测试失败: subprocess 未找到",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:18:19.659485Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:18:19.660246Z"
+}
+{
+  "query": "测试rocm-smi命令的存在性",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:18:19.662689Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:18:19.663327Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 17,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:18:19.665374Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:18:19.665926Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:18:19.667524Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_101819.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:18:19.668531Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 4,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:18:19.671307Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:18:19.671903Z"
+}
+{
+  "passed": false,
+  "severity": "critical",
+  "issue_count": 1,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:18:19.672526Z"
+}
+{
+  "issues": [
+    "禁止使用 eval()"
+  ],
+  "event": "generator_security_blocked",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:18:19.672844Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 0,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:18:19.675302Z"
+}
+{
+  "state_keys": [
+    "messages",
+    "requirement",
+    "parsed_requirement",
+    "parsed_intent",
+    "intent",
+    "intent_cluster",
+    "cluster",
+    "template_name",
+    "context",
+    "case_plan",
+    "code",
+    "generated_code",
+    "explanation",
+    "validation_result",
+    "execution_plan",
+    "execution_result",
+    "parsed_result",
+    "repair_suggestion",
+    "final_report",
+    "retry",
+    "repair_count",
+    "saved_filepath",
+    "sandbox_config",
+    "sandbox_id",
+    "sandbox_retry_count",
+    "max_sandbox_retries",
+    "feedback",
+    "error_log",
+    "session_id"
+  ],
+  "event": "generator_empty_plan",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:18:19.675642Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:18:19.676069Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:18:19.676841Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_101819.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:18:19.677858Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 4,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:18:19.685252Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:18:19.686030Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:18:19.686895Z"
+}
+{
+  "filepath": "/tmp/pytest-of-zs/pytest-0/test_generator_saves_file0/test_generated_20260529_101819.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:18:19.687585Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 4,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:18:19.690049Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:18:19.690578Z"
+}
+{
+  "issues": [
+    "代码为空"
+  ],
+  "event": "generator_security_blocked",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:18:19.691468Z"
+}
+{
+  "stage": "missing_code",
+  "error": "generated_code is empty; sandbox execution cannot start.",
+  "retry": 0,
+  "max_retries": 3,
+  "event": "sandbox_failure",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:18:19.702028Z"
+}
+{
+  "intent": "DIAGNOSE",
+  "event": "sandbox_executor_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:18:19.704545Z"
+}
+{
+  "intent": "PROBE",
+  "event": "sandbox_executor_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:18:19.706377Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:18:19.708242Z"
+}
+{
+  "passed": false,
+  "severity": "critical",
+  "issue_count": 1,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:18:19.709823Z"
+}
+{
+  "passed": false,
+  "severity": "critical",
+  "issue_count": 1,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:18:19.711150Z"
+}
+{
+  "passed": false,
+  "severity": "critical",
+  "issue_count": 1,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:18:19.712448Z"
+}
+{
+  "index": 1,
+  "total": 2,
+  "provider": "deepseek",
+  "model": "deepseek-chat",
+  "event": "model_rotation_try",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:18:19.734344Z"
+}
+{
+  "index": 2,
+  "total": 2,
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "event": "model_rotation_try",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:18:19.735015Z"
+}
+{
+  "raw": "测试rocm-smi命令的存在性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:18.086152Z"
+}
+{
+  "raw": "测试rocm-smi命令的存在性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:18.088968Z"
+}
+{
+  "raw": "测试rocm-smi命令的存在性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:18.091260Z"
+}
+{
+  "raw": "测试rocm-smi命令的存在性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:18.093479Z"
+}
+{
+  "raw": "测试rocm-smi命令的存在性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:18.097503Z"
+}
+{
+  "query": "测试rocm-smi命令的存在性",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:18.101233Z"
+}
+{
+  "event": "execution_plan_parsed",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:18.120756Z"
+}
+{
+  "execution_plan_status": "parsed",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:18.121290Z"
+}
+{
+  "query": "测试rocm-smi命令的存在性",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:18.123735Z"
+}
+{
+  "event": "execution_plan_parsed",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:18.124963Z"
+}
+{
+  "execution_plan_status": "parsed",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:18.125274Z"
+}
+{
+  "query": "测试rocm-smi命令的存在性",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:18.127082Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:18.127680Z"
+}
+{
+  "query": "测试rocm-smi命令的存在性",
+  "feedback": "测试失败: subprocess 未找到",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:18.129909Z"
+}
+{
+  "event": "execution_plan_parsed",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:18.131902Z"
+}
+{
+  "execution_plan_status": "parsed",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:18.132246Z"
+}
+{
+  "query": "测试rocm-smi命令的存在性",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:18.135615Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:18.136400Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 17,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:18.138034Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:18.138513Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:18.140110Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_102018.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:18.140942Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 4,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:18.142483Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:18.142897Z"
+}
+{
+  "passed": false,
+  "severity": "critical",
+  "issue_count": 1,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:18.143429Z"
+}
+{
+  "issues": [
+    "禁止使用 eval()"
+  ],
+  "event": "generator_security_blocked",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:20:18.143717Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 0,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:18.156341Z"
+}
+{
+  "state_keys": [
+    "messages",
+    "requirement",
+    "parsed_requirement",
+    "parsed_intent",
+    "intent",
+    "intent_cluster",
+    "cluster",
+    "template_name",
+    "context",
+    "case_plan",
+    "code",
+    "generated_code",
+    "explanation",
+    "validation_result",
+    "execution_plan",
+    "execution_result",
+    "parsed_result",
+    "repair_suggestion",
+    "final_report",
+    "retry",
+    "repair_count",
+    "saved_filepath",
+    "sandbox_config",
+    "sandbox_id",
+    "sandbox_retry_count",
+    "max_sandbox_retries",
+    "feedback",
+    "error_log",
+    "session_id"
+  ],
+  "event": "generator_empty_plan",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:20:18.157093Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:18.157640Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:18.158506Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_102018.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:18.159322Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 4,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:18.170889Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:18.171807Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:18.172778Z"
+}
+{
+  "filepath": "/tmp/pytest-of-zs/pytest-1/test_generator_saves_file0/test_generated_20260529_102018.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:18.173474Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 4,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:18.176329Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:18.176932Z"
+}
+{
+  "new_len": 0,
+  "old_len": 144,
+  "event": "generator_validation_failed_keep_old",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:20:18.179409Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_102018.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:18.180073Z"
+}
+{
+  "stage": "missing_code",
+  "error": "generated_code is empty; sandbox execution cannot start.",
+  "retry": 0,
+  "max_retries": 3,
+  "event": "sandbox_failure",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:20:18.182276Z"
+}
+{
+  "intent": "DIAGNOSE",
+  "event": "sandbox_executor_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:18.187481Z"
+}
+{
+  "intent": "PROBE",
+  "event": "sandbox_executor_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:18.189391Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:18.191137Z"
+}
+{
+  "passed": false,
+  "severity": "critical",
+  "issue_count": 1,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:18.192590Z"
+}
+{
+  "passed": false,
+  "severity": "critical",
+  "issue_count": 1,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:18.194411Z"
+}
+{
+  "passed": false,
+  "severity": "critical",
+  "issue_count": 1,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:18.195798Z"
+}
+{
+  "index": 1,
+  "total": 2,
+  "provider": "deepseek",
+  "model": "deepseek-chat",
+  "event": "model_rotation_try",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:18.281372Z"
+}
+{
+  "index": 2,
+  "total": 2,
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "event": "model_rotation_try",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:18.281888Z"
+}
+{
+  "raw": "测试rocm-smi命令的存在性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:28.238676Z"
+}
+{
+  "raw": "测试rocm-smi命令的存在性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:28.241091Z"
+}
+{
+  "raw": "测试rocm-smi命令的存在性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:28.243035Z"
+}
+{
+  "raw": "测试rocm-smi命令的存在性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:28.245850Z"
+}
+{
+  "raw": "测试rocm-smi命令的存在性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:28.248383Z"
+}
+{
+  "query": "测试rocm-smi命令的存在性",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:28.250691Z"
+}
+{
+  "event": "execution_plan_parsed",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:28.265102Z"
+}
+{
+  "execution_plan_status": "parsed",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:28.265783Z"
+}
+{
+  "query": "测试rocm-smi命令的存在性",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:28.268415Z"
+}
+{
+  "event": "execution_plan_parsed",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:28.269464Z"
+}
+{
+  "execution_plan_status": "parsed",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:28.269744Z"
+}
+{
+  "query": "测试rocm-smi命令的存在性",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:28.271815Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:28.272482Z"
+}
+{
+  "query": "测试rocm-smi命令的存在性",
+  "feedback": "测试失败: subprocess 未找到",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:28.274463Z"
+}
+{
+  "event": "execution_plan_parsed",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:28.405208Z"
+}
+{
+  "execution_plan_status": "parsed",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:28.405671Z"
+}
+{
+  "query": "测试rocm-smi命令的存在性",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:28.408059Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:28.408652Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 17,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:28.410690Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:28.411184Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:28.412880Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_102028.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:28.413749Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 4,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:28.415336Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:28.415778Z"
+}
+{
+  "passed": false,
+  "severity": "critical",
+  "issue_count": 1,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:28.416266Z"
+}
+{
+  "issues": [
+    "禁止使用 eval()"
+  ],
+  "event": "generator_security_blocked",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:20:28.416576Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 0,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:28.418155Z"
+}
+{
+  "state_keys": [
+    "messages",
+    "requirement",
+    "parsed_requirement",
+    "parsed_intent",
+    "intent",
+    "intent_cluster",
+    "cluster",
+    "template_name",
+    "context",
+    "case_plan",
+    "code",
+    "generated_code",
+    "explanation",
+    "validation_result",
+    "execution_plan",
+    "execution_result",
+    "parsed_result",
+    "repair_suggestion",
+    "final_report",
+    "retry",
+    "repair_count",
+    "saved_filepath",
+    "sandbox_config",
+    "sandbox_id",
+    "sandbox_retry_count",
+    "max_sandbox_retries",
+    "feedback",
+    "error_log",
+    "session_id"
+  ],
+  "event": "generator_empty_plan",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:20:28.418460Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:28.418838Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:28.419507Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_102028.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:28.420364Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 4,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:28.425587Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:28.426093Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:28.426741Z"
+}
+{
+  "filepath": "/tmp/pytest-of-zs/pytest-2/test_generator_saves_file0/test_generated_20260529_102028.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:28.427380Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 4,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:28.429343Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:28.429864Z"
+}
+{
+  "new_len": 0,
+  "old_len": 144,
+  "event": "generator_validation_failed_keep_old",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:20:28.430541Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_102028.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:28.431111Z"
+}
+{
+  "stage": "missing_code",
+  "error": "generated_code is empty; sandbox execution cannot start.",
+  "retry": 0,
+  "max_retries": 3,
+  "event": "sandbox_failure",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:20:28.432809Z"
+}
+{
+  "intent": "DIAGNOSE",
+  "event": "sandbox_executor_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:28.434438Z"
+}
+{
+  "intent": "PROBE",
+  "event": "sandbox_executor_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:28.435928Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:28.438955Z"
+}
+{
+  "passed": false,
+  "severity": "critical",
+  "issue_count": 1,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:28.441656Z"
+}
+{
+  "passed": false,
+  "severity": "critical",
+  "issue_count": 1,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:28.443122Z"
+}
+{
+  "passed": false,
+  "severity": "critical",
+  "issue_count": 1,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:28.444452Z"
+}
+{
+  "index": 1,
+  "total": 2,
+  "provider": "deepseek",
+  "model": "deepseek-chat",
+  "event": "model_rotation_try",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:28.455988Z"
+}
+{
+  "index": 2,
+  "total": 2,
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "event": "model_rotation_try",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:28.456579Z"
+}
+{
+  "raw": "测试rocm-smi命令的存在性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:29.522441Z"
+}
+{
+  "raw": "测试rocm-smi命令的存在性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:29.524295Z"
+}
+{
+  "raw": "测试rocm-smi命令的存在性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:29.526156Z"
+}
+{
+  "raw": "测试rocm-smi命令的存在性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:29.529505Z"
+}
+{
+  "raw": "测试rocm-smi命令的存在性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:29.531709Z"
+}
+{
+  "query": "测试rocm-smi命令的存在性",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:29.534156Z"
+}
+{
+  "event": "execution_plan_parsed",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:29.545689Z"
+}
+{
+  "execution_plan_status": "parsed",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:29.546671Z"
+}
+{
+  "query": "测试rocm-smi命令的存在性",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:29.549596Z"
+}
+{
+  "event": "execution_plan_parsed",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:29.550748Z"
+}
+{
+  "execution_plan_status": "parsed",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:29.551135Z"
+}
+{
+  "query": "测试rocm-smi命令的存在性",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:29.552979Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:29.553524Z"
+}
+{
+  "query": "测试rocm-smi命令的存在性",
+  "feedback": "测试失败: subprocess 未找到",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:29.555308Z"
+}
+{
+  "event": "execution_plan_parsed",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:29.556275Z"
+}
+{
+  "execution_plan_status": "parsed",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:29.556564Z"
+}
+{
+  "query": "测试rocm-smi命令的存在性",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:29.558318Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:29.558826Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 17,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:29.560234Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:29.560708Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:29.562585Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_102029.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:29.563552Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 4,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:29.565454Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:29.565919Z"
+}
+{
+  "passed": false,
+  "severity": "critical",
+  "issue_count": 1,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:29.566414Z"
+}
+{
+  "issues": [
+    "禁止使用 eval()"
+  ],
+  "event": "generator_security_blocked",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:20:29.566690Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 0,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:29.568105Z"
+}
+{
+  "state_keys": [
+    "messages",
+    "requirement",
+    "parsed_requirement",
+    "parsed_intent",
+    "intent",
+    "intent_cluster",
+    "cluster",
+    "template_name",
+    "context",
+    "case_plan",
+    "code",
+    "generated_code",
+    "explanation",
+    "validation_result",
+    "execution_plan",
+    "execution_result",
+    "parsed_result",
+    "repair_suggestion",
+    "final_report",
+    "retry",
+    "repair_count",
+    "saved_filepath",
+    "sandbox_config",
+    "sandbox_id",
+    "sandbox_retry_count",
+    "max_sandbox_retries",
+    "feedback",
+    "error_log",
+    "session_id"
+  ],
+  "event": "generator_empty_plan",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:20:29.568386Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:29.568765Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:29.569369Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_102029.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:29.570123Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 4,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:29.575683Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:29.576160Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:29.576811Z"
+}
+{
+  "filepath": "/tmp/pytest-of-zs/pytest-3/test_generator_saves_file0/test_generated_20260529_102029.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:29.577282Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 4,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:29.578879Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:29.579357Z"
+}
+{
+  "new_len": 0,
+  "old_len": 144,
+  "event": "generator_validation_failed_keep_old",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:20:29.579945Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_102029.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:29.580513Z"
+}
+{
+  "stage": "missing_code",
+  "error": "generated_code is empty; sandbox execution cannot start.",
+  "retry": 0,
+  "max_retries": 3,
+  "event": "sandbox_failure",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:20:29.582225Z"
+}
+{
+  "intent": "DIAGNOSE",
+  "event": "sandbox_executor_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:29.583562Z"
+}
+{
+  "intent": "PROBE",
+  "event": "sandbox_executor_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:29.584825Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:29.586061Z"
+}
+{
+  "passed": false,
+  "severity": "critical",
+  "issue_count": 1,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:29.587243Z"
+}
+{
+  "passed": false,
+  "severity": "critical",
+  "issue_count": 1,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:29.588379Z"
+}
+{
+  "passed": false,
+  "severity": "critical",
+  "issue_count": 1,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:29.589564Z"
+}
+{
+  "index": 1,
+  "total": 2,
+  "provider": "deepseek",
+  "model": "deepseek-chat",
+  "event": "model_rotation_try",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:29.605051Z"
+}
+{
+  "index": 2,
+  "total": 2,
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "event": "model_rotation_try",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:20:29.605693Z"
+}
+{
+  "event": "Loading SentenceTransformer model from /home/zs/TestCaseAgent/llm_model/all-MiniLM-L6-v2.",
+  "level": "INFO"
+}
+{
+  "event": "Loading SentenceTransformer model from /home/zs/TestCaseAgent/llm_model/all-MiniLM-L6-v2.",
+  "level": "INFO"
+}
+{
+  "event": "Loading SentenceTransformer model from /home/zs/TestCaseAgent/llm_model/all-MiniLM-L6-v2.",
+  "level": "INFO"
+}
+{
+  "event": "Loading SentenceTransformer model from /home/zs/TestCaseAgent/llm_model/all-MiniLM-L6-v2.",
+  "level": "INFO"
+}
+{
+  "event": "Loading SentenceTransformer model from /home/zs/TestCaseAgent/llm_model/all-MiniLM-L6-v2.",
+  "level": "INFO"
+}
+{
+  "event": "Loading SentenceTransformer model from /home/zs/TestCaseAgent/llm_model/all-MiniLM-L6-v2.",
+  "level": "INFO"
+}
+{
+  "stage": "missing_code",
+  "error": "generated_code is empty; sandbox execution cannot start.",
+  "retry": 0,
+  "max_retries": 3,
+  "event": "sandbox_failure",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:23:32.686888Z"
+}
+{
+  "intent": "GENERATE",
+  "event": "sandbox_executor_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.689007Z"
+}
+{
+  "intent": "GENERATE",
+  "event": "sandbox_success",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.689822Z"
+}
+{
+  "intent": "GENERATE",
+  "event": "sandbox_executor_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.691087Z"
+}
+{
+  "intent": "GENERATE",
+  "event": "sandbox_success",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.691401Z"
+}
+{
+  "intent": "GENERATE",
+  "event": "sandbox_executor_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.692956Z"
+}
+{
+  "stage": "generate_execution",
+  "error": "1 test failed",
+  "retry": 0,
+  "max_retries": 3,
+  "event": "sandbox_failure",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:23:32.693405Z"
+}
+{
+  "raw": "",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.695505Z"
+}
+{
+  "raw": "",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.697031Z"
+}
+{
+  "raw": "",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.698454Z"
+}
+{
+  "raw": "",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.699972Z"
+}
+{
+  "raw": "",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.701692Z"
+}
+{
+  "raw": "",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.703142Z"
+}
+{
+  "raw": "",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.704732Z"
+}
+{
+  "raw": "",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.707551Z"
+}
+{
+  "raw": "",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.709227Z"
+}
+{
+  "raw": "",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.711044Z"
+}
+{
+  "query": "",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.712760Z"
+}
+{
+  "query": "",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.715311Z"
+}
+{
+  "query": "",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.717705Z"
+}
+{
+  "query": "",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.719975Z"
+}
+{
+  "query": "",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.722226Z"
+}
+{
+  "query": "",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.727372Z"
+}
+{
+  "query": "",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.730545Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 9,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.732627Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 0,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.734858Z"
+}
+{
+  "state_keys": [
+    "case_plan",
+    "intent"
+  ],
+  "event": "generator_empty_plan",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:23:32.735238Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 4,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.739130Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 4,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.741438Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 4,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.744283Z"
+}
+{
+  "raw": "测试rocm-smi命令的存在性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.747589Z"
+}
+{
+  "raw": "测试rocm-smi命令的存在性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.749466Z"
+}
+{
+  "raw": "测试rocm-smi命令的存在性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.751342Z"
+}
+{
+  "raw": "测试rocm-smi命令的存在性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.752970Z"
+}
+{
+  "raw": "测试rocm-smi命令的存在性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.755128Z"
+}
+{
+  "query": "测试rocm-smi命令的存在性",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.757463Z"
+}
+{
+  "event": "execution_plan_parsed",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.760412Z"
+}
+{
+  "execution_plan_status": "parsed",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.761040Z"
+}
+{
+  "query": "测试rocm-smi命令的存在性",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.763899Z"
+}
+{
+  "event": "execution_plan_parsed",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.766010Z"
+}
+{
+  "execution_plan_status": "parsed",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.766882Z"
+}
+{
+  "query": "测试rocm-smi命令的存在性",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.769433Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.769981Z"
+}
+{
+  "query": "测试rocm-smi命令的存在性",
+  "feedback": "测试失败: subprocess 未找到",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.771740Z"
+}
+{
+  "event": "execution_plan_parsed",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.772899Z"
+}
+{
+  "execution_plan_status": "parsed",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.773192Z"
+}
+{
+  "query": "测试rocm-smi命令的存在性",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.774781Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.775352Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 17,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.778552Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.779427Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.781737Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_102332.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.782949Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 4,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.785621Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.786205Z"
+}
+{
+  "passed": false,
+  "severity": "critical",
+  "issue_count": 1,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.786802Z"
+}
+{
+  "issues": [
+    "禁止使用 eval()"
+  ],
+  "event": "generator_security_blocked",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:23:32.787143Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 0,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.788757Z"
+}
+{
+  "state_keys": [
+    "messages",
+    "requirement",
+    "parsed_requirement",
+    "parsed_intent",
+    "intent",
+    "intent_cluster",
+    "cluster",
+    "template_name",
+    "context",
+    "case_plan",
+    "code",
+    "generated_code",
+    "explanation",
+    "validation_result",
+    "execution_plan",
+    "execution_result",
+    "parsed_result",
+    "repair_suggestion",
+    "final_report",
+    "retry",
+    "repair_count",
+    "saved_filepath",
+    "sandbox_config",
+    "sandbox_id",
+    "sandbox_retry_count",
+    "max_sandbox_retries",
+    "feedback",
+    "error_log",
+    "session_id"
+  ],
+  "event": "generator_empty_plan",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:23:32.789071Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.789483Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.789982Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_102332.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.790624Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 4,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.794829Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.795375Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.796011Z"
+}
+{
+  "filepath": "/tmp/pytest-of-zs/pytest-4/test_generator_saves_file0/test_generated_20260529_102332.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.796588Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 4,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.798455Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.798876Z"
+}
+{
+  "new_len": 0,
+  "old_len": 144,
+  "event": "generator_validation_failed_keep_old",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:23:32.799456Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_102332.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.800034Z"
+}
+{
+  "stage": "missing_code",
+  "error": "generated_code is empty; sandbox execution cannot start.",
+  "retry": 0,
+  "max_retries": 3,
+  "event": "sandbox_failure",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:23:32.801275Z"
+}
+{
+  "intent": "DIAGNOSE",
+  "event": "sandbox_executor_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.802552Z"
+}
+{
+  "intent": "PROBE",
+  "event": "sandbox_executor_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.803926Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.805085Z"
+}
+{
+  "passed": false,
+  "severity": "critical",
+  "issue_count": 1,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.806354Z"
+}
+{
+  "passed": false,
+  "severity": "critical",
+  "issue_count": 1,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.807506Z"
+}
+{
+  "passed": false,
+  "severity": "critical",
+  "issue_count": 1,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.808500Z"
+}
+{
+  "index": 1,
+  "total": 2,
+  "provider": "deepseek",
+  "model": "deepseek-chat",
+  "event": "model_rotation_try",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.821045Z"
+}
+{
+  "index": 2,
+  "total": 2,
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "event": "model_rotation_try",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:23:32.821534Z"
+}
+{
+  "event": "Loading SentenceTransformer model from /home/zs/TestCaseAgent/llm_model/all-MiniLM-L6-v2.",
+  "level": "INFO"
+}
+{
+  "query": "",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:24:13.951558Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 9,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:25:48.790584Z"
+}
+{
+  "event": "Loading SentenceTransformer model from /home/zs/TestCaseAgent/llm_model/all-MiniLM-L6-v2.",
+  "level": "INFO"
+}
+{
+  "event": "Loading SentenceTransformer model from /home/zs/TestCaseAgent/llm_model/all-MiniLM-L6-v2.",
+  "level": "INFO"
+}
+{
+  "event": "Loading SentenceTransformer model from /home/zs/TestCaseAgent/llm_model/all-MiniLM-L6-v2.",
+  "level": "INFO"
+}
+{
+  "event": "Loading SentenceTransformer model from /home/zs/TestCaseAgent/llm_model/all-MiniLM-L6-v2.",
+  "level": "INFO"
+}
+{
+  "event": "Loading SentenceTransformer model from /home/zs/TestCaseAgent/llm_model/all-MiniLM-L6-v2.",
+  "level": "INFO"
+}
+{
+  "event": "Loading SentenceTransformer model from /home/zs/TestCaseAgent/llm_model/all-MiniLM-L6-v2.",
+  "level": "INFO"
+}
+{
+  "stage": "missing_code",
+  "error": "generated_code is empty; sandbox execution cannot start.",
+  "retry": 0,
+  "max_retries": 3,
+  "event": "sandbox_failure",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:26:59.594138Z"
+}
+{
+  "intent": "GENERATE",
+  "event": "sandbox_executor_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.596156Z"
+}
+{
+  "intent": "GENERATE",
+  "event": "sandbox_success",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.596543Z"
+}
+{
+  "intent": "GENERATE",
+  "event": "sandbox_executor_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.597731Z"
+}
+{
+  "intent": "GENERATE",
+  "event": "sandbox_success",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.598087Z"
+}
+{
+  "intent": "GENERATE",
+  "event": "sandbox_executor_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.599385Z"
+}
+{
+  "stage": "generate_execution",
+  "error": "1 test failed",
+  "retry": 0,
+  "max_retries": 3,
+  "event": "sandbox_failure",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:26:59.599895Z"
+}
+{
+  "raw": "",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.601783Z"
+}
+{
+  "raw": "",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.603656Z"
+}
+{
+  "raw": "",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.605473Z"
+}
+{
+  "raw": "",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.607905Z"
+}
+{
+  "raw": "",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.609537Z"
+}
+{
+  "raw": "",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.611191Z"
+}
+{
+  "raw": "",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.612939Z"
+}
+{
+  "raw": "",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.614398Z"
+}
+{
+  "raw": "",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.615905Z"
+}
+{
+  "raw": "",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.617421Z"
+}
+{
+  "query": "test req",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.619775Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_plan()' id='136204823604320'>",
+  "event": "planner_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.620661Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.621099Z"
+}
+{
+  "query": "",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.622717Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_plan()' id='136205504292304'>",
+  "event": "planner_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.623430Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.623756Z"
+}
+{
+  "query": "req",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.625443Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_plan()' id='136202948788096'>",
+  "event": "planner_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.626148Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.626463Z"
+}
+{
+  "query": "req",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.628044Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_plan()' id='136202950718912'>",
+  "event": "planner_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.628658Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.629111Z"
+}
+{
+  "query": "req",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.629437Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_plan()' id='136202950718912'>",
+  "event": "planner_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.629963Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.630265Z"
+}
+{
+  "query": "req",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.630571Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_plan()' id='136202950718912'>",
+  "event": "planner_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.631103Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.631446Z"
+}
+{
+  "query": "req",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.631775Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_plan()' id='136202950718912'>",
+  "event": "planner_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.632266Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.632565Z"
+}
+{
+  "query": "req",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.634253Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_plan()' id='136202950642048'>",
+  "event": "planner_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.634847Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.635224Z"
+}
+{
+  "query": "req",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.637229Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_plan()' id='136205547606896'>",
+  "event": "planner_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.637945Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.638417Z"
+}
+{
+  "query": "req",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.640567Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_plan()' id='136204824328864'>",
+  "event": "planner_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.641376Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.641727Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 9,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.643529Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.644011Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.645181Z"
+}
+{
+  "event": "generator_validation_failed_no_old",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:26:59.645600Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_102659.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.646074Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_generation()' id='136202949026944'>",
+  "event": "generator_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.646487Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 0,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.647832Z"
+}
+{
+  "state_keys": [
+    "case_plan",
+    "intent"
+  ],
+  "event": "generator_empty_plan",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:26:59.648225Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.648742Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.649229Z"
+}
+{
+  "event": "generator_validation_failed_no_old",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:26:59.649543Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_102659.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.650039Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_generation()' id='136202949020752'>",
+  "event": "generator_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.650504Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 4,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.651997Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.652417Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.652896Z"
+}
+{
+  "event": "generator_validation_failed_no_old",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:26:59.653228Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_102659.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.653730Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_generation()' id='136202949024400'>",
+  "event": "generator_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.654209Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 4,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.655886Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.656344Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.656744Z"
+}
+{
+  "event": "generator_validation_failed_no_old",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:26:59.657170Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_102659.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.657636Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_generation()' id='136202949093776'>",
+  "event": "generator_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.658179Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 4,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.659822Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.660241Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.660652Z"
+}
+{
+  "event": "generator_validation_failed_no_old",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:26:59.661019Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_102659.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.661539Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_generation()' id='136202949019648'>",
+  "event": "generator_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.662089Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 4,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.662445Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.662964Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.663435Z"
+}
+{
+  "event": "generator_validation_failed_no_old",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:26:59.663731Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_102659.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.664253Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_generation()' id='136202949019648'>",
+  "event": "generator_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.664623Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 4,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.665048Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.665512Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.665908Z"
+}
+{
+  "event": "generator_validation_failed_no_old",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:26:59.666243Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_102659.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.666760Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_generation()' id='136202949019648'>",
+  "event": "generator_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.667172Z"
+}
+{
+  "raw": "测试rocm-smi命令的存在性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.669178Z"
+}
+{
+  "raw": "测试rocm-smi命令的存在性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.670795Z"
+}
+{
+  "raw": "测试rocm-smi命令的存在性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.672702Z"
+}
+{
+  "raw": "测试rocm-smi命令的存在性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.674591Z"
+}
+{
+  "raw": "测试rocm-smi命令的存在性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.677465Z"
+}
+{
+  "query": "测试rocm-smi命令的存在性",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.679865Z"
+}
+{
+  "event": "execution_plan_parsed",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.681479Z"
+}
+{
+  "execution_plan_status": "parsed",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.681801Z"
+}
+{
+  "query": "测试rocm-smi命令的存在性",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.683376Z"
+}
+{
+  "event": "execution_plan_parsed",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.684172Z"
+}
+{
+  "execution_plan_status": "parsed",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.684453Z"
+}
+{
+  "query": "测试rocm-smi命令的存在性",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.685992Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.686518Z"
+}
+{
+  "query": "测试rocm-smi命令的存在性",
+  "feedback": "测试失败: subprocess 未找到",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.688079Z"
+}
+{
+  "event": "execution_plan_parsed",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.690020Z"
+}
+{
+  "execution_plan_status": "parsed",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.690290Z"
+}
+{
+  "query": "测试rocm-smi命令的存在性",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.691868Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.692475Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 17,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.694121Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.694528Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.695283Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_102659.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.695964Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 4,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.697365Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.697748Z"
+}
+{
+  "passed": false,
+  "severity": "critical",
+  "issue_count": 1,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.698373Z"
+}
+{
+  "issues": [
+    "禁止使用 eval()"
+  ],
+  "event": "generator_security_blocked",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:26:59.698656Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 0,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.700103Z"
+}
+{
+  "state_keys": [
+    "messages",
+    "requirement",
+    "parsed_requirement",
+    "parsed_intent",
+    "intent",
+    "intent_cluster",
+    "cluster",
+    "template_name",
+    "context",
+    "case_plan",
+    "code",
+    "generated_code",
+    "explanation",
+    "validation_result",
+    "execution_plan",
+    "execution_result",
+    "parsed_result",
+    "repair_suggestion",
+    "final_report",
+    "retry",
+    "repair_count",
+    "saved_filepath",
+    "sandbox_config",
+    "sandbox_id",
+    "sandbox_retry_count",
+    "max_sandbox_retries",
+    "feedback",
+    "error_log",
+    "session_id"
+  ],
+  "event": "generator_empty_plan",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:26:59.700398Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.700797Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.701287Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_102659.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.701871Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 4,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.705632Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.706041Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.706570Z"
+}
+{
+  "filepath": "/tmp/pytest-of-zs/pytest-5/test_generator_saves_file0/test_generated_20260529_102659.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.707187Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 4,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.708890Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.709348Z"
+}
+{
+  "new_len": 0,
+  "old_len": 144,
+  "event": "generator_validation_failed_keep_old",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:26:59.709910Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_102659.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.710462Z"
+}
+{
+  "stage": "missing_code",
+  "error": "generated_code is empty; sandbox execution cannot start.",
+  "retry": 0,
+  "max_retries": 3,
+  "event": "sandbox_failure",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:26:59.711675Z"
+}
+{
+  "intent": "DIAGNOSE",
+  "event": "sandbox_executor_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.712595Z"
+}
+{
+  "intent": "PROBE",
+  "event": "sandbox_executor_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.713497Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.714399Z"
+}
+{
+  "passed": false,
+  "severity": "critical",
+  "issue_count": 1,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.715399Z"
+}
+{
+  "passed": false,
+  "severity": "critical",
+  "issue_count": 1,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.716239Z"
+}
+{
+  "passed": false,
+  "severity": "critical",
+  "issue_count": 1,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.717074Z"
+}
+{
+  "index": 1,
+  "total": 2,
+  "provider": "deepseek",
+  "model": "deepseek-chat",
+  "event": "model_rotation_try",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.726757Z"
+}
+{
+  "index": 2,
+  "total": 2,
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "event": "model_rotation_try",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:26:59.727155Z"
+}
+{
+  "event": "Loading SentenceTransformer model from /home/zs/TestCaseAgent/llm_model/all-MiniLM-L6-v2.",
+  "level": "INFO"
+}
+{
+  "event": "Loading SentenceTransformer model from /home/zs/TestCaseAgent/llm_model/all-MiniLM-L6-v2.",
+  "level": "INFO"
+}
+{
+  "event": "Loading SentenceTransformer model from /home/zs/TestCaseAgent/llm_model/all-MiniLM-L6-v2.",
+  "level": "INFO"
+}
+{
+  "event": "Loading SentenceTransformer model from /home/zs/TestCaseAgent/llm_model/all-MiniLM-L6-v2.",
+  "level": "INFO"
+}
+{
+  "event": "Loading SentenceTransformer model from /home/zs/TestCaseAgent/llm_model/all-MiniLM-L6-v2.",
+  "level": "INFO"
+}
+{
+  "event": "Loading SentenceTransformer model from /home/zs/TestCaseAgent/llm_model/all-MiniLM-L6-v2.",
+  "level": "INFO"
+}
+{
+  "event": "Loading SentenceTransformer model from /home/zs/TestCaseAgent/llm_model/all-MiniLM-L6-v2.",
+  "level": "INFO"
+}
+{
+  "stage": "missing_code",
+  "error": "generated_code is empty; sandbox execution cannot start.",
+  "retry": 0,
+  "max_retries": 3,
+  "event": "sandbox_failure",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:28:02.732139Z"
+}
+{
+  "intent": "GENERATE",
+  "event": "sandbox_executor_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.733515Z"
+}
+{
+  "intent": "GENERATE",
+  "event": "sandbox_success",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.733816Z"
+}
+{
+  "intent": "GENERATE",
+  "event": "sandbox_executor_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.734721Z"
+}
+{
+  "intent": "GENERATE",
+  "event": "sandbox_success",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.735001Z"
+}
+{
+  "intent": "GENERATE",
+  "event": "sandbox_executor_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.735994Z"
+}
+{
+  "stage": "generate_execution",
+  "error": "1 test failed",
+  "retry": 0,
+  "max_retries": 3,
+  "event": "sandbox_failure",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:28:02.736549Z"
+}
+{
+  "raw": "",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.738553Z"
+}
+{
+  "raw": "",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.740012Z"
+}
+{
+  "raw": "",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.741614Z"
+}
+{
+  "raw": "",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.743502Z"
+}
+{
+  "raw": "",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.745054Z"
+}
+{
+  "raw": "",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.746667Z"
+}
+{
+  "raw": "",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.748380Z"
+}
+{
+  "raw": "",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.750016Z"
+}
+{
+  "raw": "",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.751591Z"
+}
+{
+  "raw": "",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.753019Z"
+}
+{
+  "query": "test req",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.754958Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_plan()' id='130538424607584'>",
+  "event": "planner_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.755885Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.756208Z"
+}
+{
+  "query": "",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.757672Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_plan()' id='130538425503520'>",
+  "event": "planner_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.758354Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.758679Z"
+}
+{
+  "query": "req",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.760555Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_plan()' id='130538424576928'>",
+  "event": "planner_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.761232Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.761553Z"
+}
+{
+  "query": "req",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.763035Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_plan()' id='130540298435808'>",
+  "event": "planner_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.763771Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.764093Z"
+}
+{
+  "query": "req",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.764457Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_plan()' id='130540298435808'>",
+  "event": "planner_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.765101Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.765465Z"
+}
+{
+  "query": "req",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.765778Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_plan()' id='130540298435808'>",
+  "event": "planner_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.766345Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.766689Z"
+}
+{
+  "query": "req",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.767139Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_plan()' id='130540298435808'>",
+  "event": "planner_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.767651Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.767950Z"
+}
+{
+  "query": "req",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.769687Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_plan()' id='130538424574096'>",
+  "event": "planner_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.770273Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.770603Z"
+}
+{
+  "query": "req",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.771937Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_plan()' id='130538422838736'>",
+  "event": "planner_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.772631Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.772936Z"
+}
+{
+  "query": "req",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.774448Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_plan()' id='130538422911632'>",
+  "event": "planner_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.775157Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.775468Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 9,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.777229Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.777719Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.779262Z"
+}
+{
+  "event": "generator_validation_failed_no_old",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:28:02.779772Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_102802.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.780395Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_generation()' id='130540298722032'>",
+  "event": "generator_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.780774Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 0,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.783168Z"
+}
+{
+  "state_keys": [
+    "case_plan",
+    "intent"
+  ],
+  "event": "generator_empty_plan",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:28:02.783487Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.785170Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.785654Z"
+}
+{
+  "event": "generator_validation_failed_no_old",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:28:02.786120Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_102802.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.786863Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_generation()' id='130538422840656'>",
+  "event": "generator_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.787363Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 4,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.789287Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.789897Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.790433Z"
+}
+{
+  "event": "generator_validation_failed_no_old",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:28:02.790753Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_102802.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.791316Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_generation()' id='130538425317760'>",
+  "event": "generator_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.791764Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 4,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.793733Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.794202Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.794689Z"
+}
+{
+  "event": "generator_validation_failed_no_old",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:28:02.795055Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_102802.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.795656Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_generation()' id='130538422713232'>",
+  "event": "generator_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.796282Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 4,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.799043Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.799608Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.800101Z"
+}
+{
+  "event": "generator_validation_failed_no_old",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:28:02.800510Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_102802.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.801144Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_generation()' id='130538422836240'>",
+  "event": "generator_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.801894Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 4,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.802571Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.803141Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.803822Z"
+}
+{
+  "event": "generator_validation_failed_no_old",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:28:02.804209Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_102802.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.804792Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_generation()' id='130538422836240'>",
+  "event": "generator_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.805152Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 4,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.805511Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.806044Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.806445Z"
+}
+{
+  "event": "generator_validation_failed_no_old",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:28:02.806752Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_102802.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.807956Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_generation()' id='130538422836240'>",
+  "event": "generator_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.808473Z"
+}
+{
+  "raw": "测试rocm-smi命令的存在性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.811303Z"
+}
+{
+  "raw": "测试rocm-smi命令的存在性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.813281Z"
+}
+{
+  "raw": "测试rocm-smi命令的存在性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.815150Z"
+}
+{
+  "raw": "测试rocm-smi命令的存在性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.817509Z"
+}
+{
+  "raw": "测试rocm-smi命令的存在性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.819325Z"
+}
+{
+  "query": "测试rocm-smi命令的存在性",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.821706Z"
+}
+{
+  "event": "execution_plan_parsed",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.823296Z"
+}
+{
+  "execution_plan_status": "parsed",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.823608Z"
+}
+{
+  "query": "测试rocm-smi命令的存在性",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.825115Z"
+}
+{
+  "event": "execution_plan_parsed",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.826039Z"
+}
+{
+  "execution_plan_status": "parsed",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.826365Z"
+}
+{
+  "query": "测试rocm-smi命令的存在性",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.827825Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.828385Z"
+}
+{
+  "query": "测试rocm-smi命令的存在性",
+  "feedback": "测试失败: subprocess 未找到",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.830402Z"
+}
+{
+  "event": "execution_plan_parsed",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.832045Z"
+}
+{
+  "execution_plan_status": "parsed",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.832596Z"
+}
+{
+  "query": "测试rocm-smi命令的存在性",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.834740Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.835263Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 17,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.836729Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.837111Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.837632Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_102802.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.838285Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 4,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.839463Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.839839Z"
+}
+{
+  "passed": false,
+  "severity": "critical",
+  "issue_count": 1,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.840439Z"
+}
+{
+  "issues": [
+    "禁止使用 eval()"
+  ],
+  "event": "generator_security_blocked",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:28:02.840712Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 0,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.842306Z"
+}
+{
+  "state_keys": [
+    "messages",
+    "requirement",
+    "parsed_requirement",
+    "parsed_intent",
+    "intent",
+    "intent_cluster",
+    "cluster",
+    "template_name",
+    "context",
+    "case_plan",
+    "code",
+    "generated_code",
+    "explanation",
+    "validation_result",
+    "execution_plan",
+    "execution_result",
+    "parsed_result",
+    "repair_suggestion",
+    "final_report",
+    "retry",
+    "repair_count",
+    "saved_filepath",
+    "sandbox_config",
+    "sandbox_id",
+    "sandbox_retry_count",
+    "max_sandbox_retries",
+    "feedback",
+    "error_log",
+    "session_id"
+  ],
+  "event": "generator_empty_plan",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:28:02.842613Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.842985Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.843486Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_102802.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.844137Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 4,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.848093Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.848714Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.849275Z"
+}
+{
+  "filepath": "/tmp/pytest-of-zs/pytest-6/test_generator_saves_file0/test_generated_20260529_102802.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.849777Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 4,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.852117Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.852647Z"
+}
+{
+  "new_len": 0,
+  "old_len": 144,
+  "event": "generator_validation_failed_keep_old",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:28:02.853321Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_102802.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.853939Z"
+}
+{
+  "stage": "missing_code",
+  "error": "generated_code is empty; sandbox execution cannot start.",
+  "retry": 0,
+  "max_retries": 3,
+  "event": "sandbox_failure",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:28:02.855706Z"
+}
+{
+  "intent": "DIAGNOSE",
+  "event": "sandbox_executor_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.857005Z"
+}
+{
+  "intent": "PROBE",
+  "event": "sandbox_executor_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.858117Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.859391Z"
+}
+{
+  "passed": false,
+  "severity": "critical",
+  "issue_count": 1,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.860537Z"
+}
+{
+  "passed": false,
+  "severity": "critical",
+  "issue_count": 1,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.861756Z"
+}
+{
+  "passed": false,
+  "severity": "critical",
+  "issue_count": 1,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.862909Z"
+}
+{
+  "index": 1,
+  "total": 2,
+  "provider": "deepseek",
+  "model": "deepseek-chat",
+  "event": "model_rotation_try",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.877028Z"
+}
+{
+  "index": 2,
+  "total": 2,
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "event": "model_rotation_try",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:28:02.877595Z"
+}
+{
+  "event": "Loading SentenceTransformer model from /home/zs/TestCaseAgent/llm_model/all-MiniLM-L6-v2.",
+  "level": "INFO"
+}
+{
+  "user_prompt": "say hello in one sentence",
+  "provider": null,
+  "thread_id": "test-case-agent-debug",
+  "user_id": "default_user",
+  "project_id": null,
+  "event": "run_once_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:27.919594Z"
+}
+{
+  "elapsed": 0.01,
+  "error": "Generic provider requires LLM_API_KEY, LLM_BASE_URL and LLM_MODEL.",
+  "user_prompt": "say hello in one sentence",
+  "exc_info": true,
+  "event": "run_once_failed",
+  "level": "EXCEPTION",
+  "timestamp": "2026-05-29T02:34:27.924657Z"
+}
+{
+  "user_prompt": "写一个 pytest 测试函数 test_one，断言 1+1==2",
+  "provider": null,
+  "thread_id": "test-case-agent-debug",
+  "user_id": "default_user",
+  "project_id": null,
+  "event": "run_once_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:28.022102Z"
+}
+{
+  "elapsed": 0.0,
+  "error": "Generic provider requires LLM_API_KEY, LLM_BASE_URL and LLM_MODEL.",
+  "user_prompt": "写一个 pytest 测试函数 test_one，断言 1+1==2",
+  "exc_info": true,
+  "event": "run_once_failed",
+  "level": "EXCEPTION",
+  "timestamp": "2026-05-29T02:34:28.024518Z"
+}
+{
+  "user_prompt": "测试 rocminfo 是否存在",
+  "provider": null,
+  "thread_id": "test-case-agent-debug",
+  "user_id": "default_user",
+  "project_id": null,
+  "event": "run_once_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:28.104579Z"
+}
+{
+  "elapsed": 0.0,
+  "error": "Generic provider requires LLM_API_KEY, LLM_BASE_URL and LLM_MODEL.",
+  "user_prompt": "测试 rocminfo 是否存在",
+  "exc_info": true,
+  "event": "run_once_failed",
+  "level": "EXCEPTION",
+  "timestamp": "2026-05-29T02:34:28.107269Z"
+}
+{
+  "event": "Loading SentenceTransformer model from /home/zs/TestCaseAgent/llm_model/all-MiniLM-L6-v2.",
+  "level": "INFO"
+}
+{
+  "event": "Loading SentenceTransformer model from /home/zs/TestCaseAgent/llm_model/all-MiniLM-L6-v2.",
+  "level": "INFO"
+}
+{
+  "event": "Loading SentenceTransformer model from /home/zs/TestCaseAgent/llm_model/all-MiniLM-L6-v2.",
+  "level": "INFO"
+}
+{
+  "event": "Loading SentenceTransformer model from /home/zs/TestCaseAgent/llm_model/all-MiniLM-L6-v2.",
+  "level": "INFO"
+}
+{
+  "event": "Loading SentenceTransformer model from /home/zs/TestCaseAgent/llm_model/all-MiniLM-L6-v2.",
+  "level": "INFO"
+}
+{
+  "event": "Loading SentenceTransformer model from /home/zs/TestCaseAgent/llm_model/all-MiniLM-L6-v2.",
+  "level": "INFO"
+}
+{
+  "stage": "missing_code",
+  "error": "generated_code is empty; sandbox execution cannot start.",
+  "retry": 0,
+  "max_retries": 3,
+  "event": "sandbox_failure",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:34:38.448769Z"
+}
+{
+  "intent": "GENERATE",
+  "event": "sandbox_executor_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.450333Z"
+}
+{
+  "intent": "GENERATE",
+  "event": "sandbox_success",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.450797Z"
+}
+{
+  "intent": "GENERATE",
+  "event": "sandbox_executor_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.451978Z"
+}
+{
+  "intent": "GENERATE",
+  "event": "sandbox_success",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.452285Z"
+}
+{
+  "intent": "GENERATE",
+  "event": "sandbox_executor_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.453298Z"
+}
+{
+  "stage": "generate_execution",
+  "error": "1 test failed",
+  "retry": 0,
+  "max_retries": 3,
+  "event": "sandbox_failure",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:34:38.453782Z"
+}
+{
+  "raw": "",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.455452Z"
+}
+{
+  "raw": "",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.457071Z"
+}
+{
+  "raw": "",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.458581Z"
+}
+{
+  "raw": "",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.461122Z"
+}
+{
+  "raw": "",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.464176Z"
+}
+{
+  "raw": "",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.466110Z"
+}
+{
+  "raw": "",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.467867Z"
+}
+{
+  "raw": "",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.469367Z"
+}
+{
+  "raw": "",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.471003Z"
+}
+{
+  "raw": "",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.472387Z"
+}
+{
+  "query": "test req",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.473768Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_plan()' id='132986027062384'>",
+  "event": "planner_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.474563Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.474856Z"
+}
+{
+  "query": "",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.476275Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_plan()' id='132986728438272'>",
+  "event": "planner_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.477009Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.477341Z"
+}
+{
+  "query": "req",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.479397Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_plan()' id='132986027211760'>",
+  "event": "planner_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.480098Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.480476Z"
+}
+{
+  "query": "req",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.482263Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_plan()' id='132986027462192'>",
+  "event": "planner_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.483909Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.484263Z"
+}
+{
+  "query": "req",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.484592Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_plan()' id='132986027462192'>",
+  "event": "planner_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.485149Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.485535Z"
+}
+{
+  "query": "req",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.485921Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_plan()' id='132986027462192'>",
+  "event": "planner_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.486463Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.486804Z"
+}
+{
+  "query": "req",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.487147Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_plan()' id='132986027462192'>",
+  "event": "planner_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.487722Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.488032Z"
+}
+{
+  "query": "req",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.489760Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_plan()' id='132986027332320'>",
+  "event": "planner_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.490345Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.490644Z"
+}
+{
+  "query": "req",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.492340Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_plan()' id='132986029692528'>",
+  "event": "planner_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.492927Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.493249Z"
+}
+{
+  "query": "req",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.494891Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_plan()' id='132986027062336'>",
+  "event": "planner_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.495472Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.495797Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 9,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.497531Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.498028Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.500512Z"
+}
+{
+  "event": "generator_validation_failed_no_old",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:34:38.501391Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_103438.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.502013Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_generation()' id='132986027064592'>",
+  "event": "generator_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.502550Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 0,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.504869Z"
+}
+{
+  "state_keys": [
+    "case_plan",
+    "intent"
+  ],
+  "event": "generator_empty_plan",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:34:38.505228Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.505699Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.506263Z"
+}
+{
+  "event": "generator_validation_failed_no_old",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:34:38.506645Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_103438.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.507225Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_generation()' id='132986027203600'>",
+  "event": "generator_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.507741Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 4,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.509685Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.510262Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.510803Z"
+}
+{
+  "event": "generator_validation_failed_no_old",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:34:38.511243Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_103438.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.511832Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_generation()' id='132986027472320'>",
+  "event": "generator_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.512408Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 4,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.514547Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.515070Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.515665Z"
+}
+{
+  "event": "generator_validation_failed_no_old",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:34:38.516076Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_103438.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.516693Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_generation()' id='132986025593024'>",
+  "event": "generator_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.517175Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 4,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.519116Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.519712Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.520232Z"
+}
+{
+  "event": "generator_validation_failed_no_old",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:34:38.520568Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_103438.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.521141Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_generation()' id='132986027207248'>",
+  "event": "generator_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.521618Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 4,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.521980Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.522434Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.522871Z"
+}
+{
+  "event": "generator_validation_failed_no_old",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:34:38.523188Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_103438.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.523740Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_generation()' id='132986027207248'>",
+  "event": "generator_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.524133Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 4,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.524548Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.524939Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.525345Z"
+}
+{
+  "event": "generator_validation_failed_no_old",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:34:38.525657Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_103438.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.556028Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_generation()' id='132986027207248'>",
+  "event": "generator_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.556747Z"
+}
+{
+  "raw": "测试rocm-smi命令的存在性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.559153Z"
+}
+{
+  "raw": "测试rocm-smi命令的存在性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.561166Z"
+}
+{
+  "raw": "测试rocm-smi命令的存在性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.562738Z"
+}
+{
+  "raw": "测试rocm-smi命令的存在性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.564178Z"
+}
+{
+  "raw": "测试rocm-smi命令的存在性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.566009Z"
+}
+{
+  "query": "测试rocm-smi命令的存在性",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.569705Z"
+}
+{
+  "event": "execution_plan_parsed",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.571420Z"
+}
+{
+  "execution_plan_status": "parsed",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.571747Z"
+}
+{
+  "query": "测试rocm-smi命令的存在性",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.573541Z"
+}
+{
+  "event": "execution_plan_parsed",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.574435Z"
+}
+{
+  "execution_plan_status": "parsed",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.574724Z"
+}
+{
+  "query": "测试rocm-smi命令的存在性",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.576055Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.576474Z"
+}
+{
+  "query": "测试rocm-smi命令的存在性",
+  "feedback": "测试失败: subprocess 未找到",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.577601Z"
+}
+{
+  "event": "execution_plan_parsed",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.578417Z"
+}
+{
+  "execution_plan_status": "parsed",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.578707Z"
+}
+{
+  "query": "测试rocm-smi命令的存在性",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.579943Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.580339Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 17,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.581769Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.582144Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.582736Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_103438.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.583547Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 4,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.585642Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.586105Z"
+}
+{
+  "passed": false,
+  "severity": "critical",
+  "issue_count": 1,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.586925Z"
+}
+{
+  "issues": [
+    "禁止使用 eval()"
+  ],
+  "event": "generator_security_blocked",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:34:38.587282Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 0,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.589467Z"
+}
+{
+  "state_keys": [
+    "messages",
+    "requirement",
+    "parsed_requirement",
+    "parsed_intent",
+    "intent",
+    "intent_cluster",
+    "cluster",
+    "template_name",
+    "context",
+    "case_plan",
+    "code",
+    "generated_code",
+    "explanation",
+    "validation_result",
+    "execution_plan",
+    "execution_result",
+    "parsed_result",
+    "repair_suggestion",
+    "final_report",
+    "retry",
+    "repair_count",
+    "saved_filepath",
+    "sandbox_config",
+    "sandbox_id",
+    "sandbox_retry_count",
+    "max_sandbox_retries",
+    "feedback",
+    "error_log",
+    "session_id"
+  ],
+  "event": "generator_empty_plan",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:34:38.589937Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.590383Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.590975Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_103438.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.591785Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 4,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.596273Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.596749Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.597393Z"
+}
+{
+  "filepath": "/tmp/pytest-of-zs/pytest-7/test_generator_saves_file0/test_generated_20260529_103438.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.597919Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 4,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.600925Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.601419Z"
+}
+{
+  "new_len": 0,
+  "old_len": 144,
+  "event": "generator_validation_failed_keep_old",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:34:38.602198Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_103438.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.602832Z"
+}
+{
+  "stage": "missing_code",
+  "error": "generated_code is empty; sandbox execution cannot start.",
+  "retry": 0,
+  "max_retries": 3,
+  "event": "sandbox_failure",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:34:38.604909Z"
+}
+{
+  "intent": "DIAGNOSE",
+  "event": "sandbox_executor_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.606521Z"
+}
+{
+  "intent": "PROBE",
+  "event": "sandbox_executor_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.608198Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.609641Z"
+}
+{
+  "passed": false,
+  "severity": "critical",
+  "issue_count": 1,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.610949Z"
+}
+{
+  "passed": false,
+  "severity": "critical",
+  "issue_count": 1,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.613458Z"
+}
+{
+  "passed": false,
+  "severity": "critical",
+  "issue_count": 1,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.615403Z"
+}
+{
+  "index": 1,
+  "total": 2,
+  "provider": "deepseek",
+  "model": "deepseek-chat",
+  "event": "model_rotation_try",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.630080Z"
+}
+{
+  "index": 2,
+  "total": 2,
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "event": "model_rotation_try",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:34:38.630600Z"
+}
+{
+  "event": "Loading SentenceTransformer model from /home/zs/TestCaseAgent/llm_model/all-MiniLM-L6-v2.",
+  "level": "INFO"
+}
+{
+  "event": "HTTP Request: POST http://localhost:8000/v1/chat/completions \"HTTP/1.1 200 OK\"",
+  "level": "INFO"
+}
+{
+  "user_prompt": "say hello in one sentence",
+  "provider": null,
+  "thread_id": "test-case-agent-debug",
+  "user_id": "default_user",
+  "project_id": null,
+  "event": "run_once_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:41:05.750781Z"
+}
+{
+  "raw": "say hello in one sentence",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:41:07.707865Z"
+}
+{
+  "elapsed": 2.13,
+  "error": "Error code: 400 - {'error': {'message': '\"auto\" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}",
+  "user_prompt": "say hello in one sentence",
+  "exc_info": true,
+  "event": "run_once_failed",
+  "level": "EXCEPTION",
+  "timestamp": "2026-05-29T02:41:07.876577Z"
+}
+{
+  "event": "Transient error ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')) encountered while exporting span batch, retrying in 1.20s.",
+  "level": "WARNING"
+}
+{
+  "event": "Failed to export span batch due to timeout, max retries or shutdown.",
+  "level": "ERROR"
+}
+{
+  "user_prompt": "写一个 pytest 测试函数 test_one，断言 1+1==2",
+  "provider": null,
+  "thread_id": "test-case-agent-debug",
+  "user_id": "default_user",
+  "project_id": null,
+  "event": "run_once_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:41:16.089538Z"
+}
+{
+  "raw": "写一个 pytest 测试函数 test_one，断言 1+1==2",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:41:16.118485Z"
+}
+{
+  "elapsed": 0.16,
+  "error": "Error code: 400 - {'error': {'message': '\"auto\" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}",
+  "user_prompt": "写一个 pytest 测试函数 test_one，断言 1+1==2",
+  "exc_info": true,
+  "event": "run_once_failed",
+  "level": "EXCEPTION",
+  "timestamp": "2026-05-29T02:41:16.247550Z"
+}
+{
+  "event": "Transient error ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')) encountered while exporting span batch, retrying in 1.11s.",
+  "level": "WARNING"
+}
+{
+  "event": "Exception while exporting Span.",
+  "exc_info": [
+    "<class 'ValueError'>",
+    "Attempted to set connect timeout to -0.90964674949646, but the timeout cannot be set to a value less than or equal to 0.",
+    "<traceback object at 0x70f6b428bd80>"
+  ],
+  "level": "ERROR"
+}
+{
+  "user_prompt": "测试 rocminfo 是否存在",
+  "provider": null,
+  "thread_id": "test-case-agent-debug",
+  "user_id": "default_user",
+  "project_id": null,
+  "event": "run_once_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:41:27.082630Z"
+}
+{
+  "raw": "测试 rocminfo 是否存在",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:41:27.125359Z"
+}
+{
+  "elapsed": 0.16,
+  "error": "Error code: 400 - {'error': {'message': '\"auto\" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}",
+  "user_prompt": "测试 rocminfo 是否存在",
+  "exc_info": true,
+  "event": "run_once_failed",
+  "level": "EXCEPTION",
+  "timestamp": "2026-05-29T02:41:27.241439Z"
+}
+{
+  "event": "Transient error ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')) encountered while exporting span batch, retrying in 1.00s.",
+  "level": "WARNING"
+}
+{
+  "raw": "帮我测试下 huggingface 的 qwen2b 模型",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:41:37.819357Z"
+}
+{
+  "event": "Transient error ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')) encountered while exporting span batch, retrying in 0.95s.",
+  "level": "WARNING"
+}
+{
+  "event": "Transient error ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')) encountered while exporting span batch, retrying in 1.92s.",
+  "level": "WARNING"
+}
+{
+  "event": "Failed to export span batch due to timeout, max retries or shutdown.",
+  "level": "ERROR"
+}
+{
+  "raw": "帮我测试下 huggingface 的 qwen2b 模型",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:41:41.850338Z"
+}
+{
+  "event": "Transient error ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')) encountered while exporting span batch, retrying in 0.87s.",
+  "level": "WARNING"
+}
+{
+  "event": "Transient error ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')) encountered while exporting span batch, retrying in 2.25s.",
+  "level": "WARNING"
+}
+{
+  "event": "Failed to export span batch due to timeout, max retries or shutdown.",
+  "level": "ERROR"
+}
+{
+  "raw": "帮我测试下 huggingface 的 qwen2b 模型",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:41:43.685532Z"
+}
+{
+  "event": "Transient error ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')) encountered while exporting span batch, retrying in 0.99s.",
+  "level": "WARNING"
+}
+{
+  "event": "Transient error ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')) encountered while exporting span batch, retrying in 1.91s.",
+  "level": "WARNING"
+}
+{
+  "event": "Failed to export span batch due to timeout, max retries or shutdown.",
+  "level": "ERROR"
+}
+{
+  "raw": "帮我测试下 huggingface 的 qwen2b 模型",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:41:47.397825Z"
+}
+{
+  "event": "Transient error ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')) encountered while exporting span batch, retrying in 0.94s.",
+  "level": "WARNING"
+}
+{
+  "event": "Transient error ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')) encountered while exporting span batch, retrying in 1.75s.",
+  "level": "WARNING"
+}
+{
+  "event": "Failed to export span batch due to timeout, max retries or shutdown.",
+  "level": "ERROR"
+}
+{
+  "event": "Loading SentenceTransformer model from /home/zs/TestCaseAgent/llm_model/all-MiniLM-L6-v2.",
+  "level": "INFO"
+}
+{
+  "event": "Loading SentenceTransformer model from /home/zs/TestCaseAgent/llm_model/all-MiniLM-L6-v2.",
+  "level": "INFO"
+}
+{
+  "event": "Loading SentenceTransformer model from /home/zs/TestCaseAgent/llm_model/all-MiniLM-L6-v2.",
+  "level": "INFO"
+}
+{
+  "event": "Loading SentenceTransformer model from /home/zs/TestCaseAgent/llm_model/all-MiniLM-L6-v2.",
+  "level": "INFO"
+}
+{
+  "event": "Loading SentenceTransformer model from /home/zs/TestCaseAgent/llm_model/all-MiniLM-L6-v2.",
+  "level": "INFO"
+}
+{
+  "event": "Loading SentenceTransformer model from /home/zs/TestCaseAgent/llm_model/all-MiniLM-L6-v2.",
+  "level": "INFO"
+}
+{
+  "stage": "missing_code",
+  "error": "generated_code is empty; sandbox execution cannot start.",
+  "retry": 0,
+  "max_retries": 3,
+  "event": "sandbox_failure",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:42:02.734727Z"
+}
+{
+  "intent": "GENERATE",
+  "event": "sandbox_executor_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.736280Z"
+}
+{
+  "intent": "GENERATE",
+  "event": "sandbox_success",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.736651Z"
+}
+{
+  "intent": "GENERATE",
+  "event": "sandbox_executor_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.738368Z"
+}
+{
+  "intent": "GENERATE",
+  "event": "sandbox_success",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.738765Z"
+}
+{
+  "intent": "GENERATE",
+  "event": "sandbox_executor_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.740190Z"
+}
+{
+  "stage": "generate_execution",
+  "error": "1 test failed",
+  "retry": 0,
+  "max_retries": 3,
+  "event": "sandbox_failure",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:42:02.740760Z"
+}
+{
+  "raw": "",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.743068Z"
+}
+{
+  "raw": "",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.745054Z"
+}
+{
+  "raw": "",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.747084Z"
+}
+{
+  "raw": "",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.749046Z"
+}
+{
+  "raw": "",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.750728Z"
+}
+{
+  "raw": "",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.752336Z"
+}
+{
+  "raw": "",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.753903Z"
+}
+{
+  "raw": "",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.756101Z"
+}
+{
+  "raw": "",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.757845Z"
+}
+{
+  "raw": "",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.759352Z"
+}
+{
+  "query": "test req",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.762579Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_plan()' id='124202801539424'>",
+  "event": "planner_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.763968Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.764365Z"
+}
+{
+  "query": "",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.766769Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_plan()' id='124202750743264'>",
+  "event": "planner_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.767743Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.768124Z"
+}
+{
+  "query": "req",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.770373Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_plan()' id='124202800733824'>",
+  "event": "planner_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.771105Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.771391Z"
+}
+{
+  "query": "req",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.773071Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_plan()' id='124202750739088'>",
+  "event": "planner_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.773849Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.775247Z"
+}
+{
+  "query": "req",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.775620Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_plan()' id='124202750739088'>",
+  "event": "planner_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.776231Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.776575Z"
+}
+{
+  "query": "req",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.776928Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_plan()' id='124202750739088'>",
+  "event": "planner_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.777541Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.777888Z"
+}
+{
+  "query": "req",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.778550Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_plan()' id='124202750739088'>",
+  "event": "planner_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.779188Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.779537Z"
+}
+{
+  "query": "req",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.782421Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_plan()' id='124202800741552'>",
+  "event": "planner_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.783293Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.783633Z"
+}
+{
+  "query": "req",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.785656Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_plan()' id='124202750442288'>",
+  "event": "planner_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.786408Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.786726Z"
+}
+{
+  "query": "req",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.788709Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_plan()' id='124204891627328'>",
+  "event": "planner_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.790061Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.790396Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 9,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.792180Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.792775Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.795073Z"
+}
+{
+  "event": "generator_validation_failed_no_old",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:42:02.796705Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_104202.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.799025Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_generation()' id='124202800939520'>",
+  "event": "generator_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.800195Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 0,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.802981Z"
+}
+{
+  "state_keys": [
+    "case_plan",
+    "intent"
+  ],
+  "event": "generator_empty_plan",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:42:02.803291Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.803761Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.804223Z"
+}
+{
+  "event": "generator_validation_failed_no_old",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:42:02.804531Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_104202.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.804938Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_generation()' id='124202801532512'>",
+  "event": "generator_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.805565Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 4,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.807118Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.807593Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.808149Z"
+}
+{
+  "event": "generator_validation_failed_no_old",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:42:02.808538Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_104202.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.809027Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_generation()' id='124202752579280'>",
+  "event": "generator_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.809483Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 4,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.811246Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.811675Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.812149Z"
+}
+{
+  "event": "generator_validation_failed_no_old",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:42:02.812447Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_104202.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.813004Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_generation()' id='124202799687264'>",
+  "event": "generator_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.813818Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 4,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.816481Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.817333Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.817974Z"
+}
+{
+  "event": "generator_validation_failed_no_old",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:42:02.818330Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_104202.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.818998Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_generation()' id='124202800739824'>",
+  "event": "generator_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.819550Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 4,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.820069Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.820591Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.821089Z"
+}
+{
+  "event": "generator_validation_failed_no_old",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:42:02.821401Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_104202.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.821998Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_generation()' id='124202800739824'>",
+  "event": "generator_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.822403Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 4,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.822814Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.823362Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.824087Z"
+}
+{
+  "event": "generator_validation_failed_no_old",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:42:02.824470Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_104202.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.825081Z"
+}
+{
+  "key": "<Mock name='get_memory_manager().save_generation()' id='124202800739824'>",
+  "event": "generator_memory_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.825566Z"
+}
+{
+  "raw": "测试rocm-smi命令的存在性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.828113Z"
+}
+{
+  "raw": "测试rocm-smi命令的存在性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.830349Z"
+}
+{
+  "raw": "测试rocm-smi命令的存在性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.833762Z"
+}
+{
+  "raw": "测试rocm-smi命令的存在性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.836677Z"
+}
+{
+  "raw": "测试rocm-smi命令的存在性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.839183Z"
+}
+{
+  "query": "测试rocm-smi命令的存在性",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.841605Z"
+}
+{
+  "event": "execution_plan_parsed",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.843214Z"
+}
+{
+  "execution_plan_status": "parsed",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.843538Z"
+}
+{
+  "query": "测试rocm-smi命令的存在性",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.845471Z"
+}
+{
+  "event": "execution_plan_parsed",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.846808Z"
+}
+{
+  "execution_plan_status": "parsed",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.847131Z"
+}
+{
+  "query": "测试rocm-smi命令的存在性",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.848749Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.849674Z"
+}
+{
+  "query": "测试rocm-smi命令的存在性",
+  "feedback": "测试失败: subprocess 未找到",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.851174Z"
+}
+{
+  "event": "execution_plan_parsed",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.853067Z"
+}
+{
+  "execution_plan_status": "parsed",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.853767Z"
+}
+{
+  "query": "测试rocm-smi命令的存在性",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.855930Z"
+}
+{
+  "execution_plan_status": "defaulted",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.856517Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 17,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.858273Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.858746Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.859423Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_104202.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.860111Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 4,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.861663Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.862073Z"
+}
+{
+  "passed": false,
+  "severity": "critical",
+  "issue_count": 1,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.862564Z"
+}
+{
+  "issues": [
+    "禁止使用 eval()"
+  ],
+  "event": "generator_security_blocked",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:42:02.862861Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 0,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.864332Z"
+}
+{
+  "state_keys": [
+    "messages",
+    "requirement",
+    "parsed_requirement",
+    "parsed_intent",
+    "intent",
+    "intent_cluster",
+    "cluster",
+    "template_name",
+    "context",
+    "case_plan",
+    "code",
+    "generated_code",
+    "explanation",
+    "validation_result",
+    "execution_plan",
+    "execution_result",
+    "parsed_result",
+    "repair_suggestion",
+    "final_report",
+    "retry",
+    "repair_count",
+    "saved_filepath",
+    "sandbox_config",
+    "sandbox_id",
+    "sandbox_retry_count",
+    "max_sandbox_retries",
+    "feedback",
+    "error_log",
+    "session_id"
+  ],
+  "event": "generator_empty_plan",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:42:02.864803Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.865255Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.865859Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_104202.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.866755Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 4,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.873425Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.874232Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.874883Z"
+}
+{
+  "filepath": "/tmp/pytest-of-zs/pytest-8/test_generator_saves_file0/test_generated_20260529_104202.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.875391Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "template_a",
+  "plan_len": 4,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.877299Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.877806Z"
+}
+{
+  "new_len": 0,
+  "old_len": 144,
+  "event": "generator_validation_failed_keep_old",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:42:02.878524Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_104202.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.879224Z"
+}
+{
+  "stage": "missing_code",
+  "error": "generated_code is empty; sandbox execution cannot start.",
+  "retry": 0,
+  "max_retries": 3,
+  "event": "sandbox_failure",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T02:42:02.882656Z"
+}
+{
+  "intent": "DIAGNOSE",
+  "event": "sandbox_executor_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.884438Z"
+}
+{
+  "intent": "PROBE",
+  "event": "sandbox_executor_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.885845Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.893154Z"
+}
+{
+  "passed": false,
+  "severity": "critical",
+  "issue_count": 1,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.894699Z"
+}
+{
+  "passed": false,
+  "severity": "critical",
+  "issue_count": 1,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.896085Z"
+}
+{
+  "passed": false,
+  "severity": "critical",
+  "issue_count": 1,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.897358Z"
+}
+{
+  "index": 1,
+  "total": 2,
+  "provider": "deepseek",
+  "model": "deepseek-chat",
+  "event": "model_rotation_try",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.912031Z"
+}
+{
+  "index": 2,
+  "total": 2,
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "event": "model_rotation_try",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:42:02.912590Z"
+}
+{
+  "event": "Loading SentenceTransformer model from /home/zs/TestCaseAgent/llm_model/all-MiniLM-L6-v2.",
+  "level": "INFO"
+}
+{
+  "raw": "写一个pytest测试用例，测试rocm-smi指令的存在性和正确性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T02:51:31.057696Z"
+}
+{
+  "event": "Transient error ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')) encountered while exporting span batch, retrying in 1.19s.",
+  "level": "WARNING"
+}
+{
+  "event": "Transient error ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')) encountered while exporting span batch, retrying in 1.91s.",
+  "level": "WARNING"
+}
+{
+  "event": "Failed to export span batch due to timeout, max retries or shutdown.",
+  "level": "ERROR"
+}
+{
+  "raw": "写一个pytest测试用例，测试rocm-smi指令的存在性和正确性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T03:06:26.280116Z"
+}
+{
+  "query": "写一个pytest测试用例，测试rocm-smi指令的存在性和正确性",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T03:06:26.283839Z"
+}
+{
+  "event": "execution_plan_parsed",
+  "level": "INFO",
+  "timestamp": "2026-05-29T03:06:26.338220Z"
+}
+{
+  "execution_plan_status": "parsed",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T03:06:26.338827Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "create_intent",
+  "plan_len": 1623,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T03:06:26.340766Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T03:06:26.341654Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T03:06:26.345683Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_110626.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T03:06:26.350546Z"
+}
+{
+  "raw": "写一个pytest测试用例，测试rocm-smi指令的存在性和正确性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T03:15:33.222383Z"
+}
+{
+  "query": "写一个pytest测试用例，测试rocm-smi指令的存在性和正确性",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T03:15:33.225094Z"
+}
+{
+  "event": "execution_plan_parsed",
+  "level": "INFO",
+  "timestamp": "2026-05-29T03:15:33.265961Z"
+}
+{
+  "execution_plan_status": "parsed",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T03:15:33.266462Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "create_intent",
+  "plan_len": 1623,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T03:15:33.268371Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T03:15:33.269230Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T03:15:33.272478Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_111533.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T03:15:33.274015Z"
+}
+{
+  "intent": "GENERATE",
+  "event": "sandbox_executor_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T03:15:33.274885Z"
+}
+{
+  "stage": "generate_execution",
+  "error": "安装 pytest 失败: -m: 1: Syntax error: Unterminated quoted string\n",
+  "retry": 0,
+  "max_retries": 3,
+  "event": "sandbox_failure",
+  "level": "WARNING",
+  "timestamp": "2026-05-29T03:15:37.499298Z"
+}
+{
+  "raw": "写一个pytest测试用例，测试rocm-smi指令的存在性和正确性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T03:20:58.195978Z"
+}
+{
+  "query": "写一个pytest测试用例，测试rocm-smi指令的存在性和正确性",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T03:20:58.198703Z"
+}
+{
+  "event": "execution_plan_parsed",
+  "level": "INFO",
+  "timestamp": "2026-05-29T03:20:58.229297Z"
+}
+{
+  "execution_plan_status": "parsed",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T03:20:58.229821Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "create_intent",
+  "plan_len": 1623,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T03:20:58.231010Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T03:20:58.231552Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T03:20:58.235949Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_112058.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T03:20:58.237742Z"
+}
+{
+  "intent": "GENERATE",
+  "event": "sandbox_executor_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T03:20:58.238243Z"
+}
+{
+  "intent": "GENERATE",
+  "event": "sandbox_success",
+  "level": "INFO",
+  "timestamp": "2026-05-29T03:21:15.502197Z"
+}
+{
+  "raw": "写一个pytest测试用例，测试rocm-smi指令的存在性和正确性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T03:25:46.317735Z"
+}
+{
+  "query": "写一个pytest测试用例，测试rocm-smi指令的存在性和正确性",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T03:25:46.319060Z"
+}
+{
+  "event": "execution_plan_parsed",
+  "level": "INFO",
+  "timestamp": "2026-05-29T03:25:46.341069Z"
+}
+{
+  "execution_plan_status": "parsed",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T03:25:46.341493Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "create_intent",
+  "plan_len": 1623,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T03:25:46.342260Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T03:25:46.342709Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T03:25:46.345350Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_112546.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T03:25:46.346402Z"
+}
+{
+  "intent": "GENERATE",
+  "event": "sandbox_executor_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T03:25:46.346931Z"
+}
+{
+  "intent": "GENERATE",
+  "event": "sandbox_success",
+  "level": "INFO",
+  "timestamp": "2026-05-29T03:26:00.593779Z"
+}
+{
+  "raw": "写一个pytest测试用例，测试rocm-smi指令的存在性和正确性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T05:08:29.027601Z"
+}
+{
+  "query": "写一个pytest测试用例，测试rocm-smi指令的存在性和正确性",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T05:08:29.080101Z"
+}
+{
+  "event": "execution_plan_parsed",
+  "level": "INFO",
+  "timestamp": "2026-05-29T05:08:29.460738Z"
+}
+{
+  "execution_plan_status": "parsed",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T05:08:29.464342Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "create_intent",
+  "plan_len": 1623,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T05:08:29.476753Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T05:08:29.478955Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T05:08:29.503470Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_130829.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T05:08:29.514929Z"
+}
+{
+  "intent": "GENERATE",
+  "event": "sandbox_executor_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T05:08:29.519389Z"
+}
+{
+  "intent": "GENERATE",
+  "event": "sandbox_success",
+  "level": "INFO",
+  "timestamp": "2026-05-29T05:08:57.925031Z"
+}
+{
+  "raw": "写一个pytest测试用例，测试rocm-smi指令的存在性和正确性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T05:19:21.876802Z"
+}
+{
+  "query": "写一个pytest测试用例，测试rocm-smi指令的存在性和正确性",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T05:19:21.877976Z"
+}
+{
+  "event": "execution_plan_parsed",
+  "level": "INFO",
+  "timestamp": "2026-05-29T05:19:21.898851Z"
+}
+{
+  "execution_plan_status": "parsed",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T05:19:21.899243Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "create_intent",
+  "plan_len": 1623,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T05:19:21.900094Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T05:19:21.900525Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T05:19:21.903351Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_131921.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T05:19:21.904545Z"
+}
+{
+  "intent": "GENERATE",
+  "event": "sandbox_executor_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T05:19:21.905002Z"
+}
+{
+  "intent": "GENERATE",
+  "event": "sandbox_success",
+  "level": "INFO",
+  "timestamp": "2026-05-29T05:19:27.825518Z"
+}
+{
+  "raw": "写一个pytest测试用例，测试rocm-smi指令的存在性和正确性",
+  "intent": "GENERATE",
+  "cluster": "create",
+  "template": "create_intent",
+  "event": "intent_detected",
+  "level": "INFO",
+  "timestamp": "2026-05-29T05:54:28.406541Z"
+}
+{
+  "query": "写一个pytest测试用例，测试rocm-smi指令的存在性和正确性",
+  "feedback": "",
+  "user_id": "unknown",
+  "event": "planner_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T05:54:28.410349Z"
+}
+{
+  "event": "execution_plan_parsed",
+  "level": "INFO",
+  "timestamp": "2026-05-29T05:54:28.434399Z"
+}
+{
+  "execution_plan_status": "parsed",
+  "event": "planner_done",
+  "level": "INFO",
+  "timestamp": "2026-05-29T05:54:28.434890Z"
+}
+{
+  "intent": "GENERATE",
+  "template": "create_intent",
+  "plan_len": 1623,
+  "event": "generator_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T05:54:28.436082Z"
+}
+{
+  "event": "generator_invoke_model",
+  "level": "INFO",
+  "timestamp": "2026-05-29T05:54:28.436663Z"
+}
+{
+  "passed": true,
+  "severity": "safe",
+  "issue_count": 0,
+  "event": "code_security_review",
+  "level": "INFO",
+  "timestamp": "2026-05-29T05:54:28.438755Z"
+}
+{
+  "filepath": "/home/zs/TestCaseAgent/test_case/test_generated_20260529_135428.py",
+  "event": "test_file_saved",
+  "level": "INFO",
+  "timestamp": "2026-05-29T05:54:28.439821Z"
+}
+{
+  "intent": "GENERATE",
+  "event": "sandbox_executor_start",
+  "level": "INFO",
+  "timestamp": "2026-05-29T05:54:28.440250Z"
+}
+{
+  "intent": "GENERATE",
+  "event": "sandbox_success",
+  "level": "INFO",
+  "timestamp": "2026-05-29T05:54:38.381229Z"
+}

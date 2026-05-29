@@ -9,9 +9,10 @@
 - functools.partial: 用于为节点函数绑定额外参数（model、agent）
 """
 
+import os
 from functools import partial
 from langgraph.graph import StateGraph, START, END
-from langgraph.types import RetryPolicy
+from langgraph.types import RetryPolicy, Command
 from .tools import TOOLS
 
 from .state import AgentState, AgentContext
@@ -47,7 +48,7 @@ def route_after_sandbox(state: AgentState) -> str:
     - 成功 → 结束图（END）
     - 失败且未超过最大重试次数 → 回到 planner 重新规划
     - 失败且已耗尽重试 → 终止（END，表示终端失败）
-    
+
     每轮重试会：
     1. 记录失败原因和修复尝试
     2. 将 feedback 传递给 planner
@@ -56,35 +57,78 @@ def route_after_sandbox(state: AgentState) -> str:
     5. sandbox_executor 重新执行
     """
     result = state.get("execution_result", {})
-    
+
     # 成功 → 结束
     if result.get("status") == "success":
         print(f"\n[route_after_sandbox] ✅ 执行成功，结束流程")
         return END
-    
+
     # 检查重试次数
     retry_count = state.get("sandbox_retry_count", 0)
     max_retries = state.get("max_sandbox_retries", 3)
-    
+
     # 失败分类
     stage = result.get("stage", "unknown")
     error = result.get("error", "未知错误")
     exit_code = result.get("exit_code", "unknown")
-    
+
     print(f"\n[route_after_sandbox] ❌ 执行失败")
     print(f"  - 失败阶段: {stage}")
     print(f"  - 错误信息: {error}")
     print(f"  - 退出码: {exit_code}")
     print(f"  - 重试次数: {retry_count}/{max_retries}")
-    
+
     # 判断是否可以重试
     if retry_count < max_retries:
         print(f"[route_after_sandbox] 🔄 进入第 {retry_count + 1} 轮修复...")
         return "planner"
-    
+
     # 已耗尽重试
     print(f"[route_after_sandbox] ⚠️ 已达到最大重试次数 ({max_retries})，终止流程")
     return END
+
+
+def _build_checkpointer():
+    """构建 Checkpointer —— 根据环境自动选择 MemorySaver 或 PostgreSQL。
+
+    生产环境: 设置 TEST_CASE_AGENT_POSTGRES_URL 启用持久化
+    开发环境: 默认使用 MemorySaver
+    """
+    pg_url = os.environ.get("TEST_CASE_AGENT_POSTGRES_URL", "")
+    if pg_url:
+        try:
+            from langgraph.checkpoint.postgres import PostgresSaver
+            checkpointer = PostgresSaver.from_conn_string(pg_url)
+            checkpointer.setup()
+            print("[build_graph] ✅ 使用 PostgreSQL Checkpointer")
+            return checkpointer
+        except ImportError:
+            print("[build_graph] ⚠️ langgraph-checkpoint-postgres 未安装，回退 MemorySaver")
+        except Exception as e:
+            print(f"[build_graph] ⚠️ PostgreSQL 连接失败: {e}，回退 MemorySaver")
+
+    from langgraph.checkpoint.memory import MemorySaver
+    return MemorySaver()
+
+
+def _build_store():
+    """构建 Store —— 根据环境自动选择 InMemoryStore 或 PostgreSQL Store。
+
+    生产环境: 设置 TEST_CASE_AGENT_POSTGRES_URL 启用持久化
+    开发环境: 默认使用 InMemoryStore
+    """
+    pg_url = os.environ.get("TEST_CASE_AGENT_POSTGRES_URL", "")
+    if pg_url:
+        try:
+            from langgraph.store.postgres import PostgresStore
+            return PostgresStore.from_conn_string(pg_url)
+        except ImportError:
+            pass
+        except Exception:
+            pass
+
+    from langgraph.store.memory import InMemoryStore
+    return InMemoryStore()
 
 
 def build_graph(
@@ -93,15 +137,17 @@ def build_graph(
     checkpointer=None,
     store=None,
     system_prompt: str | None = None,
+    interrupt_before_planner: bool = False,
 ):
     """构建并编译 LangGraph 状态图。
 
     参数:
         model: ChatOpenAI 兼容的 LLM 实例，为 None 时构建结构图（无 LLM 能力）
         tools: Agent 可使用的工具列表，默认使用全局 TOOLS
-        checkpointer: 检查点持久化后端（如 MemorySaver），用于支持多轮对话
-        store: 长期记忆存储后端（如 InMemoryStore），用于跨会话记忆
+        checkpointer: 检查点持久化后端（MemorySaver 或 PostgresSaver），为 None 时自动选择
+        store: 长期记忆存储后端（InMemoryStore 或 PostgresStore），为 None 时自动选择
         system_prompt: 自定义系统提示词，覆盖默认值
+        interrupt_before_planner: 是否在 planner 前中断（HITL 人工确认）
 
     返回:
         编译后的 LangGraph CompiledGraph 实例
@@ -155,7 +201,15 @@ def build_graph(
     compile_kwargs = {}
     if checkpointer is not None:
         compile_kwargs["checkpointer"] = checkpointer
+    else:
+        compile_kwargs["checkpointer"] = _build_checkpointer()
     if store is not None:
         compile_kwargs["store"] = store
+    else:
+        compile_kwargs["store"] = _build_store()
+
+    # HITL: 在 planner 节点前中断，等待人工确认计划
+    if interrupt_before_planner:
+        compile_kwargs["interrupt_before"] = ["planner"]
 
     return builder.compile(**compile_kwargs)

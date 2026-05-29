@@ -2,13 +2,16 @@ langgraph[dev]>=0.2.0
 langgraph-cli[inmem]>=0.4.0
 langgraph-checkpoint-postgres
 langchain>=0.3.0
+langchain-huggingface
 langchain-openai>=0.3.0
 python-dotenv>=1.0.0
 langfuse
 openai
 deepagents
+docker
 pytest
 pytest-asyncio
 mcp
 langchain-mcp-adapters
 huggingface_hub[mcp]>=0.32.0
+sentence-transformers

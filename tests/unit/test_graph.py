@@ -11,12 +11,13 @@ class TestGraphStructure:
 
         assert isinstance(g, Pregel)
 
-    def test_graph_has_five_nodes(self):
+    def test_graph_has_four_nodes(self):
+        """当前图有 4 个节点：requirement_parser → planner → generator → sandbox_executor。
+        （context_retriever 暂时注释，减少延迟。）"""
         g = build_graph()
         nodes = [n for n in g.get_graph().nodes.keys() if not n.startswith("__")]
         assert nodes == [
             "requirement_parser",
-            "context_retriever",
             "planner",
             "generator",
             "sandbox_executor",

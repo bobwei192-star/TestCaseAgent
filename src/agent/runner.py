@@ -4,8 +4,7 @@ import time
 from collections.abc import Iterable
 from typing import Any
 
-from langgraph.checkpoint.memory import MemorySaver
-from langgraph.store.memory import InMemoryStore
+from langchain_core.messages import HumanMessage
 
 from .graph import build_graph
 from .model import build_model
@@ -13,6 +12,7 @@ from .state import AgentState, AgentContext
 from .tools import TOOLS
 from .tracing import build_langfuse_config, flush_langfuse
 from .logging_config import get_logger
+from .config import get_config, print_config_warnings
 
 # Initialize logger
 logger = get_logger("runner")
@@ -20,7 +20,7 @@ logger = get_logger("runner")
 
 def create_initial_state(user_prompt: str) -> AgentState:
     return {
-        "messages": [{"role": "user", "content": user_prompt}],
+        "messages": [HumanMessage(content=user_prompt)],
         "requirement": user_prompt,
         "context": {},
         "case_plan": "",
@@ -47,7 +47,7 @@ def create_initial_state(user_prompt: str) -> AgentState:
             "block_network": False,
             "timeout": 120,
             "remote_host": os.environ.get(
-                "TEST_CASE_AGENT_REMOTE_HOST", "10.67.69.34"
+                "TEST_CASE_AGENT_REMOTE_HOST", ""
             ),
             "remote_user": os.environ.get("TEST_CASE_AGENT_REMOTE_USER", "jenkins"),
             "remote_work_dir": os.environ.get(
@@ -74,14 +74,12 @@ def build_runnable_graph(
 ):
     """Build a model-backed graph for actual execution."""
     model = build_model(provider=provider)
-    checkpointer = MemorySaver() if enable_checkpoint else None
-    store = InMemoryStore() if enable_store else None
-
+    # graph.py 内部自动选择 MemorySaver 或 PostgreSQL Checkpointer/Store
     return build_graph(
         model=model,
         tools=tools if tools is not None else TOOLS,
-        checkpointer=checkpointer,
-        store=store,
+        checkpointer=None,  # auto-select in build_graph
+        store=None,  # auto-select in build_graph
     )
 
 
@@ -101,6 +99,9 @@ def run_once(
     user_id: str = "default_user",
     project_id: str | None = None,
 ) -> AgentState:
+    # 启动时校验配置
+    print_config_warnings()
+
     start_time = time.time()
     logger.info(
         "run_once_start",
@@ -110,7 +111,7 @@ def run_once(
         user_id=user_id,
         project_id=project_id,
     )
-    
+
     try:
         graph = build_runnable_graph(
             provider=provider,
@@ -118,15 +119,15 @@ def run_once(
             enable_store=enable_store,
         )
         logger.debug("graph_built", provider=provider)
-        
+
         config = build_runtime_config(thread_id=thread_id)
         context = AgentContext(user_id=user_id, project_id=project_id)
-        
+
         logger.debug("invoking_graph", thread_id=thread_id)
         result = graph.invoke(
             create_initial_state(user_prompt), config=config, context=context
         )
-        
+
         elapsed = time.time() - start_time
         generated_code = result.get("generated_code", "") or result.get("code", "")
         logger.info(
@@ -137,7 +138,7 @@ def run_once(
             validation_status=result.get("validation_result", {}).get("status"),
             errors=result.get("error_log", []),
         )
-        
+
         return result
     except Exception as e:
         elapsed = time.time() - start_time
@@ -188,9 +189,9 @@ def run_multi_turn(
             else:
                 # 后续轮次：只传增量更新。
                 # Checkpointer 会自动恢复该 thread_id 的历史状态，
-                # messages 通过 operator.add 追加，requirement 直接覆盖。
+                # messages 通过 add_messages 追加，requirement 直接覆盖。
                 state = {
-                    "messages": [{"role": "user", "content": prompt}],
+                    "messages": [HumanMessage(content=prompt)],
                     "requirement": prompt,
                 }
 
@@ -201,8 +202,8 @@ def run_multi_turn(
 
             last_msg = final_state["messages"][-1]
             content = (
-                last_msg.get("content", "")
-                if isinstance(last_msg, dict)
+                last_msg.content
+                if hasattr(last_msg, "content")
                 else str(last_msg)
             )
             print(f"Assistant: {content[:300]}...")
