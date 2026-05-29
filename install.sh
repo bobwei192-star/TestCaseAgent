@@ -396,7 +396,7 @@ if [ -z "${SKIP_UI:-}" ]; then
     if [ ! -f "$UI_DIR/.env" ]; then
         cat > "$UI_DIR/.env" <<'DOTENV'
 NEXT_PUBLIC_API_URL=http://localhost:2024
-NEXT_PUBLIC_ASSISTANT_ID=agent
+NEXT_PUBLIC_ASSISTANT_ID=test_case_agent
 NEXT_PUBLIC_AUTH_SCHEME=
 DOTENV
         log_info "Created .env (连接本地 LangGraph server)"

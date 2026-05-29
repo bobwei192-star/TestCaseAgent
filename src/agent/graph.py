@@ -138,6 +138,7 @@ def build_graph(
     store=None,
     system_prompt: str | None = None,
     interrupt_before_planner: bool = False,
+    use_persistence: bool = True,
 ):
     """构建并编译 LangGraph 状态图。
 
@@ -198,15 +199,16 @@ def build_graph(
     )
 
     # 编译图，注入持久化组件
-    compile_kwargs = {}
-    if checkpointer is not None:
-        compile_kwargs["checkpointer"] = checkpointer
-    else:
-        compile_kwargs["checkpointer"] = _build_checkpointer()
-    if store is not None:
-        compile_kwargs["store"] = store
-    else:
-        compile_kwargs["store"] = _build_store()
+    compile_kwargs: dict = {}
+    if use_persistence:
+        if checkpointer is not None:
+            compile_kwargs["checkpointer"] = checkpointer
+        else:
+            compile_kwargs["checkpointer"] = _build_checkpointer()
+        if store is not None:
+            compile_kwargs["store"] = store
+        else:
+            compile_kwargs["store"] = _build_store()
 
     # HITL: 在 planner 节点前中断，等待人工确认计划
     if interrupt_before_planner:

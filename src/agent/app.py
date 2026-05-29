@@ -12,13 +12,12 @@ def build_studio_graph() -> Any:
     try:
         model = build_model()
     except RuntimeError:
-        # 无模型时构建结构图（不传 store/checkpointer）
-        compiled_graph = build_graph()
+        compiled_graph = build_graph(use_persistence=False)
     else:
-        # ✅ 正常模式：只传 model/tools，持久化由平台接管
         compiled_graph = build_graph(
             model=model,
             tools=TOOLS,
+            use_persistence=False,
         )
 
     langfuse_config = build_langfuse_config(

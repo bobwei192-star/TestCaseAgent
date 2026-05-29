@@ -7,39 +7,45 @@
 import os
 from typing import Optional
 
+from langgraph_sdk import Auth
 
-def auth(authorization: Optional[str] = None) -> str:
+auth = Auth()
+
+
+@auth.authenticate
+async def authenticate(authorization: Optional[str] = None) -> Auth.types.MinimalUserDict:
     """LangGraph Platform auth handler.
 
     Args:
         authorization: HTTP Authorization header value
 
     Returns:
-        用户标识字符串
+        MinimalUserDict: 至少包含 identity 字段的字典
 
     Raises:
-        Exception: 鉴权失败时抛出 401
+        Auth.exceptions.HTTPException: 鉴权失败时抛出 401
     """
     # 测试/开发环境可跳过鉴权
     if os.environ.get("LANGFUSE_AUTH_DISABLED", "false").lower() == "true":
-        return "anonymous"
+        return {"identity": "anonymous"}
 
     # API Key 鉴权
     api_key = os.environ.get("TEST_CASE_AGENT_API_KEY", "")
     if not api_key:
         # 未配置 API Key 时允许无鉴权（开发环境兼容）
-        return "anonymous"
+        return {"identity": "anonymous"}
 
     if not authorization:
-        raise Exception("Missing Authorization header")
+        raise Auth.exceptions.HTTPException(
+            status_code=401, detail="Missing Authorization header"
+        )
 
     # Bearer token
-    if authorization.startswith("Bearer "):
-        token = authorization[7:]
-    else:
-        token = authorization
+    token = authorization.split(" ", 1)[-1] if " " in authorization else authorization
 
     if token != api_key:
-        raise Exception("Invalid API key")
+        raise Auth.exceptions.HTTPException(
+            status_code=401, detail="Invalid API key"
+        )
 
-    return "authenticated_user"
+    return {"identity": "authenticated_user"}
